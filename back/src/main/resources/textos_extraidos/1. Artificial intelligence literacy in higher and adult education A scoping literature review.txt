@@ -1,0 +1,316 @@
+Computers and Education: Artificial Intelligence 3 (2022) 100101
+Available online 26 September 2022
+2666-920X/© 2022 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+Artificial intelligence literacy in higher and adult education: A scoping 
+literature review 
+Matthias Carl Laupichler *, Alexandra Aster, Jana Schirch, Tobias Raupach 
+Institute of Medical Education, University Hospital Bonn, Bonn, Germany   
+A R T I C L E  I N F O   
+Keywords: 
+AI literacy 
+Higher education 
+Literature review 
+AI education 
+Teaching AI 
+A B S T R A C T   
+Since artificial intelligence (AI) is finding its way into more and more areas of everyday life, improving the AI 
+skills of non-experts is important and will become even more relevant in the future. While it is necessary that 
+children learn about the possibilities of AI at an early age, adults in higher education and beyond should also 
+have at least a basic understanding of AI (i.e., AI literacy) to be able to interact effectively with the technology. 
+To evaluate the current state of the literature on AI literacy in higher and adult education, a scoping literature 
+review was conducted with the objective of identifying thematic foci and recent research trends. Ten research 
+databases were searched and out of 902 initial records, 30 studies were identified using predefined eligibility 
+criteria, whereof the content was evaluated in the review. The results indicated that research in this area is still in 
+its infancy and needs refinement in terms of how to define AI literacy in adult education as well as what content 
+should be taught to non-experts. Lastly, several recommendations for research and practice are derived from the 
+results.   
+1. Introduction 
+1.1. Defining AI literacy 
+Artificial intelligence (AI) is permeating more and more areas of 
+daily life, and is increasingly being used in professional context such as 
+education (Chen et al., 2020; Hwang et al., 2020), healthcare delivery 
+(Matheny, Whicher, & Israni, 2020; Noorbakhsh-Sabet et al., 2019; 
+Maddox, Rumsfeld, & Payne, 2019), or marketing (Vlačić, Corbo, Costa 
+e Silva, & Dabić, 2021; Verma, Sharma, Deb, & Maitra, 2021), to name 
+just a few examples. Accordingly, the training of competencies in the 
+field of artificial intelligence is extremely relevant not only for future 
+artificial intelligence professionals, but also for people who are not 
+computer scientists, mathematicians or AI engineers themselves, since 
+they will have to interact with these new technologies on a daily basis. 
+The ability to understand, use, monitor, and critically reflect on AI 
+applications without necessarily being able to develop AI models 
+themselves is commonly referred to as being “AI literate” (Long et al., 
+2021; Ng et al., 2021a). To the best of our knowledge, the term was first 
+used in an online article in 2015 (Konishi, 2015) and was picked up in an 
+empirical article shortly afterwards (Kandlhofer et al., 2016). The term 
+joins a long line of proposed literacies intended to symbolize the 
+understanding of a particular technological construct, e.g., “digital lit
+eracy” (Gilster, 1997), “media literacy” (Livingstone, 2004), or more 
+recently “data literacy” (Wolff et al., 2016). “AI literacy” encompasses 
+AI competencies that the general population should possess and 
+accordingly focuses mainly on learners without a computer science 
+background (“non-experts”). A frequently cited definition of AI literacy 
+was developed by Long and Magerko (2020, p. 2), who define it as “a set 
+of competencies that enables individuals to critically evaluate AI tech
+nologies, communicate and collaborate effectively with AI, and use AI as 
+a tool online, at home, and in the workplace”. 
+1.2. Overview of AI literacy programs and related literature 
+Fostering AI literacy is being approached from many different angles. 
+For example, there are initiatives to promote AI literacy already during 
+school. This is illustrated, for example, by initiatives such as “AI4K12” 
+(https://ai4k12.org/), or by journal articles reporting on AI teaching 
+projects (Lee et al., 2021; Ng et al., 2022; Williams, 2021) or AI curricula 
+(Touretzky et al., 2019) in primary/secondary schools. 
+In addition, many governments have recognized the need for AI lit
+eracy programs in higher and adult education as well. Thus, AI strategies 
+have been published and distributed by the United States (National 
+* Corresponding author. Institute of Medical Education, University Hospital Bonn, Venusberg-Campus 1, 53127, Bonn, Germany. 
+E-mail addresses: matthias.laupichler@ukbonn.de (M.C. Laupichler), alexandra.aster@ukbonn.de (A. Aster), jana.schirch@ukbonn.de (J. Schirch).  
+Contents lists available at ScienceDirect 
+Computers and Education: Artificial Intelligence 
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence 
+https://doi.org/10.1016/j.caeai.2022.100101 
+Received 25 May 2022; Received in revised form 23 September 2022; Accepted 23 September 2022   
+Computers and Education: Artificial Intelligence 3 (2022) 100101
+2
+Artificial Intelligence Initiative Office (NAIIO), 2021), China (PRC 
+Ministry of Education (教育部), 2019), and Germany (Federal Ministry 
+of Education and Research (BMBF), 2021). There are also 
+government-supported pilot programs such as “Elements of AI” (https 
+://www.elementsofai.com/) from Finland, which aim to strengthen AI 
+literacy for non-experts. 
+In addition, there have been a few projects in recent years that have 
+attempted to introduce AI to college or university students. These pro
+jects particularly focused on students who came from non-IT back
+grounds, such as medicine (Aulenkamp, Mikuteit, Löffler, & Schmidt, 
+2021; Brouillette, 2019; Charow et al., 2021), business administration 
+(Xu & Babaian, 2021), or teacher education (Vazhayil et al., 2019). As 
+mentioned before, increasing AI skills among “non-experts” is often 
+considered as important as training AI experts, since this group will most 
+likely use AI or collaborate and co-exist with AI (Ng et al., 2021a). 
+Accordingly, basic AI literacy education focuses on understanding AI 
+and critically reflecting on AI outcomes. Programming skills or com
+puter science knowledge are not usually considered learning objectives 
+of AI literacy, nor required qualifications (Long & Magerko, 2020). 
+Although all of these initiatives tend to share some common ground, 
+structural and content-related differences still remain. There are various 
+reasons for this, but the different target groups pose the main difference. 
+For example, one characteristic of AI courses designed for non-experts is 
+that they are commonly presented in short, easily digestible modules. In 
+addition, they mostly rely on decentralized, digitally available instruc
+tional courses or learning materials (e.g., AI campus, https://ki-campus. 
+org; Elements of AI, https://www.elementsofai.com/). AI education for 
+schoolchildren, on the other hand, is often developed in a strongly 
+hands-on and project-based manner. This is particularly true for younger 
+children, who are not yet familiar with abstract explanations or the 
+required mathematical foundations, thus requiring AI curricula that 
+differ from those meant to address adults (Yang, 2022). Programs to 
+increase AI literacy in adult education are often based at colleges or 
+universities and often seem to address students’ specific professional 
+requirements. The efforts to increase AI literacy in children or the gen
+eral population, however, are more often designed to provide a basic 
+understanding of AI without placing the focus on a particular subject 
+area. 
+A preliminary attempt to structure the heterogeneous research 
+landscape described above has revealed that there are two main types of 
+publications. The first describes courses that are intended to teach AI to 
+non-experts in different ways (Lin et al., 2021; Shih et al., 2021). Here, 
+the focus is often on course design and evaluation. The second stream of 
+publications is more theoretical and provides definitions (Long & 
+Magerko, 2020) or tries to explain how AI literacy relates to other lit
+eracy concepts (Kandlhofer et al., 2016; Wienrich & Carolus, 2021). 
+Both types of publications are equally important to explore this topic. 
+The former helps practically oriented researchers and teachers to iden
+tify “best practices”, and to gather ideas for their own creation of 
+teaching formats. The more theoretical literature, on the other hand, is 
+essential for creating a clear understanding of AI literacy so that refer
+ences to other fields can be made while also guaranteeing a clear 
+distinction from similar but fundamentally different concepts. For this 
+reason, both types of publications are described and critically reflected 
+in this review. 
+1.3. Research motivation and aim 
+Although increasing AI literacy is a very important endeavor for the 
+future, there is still relatively little empirical literature in this area. 
+Nevertheless, a positive trend in publishing articles in this topic area is 
+emerging, and more and more research teams around the world seem to 
+be interested in exploring AI literacy (see Fig. 1). There have already 
+been isolated attempts to sift through and evaluate the rather disorga
+nized research literature by means of literature reviews (see Ng et al., 
+2021a). However, these reviews often focused on AI literacy in a more 
+general sense (Ng et al., 2021a), or they concentrated on a selected 
+variety of articles, for example to generate a universally valid definition 
+of AI literacy (Long & Magerko, 2020). While these efforts are very 
+helpful in mapping the current state of the research and further sharp
+ening the construct of AI literacy, to the best of our knowledge, a closer 
+look at the AI literacy of individual target groups through literature 
+analysis is still lacking. However, this target-group-specific view is 
+necessary to account for the differences in educational projects. Thus, in 
+this paper, we will present a literature review for one of these target 
+groups, namely AI learners in higher and adult education. For this group 
+of people enhancing their AI literacy is crucial, since they are (or soon 
+will be) confronted with AI applications not only in their daily but also in 
+their professional life. They need to be able to collaborate and cooperate 
+with AI in order to stay up to date and avoid being left behind in a 
+fast-changing workplace. This is especially relevant for people who did 
+not grow up as “digital natives” (Bennett et al., 2008). 
+1.4. Research questions 
+We have proposed several research questions, the answers to which 
+will help shed light on important aspects of AI literacy in higher and 
+adult education. The first step is to examine if and to what extent certain 
+topics, issues, or problems occur frequently in the literature. Therefore, 
+our first research question is: 
+RQ 1: Which thematic foci can be identified in the literature on AI 
+literacy in higher and adult education? 
+Furthermore, it is of great interest for future research to develop an 
+understanding of AI literacy that is as universally applicable as it is 
+useful. Therefore, research question 2 takes a closer look at how the 
+included reports define the construct of AI literacy and how AI literacy is 
+distinguished from related constructs, for instance, “AI readiness” pro
+posed by Karaca et al. (2021) or “AI capabilities” (Markauskaite et al., 
+2022). 
+RQ 2: How does the literature on AI literacy in higher and adult 
+education define the concept of AI literacy and how is it distin
+guished from related constructs? 
+AI literacy is a field of research that is being investigated inter
+disciplinarily. In order to develop a profound understanding of which 
+disciplines are currently working on this topic and which groups are 
+targeted in attempts to increase AI literacy, we have formulated research 
+Fig. 1. Frequency of results on Google Scholar with the search term “ai liter
+acy” OR “artificial intelligence literacy” for each year since 2016. Note: The 
+search was conducted in May 2022, which is the reason for the smaller number 
+of results in 2022 compared to 2021. 
+M.C. Laupichler et al.                                                                                                                                                                                                                          
+Computers and Education: Artificial Intelligence 3 (2022) 100101
+3
+question 3. 
+RQ 3.1: What professional disciplines are currently engaged in 
+fostering AI literacy? 
+RQ 3.2: Which target groups are addressed by the publications in the 
+field of AI literacy in higher and adult education? 
+As mentioned earlier, we did not focus explicitly on evaluating 
+courses in AI education, but placed the focus of the review on AI literacy 
+articles. Nevertheless, there are several articles, especially in recent 
+years, which deal with the creation and evaluation of AI courses and 
+present this in the context of current developments in the field of AI 
+literacy education. Research question 4 therefore aims to provide a brief 
+overview of teaching opportunities for increasing AI literacy in adults. 
+RQ 4.1: What teaching formats and pedagogical structures are used 
+in courses that have the goal to increase AI literacy in higher and 
+adult education? 
+RQ 4.2: What kind of content are these courses trying to teach and 
+what lessons can be learned? 
+2. Methods 
+2.1. Exploratory literature review 
+Research on AI literacy is still in its infancy and literature on the 
+topic is scarce. Therefore, the review process does not lend itself to meta- 
+analyses or systematic literature reviews, which require a vast number 
+of relatively homogenous publications to enable the conclusion of valid 
+statements. Accordingly, we decided to follow a scoping literature re
+view approach in order to focus less on statistical parameters and more 
+on the content of the papers. We have followed the PRISMA statement 
+on scoping reviews (Tricco et al., 2018) wherever feasible to ensure that 
+the approach is as methodologically sound as possible. 
+2.2. Eligibility criteria 
+We developed seven exclusion criteria that were used in both the 
+screening of the abstracts and the screening of the full-text reports (see 
+Table 1). We excluded reports that mention the term AI literacy but have 
+another focus (criterion 1), e.g., reports that focus on computational 
+literacy (Jacob & Warschauer, 2018). As described in section 1.2, re
+ports that cover AI literacy in the school context or in relation to 
+childhood education (outside of school) were not of interest, which is 
+why we excluded reports that focused solely on those target groups 
+(criteria 2 and 3). We also excluded reports that referred to other forms 
+of literacy, especially alphabetic literacy (i.e., reading and writing lit
+eracy, criterion 4). Since we have tried to conduct an exhaustive liter
+ature search, we have also gone through databases that do not 
+exclusively contain scientific articles. Non-empirical reports (e.g., 
+magazine or newspaper articles) were excluded in the screening process 
+(criterion 5). Since artificial intelligence changed a lot in recent years, 
+especially in comparison to AI methods from the last millennium 
+(Anyoha, 2017; Council of Europe, 2022), we excluded reports that were 
+published before 2000 (criterion 6). However, this does not pose a 
+problem to the question at hand, as research on AI literacy has only been 
+pursued for a few years (see Fig. 1) and the 70 records that were 
+excluded solely on the basis of their year of publication did not deal with 
+AI, but coincidentally included the suffix "-ai” followed by the word 
+“literacy".1 Lastly, we excluded reports written in a language other than 
+English or German because the authors had a good command of only 
+these two languages and otherwise there would have been a loss of in
+formation due to translation errors (criterion 7). 
+2.3. Search strategy 
+We searched the following research literature databases: PubMed 
+(National Library of Medicine), Web of Science (Clarivate), JSTOR 
+(ITHAKA), ERIC (Institute of Education Sciences), IEEE Xplore (IEEE), 
+PsycINFO (American Psychological Association), ACM Digital Library 
+(Association for Computing Machinery), and ScienceDirect (Elsevier). 
+Since we have placed great emphasis on capturing the latest de
+velopments in the research literature, and due to the novelty of the 
+research topic, we have decided to include gray literature, as long as it 
+meets basic scientific requirements. This includes, for example, master’s 
+theses, dissertations, and manuscripts that have not (yet) been published 
+in a peer-reviewed journal. Thus, the extensive literature search engine 
+of the “University and State Library Bonn” (Universitäts-und Land
+esbibliothek Bonn, https://www.ulb.uni-bonn.de/de/literatursuche/su 
+chinstrumente/bonnus?set_language=en) was used, which includes 
+preprint and gray literature databases such as arXiv.org in addition to 
+traditional academic journals and databases. We conducted the initial 
+search on November 30th, 2021, and an additional search on May 5th, 
+2022. The second search yielded an additional 43 records that were 
+published between December 2021 and May 2022. Please refer to Fig. 2 
+for a more detailed breakdown of the number of records retrieved from 
+the respective databases. 
+As mentioned earlier, the amount of literature regarding AI literacy 
+is still relatively small, and this is especially true for literature on AI 
+literacy in higher and adult education. Therefore, in the context of the 
+research presented here, we drew an exhaustive picture of the existing 
+literature. We will focus exclusively on articles that contain the term “AI 
+literacy” or “artificial intelligence literacy” (Boolean conjunction: “ai 
+literacy” OR “artificial intelligence literacy”) in the title, abstract, or 
+main text. Papers that dealt with the use of AI applications in educa
+tional contexts (commonly referred to as AIED, see International Journal 
+of AIED, Kay & Aleven, 2022) or reports that focus on aspects of machine 
+learning were beyond the scope of this review. Thus, we did not include 
+terms like “AI education” or “learning artificial intelligence” as search 
+terms, contrary to the approach of other authors (see for example Long & 
+Magerko, 2020). We only sought to include research that explicitly deals 
+with theoretical or practical aspects of AI literacy, i.e., teaching AI skills 
+to non-experts. We did not set any further search restrictions and 
+excluded inappropriate articles according to the exclusion criteria (see 
+Table 1). 
+Table 1 
+Exclusion criteria.  
+Criterion 
+number 
+Criterion name Criterion explanation 
+1 Missing focus on 
+AI literacy 
+Reports in which the term “AI literacy” is 
+mentioned somewhere in the report, but which 
+have a completely different focus 
+2 School education Reports focused solely on AI literacy in school 
+students (e.g., elementary schools, K-12 
+education) 
+3 AI literacy for 
+children 
+Reports that focus on fostering AI literacy in 
+children outside the school context (e.g., 
+museum exhibitions for children). 
+4 Other forms of 
+literacy 
+Reports focused on alphabetical literacy (e.g., 
+research on the use of AI in promoting reading 
+& writing abilities) or other forms of “literacy” 
+that are not similar to AI literacy (e.g., 
+computational literacy) 
+5 Non-empirical 
+reports 
+Reports published in non-scientific media (e.g., 
+newspapers, magazines) 
+6 Before 2000 Reports published before 2000 
+7 Foreign language Reports published in languages other than 
+English or German  
+1 To give an example: In an article by Graham (1989) on media literacy, the 
+term “critical literacy” appears, which was apparently interpreted as " … ai 
+literacy” by the optical character recognition system of one of the data bases. 
+M.C. Laupichler et al.                                                                                                                                                                                                                          

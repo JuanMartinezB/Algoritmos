@@ -1,0 +1,326 @@
+Computers and Education: Artificial Intelligence 4 (2023) 100138
+Available online 1 May 2023
+2666-920X/© 2023 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+Opportunities of artificial intelligence for supporting complex 
+problem-solving: Findings from a scoping review 
+Srecko Joksimovic a,b,*, Dirk Ifenthaler c,d, Rebecca Marrone a,b, Maarten De Laat a,b, 
+George Siemens a,b 
+a Education Futures, University of South Australia, Australia 
+b Centre for Change and Complexity in Learning, University of South Australia, Australia 
+c Business School, University of Mannheim, Germany 
+d UNESCO Deputy Chair on Data Science in Higher Education Learning and Teaching, Curtin University, Australia  
+A B S T R A C T   
+The research objective of this paper is to advance knowledge about the role of artificial intelligence (AI) in complex problem-solving. A problem is complex due to the 
+large number of highly inter-connected variables affecting the problem state. Complex problem-solving situations often change decremental or worsen, forcing a 
+problem solver to act immediately, under considerable time pressure. While research findings support the assumption that (1) affective, (2) (meta-)cognitive, and (3) 
+social processes support complex problem-solving, opportunities of AI for supporting complex problem-solving need to be further investigated. This article presents a 
+scoping review of relevant literature from the last five years. The study included, N = 38 studies for coding and analysis. Our findings show that in addition to the 
+increased number of publications, the current trend suggests increased quality of published work. Human-AI collaboration in complex problem-solving has been 
+explored across a broad variety of AI application domains. However, the four dimensions of complex problem – namely, cognitive, metacognitive, social and affective 
+- have been augmented by AI to a different extent. Although most of the work has been done in the cognitive domain, it is encouraging to see progress across social 
+and affective dimensions as well. Implications for future research and practice are being discussed.   
+1. Introduction 
+Complex problem-solving involves engaging with problems that are 
+dynamic, could have multiple solutions, and usually require multidis
+ciplinary teamwork (Dörner, 1980). These are “problems that resemble 
+real-life situations” (Kunze et al., 2018, p. 3). As society has become 
+more globalized and interconnected, the problems generated have 
+become more complex and intractable, raising the need for skills to 
+engage with new challenges and also a nuanced understanding of how to 
+approach them. Fortunately, the nature of solving complex problems has 
+changed over the last several decades, due to advances in computer 
+science, artificial intelligence (AI), and cognitive psychology. Specif
+ically, unprecedented amounts of data, advanced algorithms, and 
+significantly improved computation and distributed infrastructure (such 
+as managed data lakes) now support collaboration across diverse teams. 
+Working collaboratively and using technology such as an active 
+agent to make sense of an abundance of information is a critical skill for 
+successful learning, work, and life in general. Today’s learners and 
+workers also require the ability to navigate and astutely employ a range 
+of social, affective, and cognitive capabilities to make sense of and 
+address complex, real-world problems (Joksimović et al., 2020, 2022; 
+Microsoft, 2020). In order to successfully solve complex problems, the 
+individuals or teams involved must be able to view and simulate the 
+dynamic problem system in its entirety, imagining the events that would 
+take place if a particular action were to be performed (de Laat et al., 
+2020). 
+Solving complex problems, therefore, depends on the ability of in
+dividuals to integrate diverse background knowledge and expertise into 
+a dynamic collaborative process (Van Den Bossche et al., 2011). 
+Research on collaborative and cooperative learning and work demon
+strates the importance of social and cognitive processes in creating a 
+common understanding and shared conception of the problem and 
+possible solutions (Van Den Bossche et al., 2011). Group work and 
+complex problem-solving are not detached from emotions and depend 
+on each individual’s motivation and abilities to plan and monitor their 
+activities (Hermes & Stelling, 2016). The research in group and collab
+orative problem-solving details the importance of understanding the 
+interplay of factors that influence how individuals and groups regulate 
+affective and motivational processes (Hermes & Stelling, 2016). 
+Recent developments in AI have the potential to support the 
+* Corresponding author. Education Futures, University of South Australia, Australia. 
+E-mail address: srecko.joksimovic@unisa.edu.au (S. Joksimovic).  
+Contents lists available at ScienceDirect 
+Computers and Education: Artificial Intelligence 
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence 
+https://doi.org/10.1016/j.caeai.2023.100138 
+Received 1 February 2023; Received in revised form 17 April 2023; Accepted 18 April 2023   
+Computers and Education: Artificial Intelligence 4 (2023) 100138
+2
+integration of human and artificial intelligence and impact human and 
+machine collaboration during group and teamwork (de Laat et al., 2020; 
+Seeber et al., 2020; Yang et al., 2021; Siemens et al., 2022). The utili
+zation of AI in the classroom, workplace, and life in general, has shifted 
+from being narrowly focused on automation-based labour cost savings to 
+augmentation of human capabilities, as exemplified by generative AI 
+tools such as ChatGPT,1 increasing the prospect that AI can play an 
+active role in solving complex problems. 
+AI systems are capable of analysing large datasets, including un
+structured data, in real-time, and detecting patterns or structures that 
+can be used to support human decision-making and team-based prob
+lem-solving. In the context of education, AI has the potential to trans
+form the way that learners and educators approach complex problems, 
+by providing personalized insights and data-driven recommendations. 
+When AI is used in complex problem solving, the patterns of interaction 
+become more sophisticated, since AI teammates augment human con
+tributions and can influence the resulting actions by humans. This in
+fluence of human-AI teaming increases the importance of social, 
+affective, cognitive, and metacognitive aspects to problem-solving. Un
+fortunately, a substantial gap exists in the literature regarding how these 
+attributes are expressed in joint human-AI teams in complex settings. 
+This paper presents the findings of a scoping literature review focusing 
+on empirical evidence on how artificial intelligence supports human 
+complex problem-solving and the nature of human-AI collaboration in 
+complex problem-solving at the level of (meta-)cognitive and social 
+practices, as well as affective processes. 
+2. Research on problem-solving 
+Research on problem-solving has a long tradition in both psychology 
+and education. Jonassen (1997) classifies problems on a continuum 
+from well-structured to ill-structured. Well-structured problems have a 
+well-defined initial state, a known goal state or solution, and a con
+strained set of known procedures for solving a class of problems. In 
+contrast, the solutions to ill-structured problems are neither predictable 
+nor convergent because they often possess unknown aspects. Addition
+ally, they possess multiple solutions or solution strategies or often no 
+solutions at all (Funke, 2012). Jonassen (2010) reiterates that the 
+structure of a problem often overlaps with complexity: Ill-structured 
+problems tend to be more complex, especially those emerging from 
+everyday practice, whereas most well-structured problems tend to be 
+less complex. The complexity of a problem is determined by the number 
+of functions or variables involved; the degree of connectivity among 
+these variables; the type of functional relationships between these 
+properties; and the stability of the properties of the problem over time 
+(Mainert et al., 2019). Simple problems are composed of a few variables, 
+while ill-structured (complex) problems may include many variables 
+that may interact in unpredictable ways. When the conditions of a 
+problem change, a person must continuously adapt his or her under
+standing of the problem while searching for new solutions, because the 
+old solutions may no longer be viable. Static problems are those in which 
+the factors are stable over time while ill-structured problems tend to be 
+more dynamic (Seel et al., 2009). 
+Accordingly, a problem is complex due to the large number of highly 
+inter-connected variables affecting the problem state (Eseryel et al., 
+2013). This means that changes in one variable influence the status of 
+many other related variables; therefore, it is difficult to anticipate all 
+possible consequences of any action. Not all of the variables lend 
+themselves to direct observation. Dealing with the intransparency of the 
+problem variables and the interrelationships among them is often 
+difficult due to time-delayed effects, i.e., not every action shows im
+mediate consequences. Complex problem-solving situations often 
+change decrementally or worsen, forcing a problem solver to act 
+immediately, under considerable time pressure, such as determining the 
+causes of overpopulation, hunger, and pollution. Therefore, complex 
+problem-solving situations bear multiple goals, some of which could be 
+contradictory requiring a reasonable trade-off. A complex problem is 
+ill-structured because such problems “cannot be described with a high 
+degree of completeness or solved with a high degree of certainty” (King 
+et al., 1994, p. 10). All of these factors make ill-structured problem-
+solving very challenging (Funke, 1991). 
+One of the most developed areas of research in AI is centred around 
+supporting various processes involved in complex problem-solving. As 
+such, contemporary research spans various domains, from healthcare 
+and augmenting medical decision-making, supply chain optimization, to 
+environmental monitoring analysing various sources of data, including 
+various sensors and satellite images to disaster response. One common 
+characteristic, despite the domain of complex problems, is that AI is 
+primarily used to support human capabilities. Current research and 
+practice in AI mainly focuses cognitive support by processing large 
+amounts of data and summarizing information from various sources, 
+helping humans to identify emerging patterns, and make decisions. 
+However, complex problem-solving is a multidimensional construct that 
+also involves affective and social processes (Döppner et al., 2019; 
+Eseryel et al., 2014; Hermes & Stelling, 2016). This study is therefor 
+aimed at reviewing literature to understand how AI support human 
+complex problem-solving at the level of affective, (meta-)cognitive and 
+social processes. 
+3. Opportunities of artificial intelligence for complex problem- 
+solving 
+Building on the previous work by Andrews-Todd and Forsyth (2020), 
+Salas et al. (2008), Barth and Funke (2010), Dörner and Funke (2017), 
+and Spering et al. (2005), among others, we posit that complex problem 
+solving encompasses three interrelated domains of (meta-)cognitive, 
+affective, and social processes. Although there is an abundance of 
+research around supporting cognitive processes of complex 
+problem-solving using AI, such as decision-making, there is a lack of 
+evidence linking AI and other domains of complex problem-solving, 
+namely social and affective (Osbeck & Nersessian, 2011). Specifically, 
+the existing research on augmenting human capabilities using AI pre
+dominantly discusses the division of cognitive tasks between humans 
+and machines, using machines in recognition of human affective states, 
+or exploring how machines support social activities, such as co-creation 
+(Fu & Zhou, 2020). Such division of roles between humans and ma
+chines is rather static and is usually performed on arbitrary assumptions 
+about the expected performance and the notion of who does what better 
+in the context of mixed human-AI partnership (Seeber et al., 2020). In 
+the context of supporting cognitive processes of complex 
+problem-solving, it is crucial to observe this domain as an emerging, 
+rather than static (de Laat et al., 2020). That is, the cognitive dimension 
+of human engagement unfolds in various ways across the phases of 
+complex problem-solving (e.g., brainstorming, data collection, 
+decision-making). Therefore, it is critical to establish roles, actions, and 
+capabilities needed for an AI partner to coordinate complex 
+problem-solving practices. This is, however, equally important for 
+metacognitive, social and affective domains that seem underdeveloped 
+in contemporary research. 
+A growing body of empirical studies shows that complex problem- 
+solving is highly related to affective states (Pekrun et al., 2014; Sper
+ing et al., 2005). In Berlyne’s (1971, p. 336) terms, the novelty and 
+complexity of a problem-solving situation can induce a cognitive 
+dissonance that in turns increases arousal mediating an affective reac
+tion, for instance, curiosity or anxiety. Complex, novel, or incongruous 
+objects have in common that they resist immediate assimilation and 
+evoke emotions that interact reciprocally with cognitive appraisals 
+(Kuhl, 2000), and thus, create a basis for goal-directed actions (Gross, 
+1998). Findings of experimental research show consistently that positive 1 https://chat.openai.com/chat. 
+S. Joksimovic et al.                                                                                                                                                                                                                             
+Computers and Education: Artificial Intelligence 4 (2023) 100138
+3
+state emotions are more likely associated with the use of heuristic pro
+cessing strategies that are characterized by the productive use of sche
+mas, discussed in terms of generic knowledge structures, and related 
+top-down processing (Ifenthaler, 2015; Spering et al., 2005). In 
+contrast, negative state emotions are more likely associated with 
+bottom-up processing and a more systematic gathering of information as 
+well as with paying more attention to the details of the problems to be 
+mastered (Fiedler, 2001). This further suggests considerable opportu
+nities for the use of AI in the context of emotional-driven adaptive sys
+tems for decision-making support or using NLP to identify patterns and 
+trends in the relationship between emotions and language use (Tillman 
+& Louwerse, 2018). 
+A general assumption in problem-solving research is that the first 
+thing a person does when confronted with a problem is to try to 
+construct a mental representation of its relevant features (Seel et al., 
+2009). This internal representation of a problem is termed a problem 
+space – and if its construction has been successful the problem space will 
+consist of information about the initial and goal state of the problem as 
+well as information about the operators which can be applied to solve it. 
+More specifically, Rumelhart et al. (1986) argue that these internal 
+functions during problem-solving are dependent on two interacting 
+modules or sets of units: (1) schemata and (2) mental models. The 
+resulting cognitive architecture corresponds to a great extent with Pia
+get’s epistemology (Piaget, 1976) and its basic mechanisms of assimi
+lation and accommodation (Ifenthaler & Seel, 2011). Assimilation is 
+dependent on the availability and activation of schemata, which allow 
+new information to be integrated immediately into pre-existing cogni
+tive structures. If a schema does not fit immediately with the re
+quirements of a new task it can be adjusted to meet them using 
+accretion, tuning, or reorganization (Seel et al., 2009). Accordingly, if a 
+schema for any problem type is available, the schema is mapped onto the 
+problem to be solved promptly (Jonassen, 2000). If assimilation is not 
+successful, accommodation must take place to reorganise or restructure 
+an individual’s knowledge. However, when no schema is available or its 
+reorganization fails, the human mind switches to the construction of a 
+mental model which is defined as a dynamic ad hoc representation of a 
+phenomenon or problem that aims at creating subjective plausibility 
+through simplifying and envisioning the situation, or through analogical 
+reasoning. From a meta-cognitive perspective, the above-mentioned 
+processes may be monitored and reflected for advancing these func
+tions for future events (Azevedo et al., 2013). 
+Finally, shared mental models are regarded as a significant factor for 
+successful problem-solving (Cannon-Bowers & Salas, 2001). However, 
+the concept of shared mental model is used and interpreted differently 
+by various disciplines, for example, industrial and organisational psy
+chology, human factors, social psychology, or system dynamics (Bad
+ke-Schaub et al., 2011). Previous research on social processing in 
+complex problem-solving shows that if humans share similar individual 
+mental models they are more effective in their problem-solving perfor
+mance (Van Den Bossche et al., 2011). For example, Lim and Klein 
+(2006) found that shared task knowledge and shared team knowledge 
+were valid predictors for problem-solving performance. Similar findings 
+regarding the influence of shared task and team knowledge on 
+problem-solving performance were found in a series of studies using 
+flight simulators in laboratory settings (Mathieu et al., 2005). 
+While research findings support the assumption that (1) affective, (2) 
+(meta-)cognitive, and (3) social processes support complex problem- 
+solving, opportunities of AI for supporting complex problem-solving 
+need to be further investigated [18]. Thus, the central research objec
+tive of this paper is to advance knowledge about the role of AI in com
+plex problem-solving. To guide the scoping review, the following 
+research question was formulated: How may AI complement humans 
+during complex problem-solving through the functions of (1) affective 
+processing, (2) cognitive and meta-cognitive processing, as well as (3) 
+social processing? 
+4. Method 
+4.1. Data collection 
+Given the rather heterogenous nature (i.e., draws on various fields 
+and disciplined) of the research on human-machine collaboration and 
+complex problem-solving, we opted for a scoping review, instead of a 
+more precise systematic literature review. In so doing, we still followed 
+the guidelines for a scientifically rigorous literature review, except that 
+we searched only one digital database – i.e., Scopus, following an 
+approach similar to Cetindamar et al. (2022). In general, scoping re
+views are commonly used for “reconnaissance” - to clarify working 
+definitions and conceptual boundaries of a topic or field. Scoping re
+views are therefore particularly useful when a body of literature has not 
+yet been comprehensively reviewed or exhibits a complex or heteroge
+neous nature not amenable to a more precise systematic review of the 
+evidence. Moreover, compared to other databases, such as Web of Sci
+ence, Scopus also includes conference papers that are crucial for 
+emerging fields such as human-AI collaboration. Compared to Google 
+Scholar, on the other hand, Scopus includes less grey literature, and it 
+has been widely used in bibliometric studies (Caputo & Kargina, 2022; 
+Tibaná-Herrera et al., 2018). 
+Given our focus on understanding the dimensions of human-AI 
+collaboration in complex problem-solving, we defined the following 
+search query in Scopus: 
+TITLE-ABS-KEY ((“problem solv*“) AND (“artificial intelligence” OR 
+“machine learning”)) 
+We intentionally opted for “problem-solving” as a basis for our 
+search, rather than “complex problem-solving”, to capture a broader set 
+of studies, as there might be a difference in conceptualisations between 
+ill-defined and well-defined problems across diverse fields of research. 
+We limited our search to include studies published over a five year 
+period, starting in 2017 resulting in 2607 studies. After removing du
+plicates, we obtained 2597 studies considered for screening. The 
+screening process was conducted by two researchers who read the title 
+and the abstract for each of the studies, resulting in 809 studies 
+considered for inclusion. Both researchers have been actively exploring 
+the domain of human-AI collaboration with previous work being done in 
+developing models for complex skills assessment, such as creativity, 
+critital chinking or problem solving. Given the complexity of the topic, 
+two researchers skimmed all 809 studies and reviewed them for inclu
+sion or exclusion, discussing every decision until a common agreement 
+was met. The inclusion criteria was defined around the following prin
+ciples: only studies that are relevant to the research question and pub
+lished as peer-reviewed journal articles, conference proceedings, books, 
+or reports will be included; only studies published in English will be 
+included in this scoping review; studies published from 2017 to 2021 
+were considered for inclusion; studies must include human participants, 
+regardless of age, gender, ethnicity, or geographical location. The level 
+of agreement between coders was generally high, with an accuracy rate 
+exceeding 95%. However, there were some instances where the coders 
+disagreed, particularly in cases where the studies employed different 
+tools or simulations to facilitate teamwork. All disagreements were 
+resolved through discussion and consensus among the coders. The ma
+jority of the studies that were excluded were either focused on devel
+oping an AI algorithm, rather than human-machine teaming, were not 
+focusing on supporting humans in complex problem-solving, or were not 
+empirical studies (e.g., an opinion paper discussing the nature of human- 
+AI collaboration in complex problem solving). The final dataset included 
+38 studies selected for coding and analysis. The list of selected papers 
+has been explicitly specifically marked in the reference list. 
+4.2. Analysis 
+To address our research questions, two coders, also authors of this 
+paper, coded all 38 studies based on the following dimensions. 
+S. Joksimovic et al.                                                                                                                                                                                                                             

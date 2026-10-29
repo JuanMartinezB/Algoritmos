@@ -1,0 +1,179 @@
+Citation: Bahroun, Z.; Anane, C.;
+Ahmed, V.; Zacca, A. Transforming
+Education: A Comprehensive Review
+of Generative Artificial Intelligence in
+Educational Settings through
+Bibliometric and Content Analysis.
+Sustainability 2023, 15, 12983.
+https://doi.org/10.3390/
+su151712983
+Academic Editors: Savvas A.
+Chatzichristofis, Hao-Chiang
+Koong Lin, Jian-Hong Ye,
+Yung-Wei Hao and Yu-Feng Wu
+Received: 1 August 2023
+Revised: 17 August 2023
+Accepted: 17 August 2023
+Published: 29 August 2023
+Copyright: © 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+sustainability
+Review
+Transforming Education: A Comprehensive Review of
+Generative Artificial Intelligence in Educational Settings
+through Bibliometric and Content Analysis
+Zied Bahroun 1,* , Chiraz Anane 2, Vian Ahmed 1 and Andrew Zacca 1
+1 Department of Industrial Engineering, College of Engineering, American University of Sharjah,
+Sharjah P.O. Box 26666, United Arab Emirates; vahmed@aus.edu (V.A.); b00084411@aus.edu (A.Z.)
+2 Department of Foreign Languages, College of Arts, Humanities and Social Sciences, University of Sharjah,
+Sharjah P.O. Box 27272, United Arab Emirates; canane@sharjah.ac.ae
+* Correspondence: zbahroun@aus.edu
+Abstract: In the ever-evolving era of technological advancements, generative artificial intelligence
+(GAI) emerges as a transformative force, revolutionizing education. This review paper, guided by
+the PRISMA framework, presents a comprehensive analysis of GAI in education, synthesizing key
+insights from a selection of 207 research papers to identify research gaps and future directions in
+the field. This study begins with a content analysis that explores GAI’s transformative impact in
+specific educational domains, including medical education and engineering education. The versatile
+applications of GAI encompass assessment, personalized learning support, and intelligent tutoring
+systems. Ethical considerations, interdisciplinary collaboration, and responsible technology use are
+highlighted, emphasizing the need for transparent GAI models and addressing biases. Subsequently, a
+bibliometric analysis of GAI in education is conducted, examining prominent AI tools, research focus,
+geographic distribution, and interdisciplinary collaboration. ChatGPT emerges as a dominant GAI
+tool, and the analysis reveals significant and exponential growth in GAI research in 2023. Moreover,
+this paper identifies promising future research directions, such as GAI-enhanced curriculum design
+and longitudinal studies tracking its long-term impact on learning outcomes. These findings provide
+a comprehensive understanding of GAI’s potential in reshaping education and offer valuable insights
+to researchers, educators, and policymakers interested in the intersection of GAI and education.
+Keywords: education; generative artificial intelligence; educational technology; ChatGPT; ethics;
+review
+1. Introduction
+In an era where technological advancements are redefining human existence, there is
+one revolutionary force that stands out among the rest: artificial intelligence (AI). AI has
+permeated every corner of our lives, quietly and profoundly transforming the way we work,
+communicate, and navigate the world. The rise of AI was sparked in November 2022, when
+U.S. company OpenAI (San Francisco, CA, USA) released ChatGPT [1], an AI program
+that draws upon a large language database to generate responses from text-based inputs
+entered by humans [2]. Since its launch, it has skyrocketed in popularity, becoming one of
+the fastest-growing consumer applications ever with an estimated 100 million active users
+every month [3]. Following the successful release of ChatGPT, other tech companies have
+come out with their own AI-powered products, such as Google’s Bard [4] and GitHub’s
+Copilot [5].
+AI has infused various domains of our lives, revolutionizing industries such as finance,
+education, engineering, healthcare, and many more. According to Hadi et al. [6], AI has
+transformed practices in the financial sector, such as algorithmic trading, market prediction,
+and financial reporting. Hadi et al. [6] further argue that education has seen the integration
+Sustainability 2023, 15, 12983. https://doi.org/10.3390/su151712983 https://www.mdpi.com/journal/sustainability
+Sustainability 2023, 15, 12983 2 of 40
+of AI in automated essay grading, intelligent tutoring systems, and personalized learning.
+In engineering, AI drives advancements in code generation, software testing, and document
+generation. In addition, in the healthcare sector, AI assists in radiologic decision-making,
+patient care, and medical education. These various use cases demonstrate the extensive
+reach and transformative power that AI can deliver across these diverse domains.
+More notably, the field of education is experiencing a transformative revolution, driven
+by the emergence of GAI. According to Baidoo-Anu and Owusu Ansah [7], GAI is an unsu-
+pervised or partially supervised machine learning framework that seamlessly generates
+artificial creations by analyzing existing digital content like videos, images/graphics, text,
+and audio. The impact of GAI has been felt across a diverse range of educational fields.
+In education, GAI finds versatile applications in assessment and evaluation, student per-
+formance prediction, intelligent tutoring systems, and learning management [8]. In the
+medical field, the application of GAI, such as ChatGPT, extends to medical education,
+where it offers realistic case scenarios and instantaneous feedback to medical students on
+their diagnostic and treatment decisions [9]. Moreover, GAI proves instrumental in provid-
+ing simplified explanations of complex medical and pharmaceutical concepts, facilitating
+students’ understanding [9,10]. In the field of computer science, AI tools demonstrate
+tremendous potential in coding education, as evidenced by GPT-3’s ability to generate
+diverse code explanations [11].
+AI’s impact has triggered a wide array of discussions encompassing diverse topics,
+ranging from its potential in transforming learning and teaching methods [12] to its role
+in aiding research endeavors and to the crucial considerations of ethics and academic
+integrity in its implementation [13]. In the domain of teaching, GAI showcases promising
+opportunities for lesson planning, personalized learning support, rapid assessment and
+evaluation, and addressing learners’ queries [12]. Furthermore, Markel et al. [14] have
+introduced a novel AI tool called “GPTeach”, which is specifically designed for teacher
+training, enabling aspiring educators to practice teaching with simulated students powered
+by GPT. As the transformative influence of AI in education continues to unfold, these
+discussions will undoubtedly shape the future of how we impart knowledge and foster
+learning in an ever-evolving educational landscape.
+This transformative technology has opened up new avenues for personalized instruc-
+tion, enhanced feedback, and tailored learning experiences, ultimately paving the way for
+a more efficient, inclusive, and engaging educational environment. GAI is reshaping the
+way we teach and learn by offering innovative solutions to longstanding challenges and
+opening up new possibilities for improving educational experiences for learners of all ages.
+As GAI continues to advance, it is crucial to investigate its applications, implications, and
+the challenges it poses to further explore its role in shaping the future of education.
+The scope of this review encompasses a wide range of topics, delving into the ap-
+plications of GAI in various educational contexts, the tools and techniques utilized, the
+effectiveness of GAI in supporting teaching and learning, the impact on student outcomes,
+and the potential challenges and ethical considerations associated with its implementation.
+By examining multiple dimensions of GAI in education, this review aims to provide a
+holistic overview of the field. This paper aims to analyze and consolidate a compilation
+of existing reviews on GAI in specific fields of education. By thoroughly examining a
+diverse range of papers in this domain, this study offers a comprehensive and in-depth
+understanding of the current state of research in this field. Through synthesizing and
+summarizing key findings, methodologies, and recommendations from multiple papers,
+this study provides a valuable resource for researchers, educators, and policymakers who
+are keenly interested in exploring the transformative intersection of GAI and education.
+This review paper contributes to the field in various ways. Firstly, it provides a compre-
+hensive overview of the current state of research on GAI in education, allowing researchers
+to identify the prevailing themes and research directions within the field. Secondly, it
+synthesizes the findings and insights from multiple review papers, providing a holistic
+perspective on the effectiveness and potential of GAI in educational contexts. Additionally,
+Sustainability 2023, 15, 12983 3 of 40
+this review identifies research gaps and areas that require further investigation, guiding
+future research endeavors. The subsequent sections of this paper will, therefore, present
+the methodology employed in selecting and analyzing the research papers, followed by a
+comprehensive content analysis and synthesis of the findings and insights. Key themes,
+trends, and recommendations will be presented, allowing readers to gain a comprehensive
+understanding of the existing knowledge base. Subsequently, a comprehensive bibliometric
+analysis will be conducted, examining prominent AI tools, research focus, geographic
+distribution, and interdisciplinary collaboration in detail. Finally, this review will conclude
+by highlighting the implications of the synthesized findings and suggesting future research
+directions to advance the field of GAI in education.
+2. Methodology
+The methodology employed in this research follows a systematic approach to gather
+and analyze literature concerning the integration of GAI in education. It involves four key
+steps, as described below:
+a. Literature retrieval—This step entails selecting appropriate search terms and key-
+words to comprehensively capture pertinent publications related to the intended
+topic representing the initial and pivotal phase of the data collection process. We
+retrieved a compilation of pre-existing articles and publications in the domain of
+GAI in education from the Scopus database. By utilizing a combination of the follow-
+ing keywords, “Education”, “GAI”, “Generative Artificial Intelligence”, “GPT-4”,
+“ChatGPT”, “AlphaCode”, “GitHub Copilot”, and “Bard”, the authors conducted a
+targeted search across titles, abstracts, and keyword fields. This process resulted in
+the enlistment of a total of 437 papers, spanning the years 2018 to 2023.
+b. Literature screening—The literature screening process for this study drew inspiration
+from the PRISMA statement, which is widely recognized as a rigorous and trans-
+parent approach for conducting systematic reviews and meta-analyses (Figure 1).
+PRISMA provides a structured framework to ensure the systematic identification,
+selection, and evaluation of the relevant literature, promoting the reliability and
+reproducibility of the review process [15]. Initially, a total of 437 papers were re-
+trieved. Following the removal of duplicates, 312 papers remained. After observingly
+reviewing each publication, all articles that were deemed irrelevant to our research
+focus were discarded. We narrowed the list down to 217 reviews, papers, and publi-
+cations that spanned from the years 2018 to 2023. The chronological growth of the
+papers (in the context of the topic) in the above-mentioned spanned years is depicted
+in Figure 2.
+The figure above depicts a substantial number of papers available from our compiled
+list, specifically published in the year 2023. Notably, there is a significant and exponential
+growth in the field of GAI from 2018 to 2023, indicating a growing amount of research
+interest in the topic. This surge in research can be attributed to the recent emergence
+of popular GAI tools, such as ChatGPT, which have garnered considerable attention and
+sparked innovation within the education domain. The increasing research activity, therefore,
+suggests that GAI is perceived as a promising area for innovation in education and that
+researchers and educators are increasingly recognizing the potential benefits of integrating
+AI technologies into educational settings.
+c. Content analysis—This step entails carefully studying a large amount of informa-
+tion, like research publications, and organizing it in a meaningful way. This helps
+researchers see common themes and patterns in the information. In this case, the
+content analysis focused on how GAI is being used in education. The methodology
+involved categorizing and classifying the research papers into different themes and
+sub-themes. This organization helps researchers understand the different ways GAI
+is impacting education, making it easier to draw conclusions and insights from the
+collected information.

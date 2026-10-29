@@ -1,0 +1,176 @@
+Citation: Ogunleye, B.; Zakariyyah,
+K.I.; Ajao, O.; Olayinka, O.; Sharma,
+H. A Systematic Review of Generative
+AI for Teaching and Learning Practice.
+Educ. Sci. 2024, 14, 636. https://
+doi.org/10.3390/educsci14060636
+Academic Editor: Bracha Kramarski
+Received: 28 March 2024
+Revised: 6 June 2024
+Accepted: 11 June 2024
+Published: 13 June 2024
+Copyright: © 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+education 
+sciences
+Systematic Review
+A Systematic Review of Generative AI for Teaching and
+Learning Practice
+Bayode Ogunleye 1,* , Kudirat Ibilola Zakariyyah 1, Oluwaseun Ajao 2, Olakunle Olayinka 3
+and Hemlata Sharma 4
+1 School of Architecture, Technology & Engineering, University of Brighton, Brighton BN2 4GJ, UK
+2 Department of Computing & Mathematics, Manchester Metropolitan University, Manchester M1 5GD, UK
+3 School of Computer Science, The University of Sheffield, Sheffield S1 4DP, UK
+4 Department of Computing, Sheffield Hallam University, Sheffield S1 2NU, UK
+* Correspondence: b.ogunleye@brighton.ac.uk
+Abstract: The use of generative artificial intelligence (GenAI) in academia is a subjective and hotly
+debated topic. Currently, there are no agreed guidelines towards the usage of GenAI systems in
+higher education (HE) and, thus, it is still unclear how to make effective use of the technology for
+teaching and learning practice. This paper provides an overview of the current state of research on
+GenAI for teaching and learning in HE. To this end, this study conducted a systematic review of
+relevant studies indexed by Scopus, using the preferred reporting items for systematic reviews and
+meta-analyses (PRISMA) guidelines. The search criteria revealed a total of 625 research papers, of
+which 355 met the final inclusion criteria. The findings from the review showed the current state and
+the future trends in documents, citations, document sources/authors, keywords, and co-authorship.
+The research gaps identified suggest that while some authors have looked at understanding the
+detection of AI-generated text, it may be beneficial to understand how GenAI can be incorporated into
+supporting the educational curriculum for assessments, teaching, and learning delivery. Furthermore,
+there is a need for additional interdisciplinary, multidimensional studies in HE through collaboration.
+This will strengthen the awareness and understanding of students, tutors, and other stakeholders,
+which will be instrumental in formulating guidelines, frameworks, and policies for GenAI usage.
+Keywords: artificial intelligence; generative AI; higher education; PRISMA; systematic literature
+review; teaching and learning; topic modelling
+1. Introduction
+Generative artificial intelligence (GenAI) tools have taken the world by storm, most
+especially, ChatGPT and now, Gemini [1]. The advancement in technology has raised
+strands of concern in various sectors, specifically, on the assumption that technology will
+replace peoples’ jobs. A perceived predominant sector related to such effect is higher
+education [2]. The higher education (HE) sector contributes to every nation’s economy,
+offering a wealth of benefits to society. HE plays a key role in enhancing social mobility,
+bolstering social capital, fostering political stability, reducing crime rates, promoting social
+unity, spurring innovation, and cultivating trust and tolerance [3]. The development of such
+technology can be traced back to the advent of large language models (LLMs) in 2018, when
+BERT was released [4]. Since then, several LLMs have been released including GPT [5].
+GenAI tools rely on these LLMs to perform the task they are developed for. For example,
+ChatGPT relies on the GPT series to perform its task. LLMs are trained on a large number
+of parameters (data), including text and images [5–7]. By processing a huge amount of
+data, LLMs learn the statistical relationships, patterns, and structure within datasets, which
+enables them to predict or generate relevant and meaningful content in response to user
+requests. Thus, they are capable of performing various complex tasks [6–9].
+Educ. Sci. 2024, 14, 636. https://doi.org/10.3390/educsci14060636 https://www.mdpi.com/journal/education
+Educ. Sci. 2024, 14, 636 2 of 20
+However, concerns including hallucinations [10], bias [11], ethical and privacy con-
+cerns [12,13], accidental plagiarism [14], and academic integrity [15–20] have been raised
+regarding GenAI tools; such tools have been praised for their potential benefits in rela-
+tion to HE. For example, Daun et al. [2] demonstrated the use of GenAI for teaching and
+learning within the context of software engineering education. They showed that GenAI
+tools like ChatGPT can be used to find literature, answer student questions, support code
+implementation, and generate exercises. Kurtz et al. [21] synthesised the literature and
+found out that GenAI offers opportunities to enhance students’ learning experiences by
+facilitating learning environments tailored to students’ educational needs. Their findings
+further suggest that the potential use of GenAI for student performance prediction offers
+an opportunity for early interventions, potentially reducing student churn and dropout
+rates. Atlas [22] reported the current application of GenAI in HE as automated essay
+scoring; personalised tutoring; research assistance; language translation; helping professors
+in creating their syllabus, quizzes, and exams; generating reports; and email and chatbot
+assistance. Pesovski et al. [23] added that GenAI provides an opportunity for affordable
+and sustainable personalised learning. Other notable benefits of GenAI in HE are creative
+writing and brainstorming [24], support for personalised tutoring [13], support for pro-
+gramming code development [25], essay grading [26], and it is useful for designing science
+units and rubrics [27]. In terms of user perceptions, Rajabi et al. [28] investigated both
+students’ and teachers’ perspectives on the integration of GenAI for teaching and learning
+within a post-secondary school environment using a qualitative dataset. The participants
+recognised the tool as an advanced search engine and emphasised that students are likely to
+use GenAI tools, irrespective of whether the tools are incorporated into HE courses or not.
+Their results showed that students and teachers have mixed perceptions about ChatGPT’s
+usage in a post-secondary school setting. The findings by Lozano and Blanco-Fontao [29]
+showed that students have a positive perception of the utilisation of GenAI tools in HE.
+Most importantly, their findings suggest that ChatGPT is not perceived as a threat, causing
+the deterioration of the educational system. Moreover, Sánchez-Ruiz et al. [30] surveyed
+110 students to gather students’ perspectives on the impact and usage of ChatGPT. Their
+results showed that students have a positive opinion of ChatGPT. However, there are
+concerns about gaining problem-solving and creative skills.
+Based on the challenges and promise GenAI offers to HE sectors, it is worth highlight-
+ing and synthesising the literature to understand the potential use, impact, and ethical
+issues posed by AI tools in the context of teaching and learning. To this end, this paper
+aims to conduct a systematic literature review on the use of GenAI tools in HE, provide
+an overview of the current state of research on GenAI for teaching and learning, and offer
+insights into future research directions. By doing so, this study formulates two research
+questions (RQ) to be answered, as follows:
+• RQ1. What is the evolutionary productivity in the field in terms of the most influ-
+ential journals, most cited articles, and authors, including geographical distribution
+of authorship?
+• RQ2. What are the main trends and core themes emerging from the extant literature?
+To the best of the researchers’ knowledge, only limited studies were found to have
+conducted a systematic review of the literature on GenAI in education. The authors in [31]
+conducted a tertiary systematic review of AI tools in education. Sullivan et al. [32] used a
+systematic search to review English language newspapers and online news sources about
+how ChatGPT is disrupting HE across selected countries. Furthermore, Bahroun et al. [33]
+adopted the preferred reporting items for systematic reviews and meta-analyses (PRISMA)
+framework for the selection of literature on GenAI use in education. These authors reviewed
+a total of 207 research papers using bibliometric and content analysis to explore GenAI’s
+transformative impact in specific educational domains, including medical education and
+engineering education. However, this study differs as it centres on a systematic review
+specifically on the use of GenAI for teaching and learning practice in HE. In addition, this
+paper adopts a topic modelling (TM) approach to distil information from the literature and
+Educ. Sci. 2024, 14, 636 3 of 20
+report core themes. To conclude, relevant analysis of the data collected is performed and
+the main contributions of this paper are described, as follows:
+• This review provides a comprehensive overview of the current state of research on
+GenAI for teaching and learning in HE, this helps researchers to identify the evolution-
+ary progression (most influential journals, articles, authors, including geographical
+distribution of authorship), prevailing topics, and research directions within the field;
+• This review synthesises the findings to generate insights into a holistic perspective on
+the potential, effectiveness, and limitations of GenAI use for teaching and learning
+in HE;
+• This review identifies research gaps that require further investigation, guiding future
+research work.
+2. Methodology
+A systematic literature review on the use of GenAI in HE was conducted by adopting
+the PRISMA [34] guidelines. Scholarly articles (conference proceedings and journal papers)
+over the last 7 years were reviewed and analysed. As shown in Figure 1, the study made
+use of key search terms related to GenAI, teaching, and learning, and HE. The keywords,
+as shown in Table 1, were used to extract metadata from the relevant research papers
+(documents) in the Scopus database. The Scopus database was used due to its document
+volume, reliability, the accuracy of the information, and its advantage of using rigorous
+original metadata to associate people, published theories, and institutions [33,35]. The
+following subsections discuss the steps taken to achieve the data collection and analysis.
+Educ. Sci. 2024, 14, x FOR PEER REVIEW 3 of 21 
+ 
+authors reviewed a total of 207 research papers using bibliometric and content analysis to 
+explore GenAI’s transformative impact in specific educational domains, including 
+medical education and engineering education. However, this study differs as it centres on 
+a systematic review specifically on the use of GenAI for teaching and learning practice in 
+HE. In addition, this paper adopts a topic modelling (TM) approach to distil information 
+from the literature and report core themes. To conclude, relevant analysis of the data 
+collected is performed and the main contributions of this paper are described, as follows: 
+• This review provides a comprehensive overview of the current state of research on 
+GenAI for teaching and learning in HE, this helps researchers to identify the 
+evolutionary progression (most influential journals, articles, authors, including 
+geographical distribution of authorship), prevailing topics, and research directions 
+within the field; 
+• This review synthesises the findings to generate insights into a holistic perspective 
+on the potential, effectiveness, and limitations of GenAI use for teaching and learning 
+in HE; 
+• This review identifies research gaps that require furth r inv stigation, guiding future 
+research work. 
+2. Methodology 
+A systematic literature review on the use of GenAI in HE was conducted by adopting 
+the PRISMA [34] guidelines. S holarly articles (conference proceedings and journal 
+papers) over the last 7 years were reviewed and analysed. As shown in Figure 1, the study 
+made use of key search terms related to GenAI, teaching, and learning, and HE. The 
+keywords, as shown in Table 1, ere used to extract met data from the relevant research 
+papers (documents) in the Scopus database. The Sc pus database was used due to its 
+document volume, reliability, the accuracy of the information, and its advantage of using 
+rigorous original m tadata to associ te people, published theories, and institutions 
+[33,35]. The following subsections discuss the steps taken to achieve the data collection 
+and analysis. 
+ 
+Figure 1. A systematic literature search using the PRISMA framework. 
+Figure 1. A systematic literature search using the PRISMA framework.

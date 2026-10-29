@@ -1,0 +1,289 @@
+Computers and Education: Artificial Intelligence 3 (2022) 100097
+Available online 6 September 2022
+2666-920X/© 2022 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+A systematic review of artificial intelligence techniques for collaborative 
+learning over the past two decades 
+Seng Chee Tan *, Alwyn Vwen Yen Lee, Min Lee 
+National Institute of Education, Nanyang Technological University, 1 Nanyang Walk Singapore, 637616, Singapore   
+A R T I C L E  I N F O   
+Keywords: 
+Artificial intelligence 
+Collaborative learning 
+Systematic review 
+AI in Education 
+A B S T R A C T   
+This systematic review focuses on publications related to studies of the use of artificial intelligence (AI) for 
+collaborative learning. The use of AI for collaborative learning is a recent phenomenon and a systematic review 
+of such studies is lacking. Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses 
+(PRISMA) protocol, 41 journal articles were shortlisted. These articles were analysed in terms of the contexts 
+of study (year, group size, platforms of interaction, and types of learners). Using a thematic approach, two broad 
+foci and five sub-categories of use of AI for collaborative learning were identified: (1) learning outcomes – (a) 
+collective performances, and (b) content of learning; (2) social interactions and processes – (c) sentiments and 
+emotions, (d) discourse patterns and talk moves, and (e) learner characteristic and behaviours. The AI techniques 
+were coded according to three broad purposes (discovering, learning and reasoning) and nine techniques: 
+clustering, ensemble, regression algorithms, deep learning, decision trees, natural language processing, instance- 
+based, fuzzy logic, and agents. A Sankey diagram was used to depict the relationships among the nine AI 
+techniques to the five sub-categories of how AI was used to support collaborative learning. The gaps in the 
+selected articles and limitations of the current review were discussed to suggest future areas of study.   
+1. Introduction 
+In the past few decades, artificial intelligence (AI) has been 
+increasingly applied to advance various fields that permeate many as
+pects of our lives (e.g., Burleson & Lewis, 2016; Kaplan & Haenlein, 
+2019; Zdenek, 2003). In recent years, the resurgent interest and 
+increasing use of AI in educational contexts have led to the emergence of 
+the research field “AI in education”, or AIED in short. AIED refers to the 
+use of AI technologies in educational settings that facilitate teaching and 
+learning by simulating human intelligence at various degrees to infer, 
+judge, predict, and make decisions (Hwang et al., 2020). These may take 
+the form of providing personalized feedback to students and teachers, 
+guidance for policymakers, or assistance in decision-making processes 
+(Miao et al., 2021; Seldon & Abidoye, 2018). 
+AIED has promising potential and is likely to play a key role in 
+influencing teaching and learning in the near future (Loeckx, 2016; 
+Seldon & Abidoye, 2018). Further, as AI is often considered a tool that 
+can leverage technical capacities to resolve difficult and complex 
+problems, the study of how AI can be used to support students’ learning 
+in complex computer-supported collaborative learning (CSCL) contexts 
+is gaining traction (Ludvigsen & Steier, 2019; Rosé & Ferschke, 2016). 
+This development will have an impact on how students frame and 
+investigate problems, explore multiple perspectives, and leverage mul
+tiple resources via collaboration and social interactions with one 
+another. Such learning contexts require students to develop advanced 
+agency and cognitive, social-emotional, and behavioural capacities for 
+working in knowledge societies. 
+How can institutions, teachers, researchers, instructional designers 
+and content creators contribute to the development of AIED? Answering 
+this question requires a more detailed scan of how studies are achieving 
+collaborative learning goals and conducting research studies with 
+existing AI techniques. A search for literature using EBSCOhost infor
+mation services and comprehensive search terms (see Section 2) and the 
+key term “review” did not lead to the identification of any article. To 
+address this gap and contribute to the effort of understanding how AI has 
+been used for collaborative learning, this systematic review examined 
+studies related to collaborative learning that are supported by AI tech
+niques published over the past two decades. This systematic review is 
+guided by the following research questions: 
+* Corresponding author. 
+E-mail addresses: sengchee.tan@nie.edu.sg (S.C. Tan), alwyn.lee@nie.edu.sg (A.V.Y. Lee), nie21.lm1646@e.ntu.edu.sg (M. Lee).  
+Contents lists available at ScienceDirect 
+Computers and Education: Artificial Intelligence 
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence 
+https://doi.org/10.1016/j.caeai.2022.100097 
+Received 28 June 2022; Received in revised form 21 August 2022; Accepted 31 August 2022   
+Computers and Education: Artificial Intelligence 3 (2022) 100097
+2
+1. What are the main characteristics of studies focusing on collabora
+tive learning supported by AI in terms of publication year, interac
+tion platforms, group size, and learner types?  
+2. What are the aspects of collaborative learning supported by AI and 
+what are the corresponding major AI techniques used to achieve 
+these goals?  
+3. What are the gaps arising from the findings, limitations of the review, 
+and future work? 
+2. Methods 
+This systematic review followed the Preferred Reporting Items for 
+Systematic Reviews and Meta-Analyses (PRISMA 2020) for the selection 
+of items (Moher et al., 2015; Page et al., 2021) a 4-phase flow diagram to 
+ensure the quality and rigor of reporting a systematic review. PRISMA 
+was selected for this review’s search strategy as it is widely endorsed and 
+adopted as a guideline for systematic reviews (Page et al., 2021). This 
+section presents the search strategy, selection inclusion and exclusion 
+criteria with explanations, and how data coding was conducted. 
+2.1. Data sources and search strategy 
+A wide range of databases was used as our primary source. The da
+tabases included Academic Search Complete, British Education Index, 
+Computer Source and Education Source. These databases were selected 
+based on their relevance to education (e.g., Education Source) and AI (e. 
+g., Computer Source) to ensure comprehensive coverage for the review. 
+We used EBSCOhost information services to search the database 
+concurrently. Scopus was included as an additional database to detect 
+other literature that could be relevant to our study. 
+A search was conducted in May 2022 using three sets of search terms 
+as shown in Table 1. The first set of search terms consists of different 
+variations of the term collaboration. The second set of search terms in
+cludes terms relevant to artificial intelligence. The third set of search 
+terms includes terms related to learning. In total, 2810 papers that 
+contain the three sets of search terms within the title and abstract were 
+identified in the search. 
+2.2. Selection inclusion and exclusion criteria 
+The overview of the search protocol is summarized in Fig. 1. This 
+protocol was conducted following the PRISMA statement (Moher et al., 
+2015). 
+Inclusion and exclusion criteria were used to select suitable studies 
+for this review. First, we limited the publication period to the past two 
+decades, from January 2002 to May 2022, to ensure the relevance of the 
+literature (Tang et al., 2021, pp. 1–19). This reduced the set to 
+2759studies. Next, we limited the search to peer-reviewed journal arti
+cles for quality assurance. Duplicate copies of the studies were also 
+removed. Based on this criterion, trade publications, editorials, books, 
+conference proceedings and review articles were also excluded from the 
+search. The search was further limited to papers published in English to 
+match the authors’ language proficiency, reducing the search to 
+2074papers. Next, the titles and abstracts were scanned to ensure that 
+the chosen articles were relevant to collaborative learning involving AI 
+technologies. By this criterion, we excluded studies such as collaborative 
+filtering (e.g., collaborative filtering for recommender systems by Zhang 
+et al., 2020), non-education contexts (e.g., collaborative editing of 
+websites by Chen et al., 2018) and use of non-AI technologies for 
+collaborative learning (e.g., use of learning analytics by Saqr et al., 
+2020). This reduced the short-listed items to 67 studies. In this review, 
+we included studies ranging from K-12 to higher education and noted 
+that we found no studies from the pre-school contexts. The full text of 
+each study was reviewed to verify that the focal point of the study re
+sides in the use of AI for collaborative learning activities. Our final set 
+consisted of 41 studies. Table 2 presents the inclusion and exclusion 
+criteria and the number of studies remaining after assessing the criteria 
+for fit. 
+2.3. Aspects of collaborative learning supported by technologies including 
+AI 
+This review focuses on the use of AI to support collaborative 
+learning. Theoretically, collaborative learning can be traced to the 
+social-cultural theory of learning (Vygotsky, 1978) which regards social 
+interactions as necessary processes of learning. It starts with interactions 
+between a more knowledgeable person (e.g., a tutor) with the learner 
+(interaction in the inter-mental plane) that results in cognitive changes 
+within the learner (changes in the intra-mental plane). Collaborative 
+learning or CL (Laal & Laal, 2012, p. 491) refers to 
+An educational approach to teaching and learning that involves 
+groups of learners working together to solve a problem, complete a task, 
+or create a product. In the CL environment, the learners are challenged 
+both socially and emotionally as they listen to different perspectives, 
+and are required to articulate and defend their ideas. In so doing, the 
+learners begin to create their own unique conceptual frameworks and 
+not rely solely on an expert’s or a text’s framework. 
+Dillenbourg (1999) explained that there are many variations in the 
+situations for collaborative learning, including group size, group 
+composition, nature of collaboration, and communication media; these 
+collaborative learning situations are arranged such that “particular 
+forms of interaction among people are expected to occur, which would 
+trigger learning mechanisms, but there is no guarantee that the expected 
+interactions will actually occur” (p. 5). In other words, how the learning 
+environment is structured and which aspect of collaborative learning is 
+supported are critical; as well, multiple factors are involved for effective 
+learning to occur. Thus, researchers have been exploring both the pro
+cesses and the learning outcomes of collaboration. 
+In addition to the variations in the concept and situations of 
+collaborative learning, a close concept is cooperative learning (Johnson 
+& Johnson, 2009). Differences between collaborative learning and 
+cooperative learning have been proposed; for example, collaborative 
+learning focuses on coordinated effort on shared goals and tasks, 
+whereas cooperative learning emphasizes the interdependence among 
+learners, often in the form of division of roles (Davidson & Major, 2014; 
+Dillenbourg et al., 1996); collaborative learning is for mature learners 
+who are self-directed whereas cooperative learning caters to younger 
+students who learn under teacher-directed activities (Bruffee, 1995). 
+Cooperative learning involves more structural guidance or scripting, 
+which is more teacher-directed, whereas collaborative learning prizes 
+students’ agency and working towards common goals. Regardless, 
+common attributes of collaborative and cooperative learning (Davidson 
+& Major, 2014, p. 29) include common tasks or activities for group work, 
+group interactions on the shared tasks or activities, helpful group pro
+cesses to jointly accomplish the tasks or activities, learning task, 
+accountability and responsibility exhibited by individuals, as well as 
+interdependence among individuals who are working together. 
+In addition to interactions with others, the theory of distributed 
+cognition (Hutchins, 1995) suggests that cognition involves interactions 
+with others with different expertise as well as tools in the environment 
+that provide additional cognitive resources for learning. External tools 
+Table 1 
+Search terms used in each category.  
+Categories Search terms in the category 
+Collaborative 
+learning 
+Collab* 
+Artificial 
+Intelligence 
+Artificial intelligence, AI, machine learning, ML, machine 
+intelligence, intelligent support, intelligent agent, automated 
+tutor, deep learning, neural network, natural language 
+processing, NLP, expert system 
+Learning learn*, stud*, educat*, school, university  
+S.C. Tan et al.                                                                                                                                                                                                                                   
+Computers and Education: Artificial Intelligence 3 (2022) 100097
+3
+may include computer-based resources such as the internet or learning 
+management systems. Computer-supported collaborative learning 
+(Stahl et al., 2014), or CSCL, has emerged as a prominent field of 
+research in the past three decades. Researchers have studied how stu
+dents interact and learn around a computer (e.g., Stahl, 2006) while 
+interacting with shared computer resources, as well as how students 
+learn by communicating through networked computers and interacting 
+with online resources (e.g., Scardamalia & Bereiter, 2014). In a CSCL 
+environment, students’ adaptiveness and self-directedness are critical 
+because they are not learning from a fixed-sequence tutorial program 
+but learning with others mediated by network computers, with fluid and 
+dynamic interactions and evolving roles and tasks. In such a situation, 
+students’ agency to engage with others and resources is prized (Scar
+damalia, 2002). 
+CSCL (e.g., online forums) not only support communication among 
+learners but also scaffold learners for more productive interactions and 
+meaning making. For example, researchers have explored the use of 
+Knowledge Forum, an online forum, to support students in collaborative 
+knowledge building (Scardamalia & Bereiter, 2014) and various fea
+tures, such as scaffolds for productive discourse, are used to encourage 
+productive interactions among learners. Research studies involving 
+CSCL have explored students’ learning outcomes, such as ideas 
+discussed (Lee & Tan, 2017) or performance in learning tasks, as well as 
+the processes such as discourse moves (e.g., argumentation moves by 
+Weinberger & Fischer, 2006), ways of grouping students (Moore et al., 
+2019), and students’ interaction processes (e.g., Hernández-Sellés et al., 
+2020). 
+Besides CSCL, in the late 2000s, the emergence of Massive Open 
+Online Courses (MOOCs) has rapidly gained traction as an educational 
+revolution that promises to provide an inclusive quality education that 
+can create an impact in education. The rapid advancement in MOOCs 
+has seen their enlistment in many universities globally (Sharrock, 2015). 
+The availability of students’ interaction and outcome data in CSCL and 
+MOOCs provides fertile ground for leveraging AI to support collabora
+tive learning. AI applications have been used to explore students’ ideas 
+and contents (Lee, 2021), students’ collaborative interactions (Järvelä 
+et al., 2020), and students’ emotions (Zhu et al., 2019). This review 
+focuses on collaborative learning because the applications of AI build on 
+the availability of data with technological supports (e.g., CSCL) for the 
+collaborative processes as elaborated below. 
+Based on the literature, this systematic review will examine the 
+selected papers on the followings: (1) contexts of learning (e.g., types of 
+learning environment, group size), (2) group learning outcomes (e.g., 
+content or ideas expressed by learners), and (3) group interaction pro
+cesses (e.g., grouping of or connecting students, promoting productive 
+discourse, promoting positive behaviours for collaboration). Recog
+nizing that there could be many variations in collaborative learning 
+(Dillenbourg, 1999), sub-categories of these three broad factors will be 
+identified through thematic coding of the short-listed articles. These are 
+presented in the Findings section. 
+2.4. Framework and coding for AI techniques 
+Although there are varying definitions of AI (Murphy, 2019), it has 
+often been referenced to be part of an approach, method, or algorithm 
+that resides in a system and serves the purpose of doing the work in place 
+of human intelligence. As Murphy (2019) noted, a precise definition is 
+not necessarily critical in the study of AI, and therefore the prevalence 
+and application of AI techniques across fields and disciplines can still be 
+generally categorized. 
+Fig. 1. Overview of search protocol.  
+Table 2 
+Inclusion and exclusion criteria.   
+Inclusion criteria Exclusion criteria 
+Publication 
+year 
+Papers published from 
+January 2002 to May 
+2022 
+Papers published before 2002 
+Source types Peer-reviewed journal 
+papers 
+Non-peer-reviewed journal papers, 
+trade publications, editorials, books, 
+conference proceedings and review 
+articles 
+Language English language Other languages (e.g., Spanish, 
+Chinese) 
+Context Education (e.g., K-12, 
+higher education) 
+Non-education contexts (e.g., 
+corporate settings) 
+Topic Use of AI for collaborative 
+learning 
+Collaborative AI systems, use of AI for 
+independent learning  
+S.C. Tan et al.                                                                                                                                                                                                                                   

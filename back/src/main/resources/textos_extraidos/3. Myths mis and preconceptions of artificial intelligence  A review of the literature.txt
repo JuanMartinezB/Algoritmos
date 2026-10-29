@@ -1,0 +1,331 @@
+Computers and Education: Artificial Intelligence 4 (2023) 100143
+Available online 26 May 2023
+2666-920X/© 2023 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+Myths, mis- and preconceptions of artificial intelligence: A review of 
+the literature 
+Arne Bewersdorff a,*, Xiaoming Zhai b, Jessica Roberts c, Claudia Nerdel a 
+a Technical University of Munich, Munich, Germany 
+b University of Georgia, Athens, USA 
+c Georgia Institute of Technology, Atlanta, USA   
+A R T I C L E  I N F O   
+Keywords: 
+Artificial intelligence 
+Misconceptions 
+Preconceptions 
+Review 
+A B S T R A C T   
+Artificial Intelligence (AI) is prevalent in nearly every aspect of our lives. However, recent studies have found a 
+significant amount of confusion and misunderstanding surrounding AI. To develop effective educational pro
+grams in the field of AI, it is vital to examine and understand learners’ pre- and misconceptions as well as myths 
+about AI. This study examined a corpus of 591 studies. 25 relevant studies were identified by applying the 
+following eligibility criteria: English-written original empirical research on education and AI and reporting AI 
+conceptions in a formal learning context. The review found studies from six continents, with the majority 
+conducted in Europe and North America. The studies predominantly focus on the school and university levels. 
+Findings reveal a range of preconceptions, misconceptions, and myths about AI, such as: Learners often have 
+limited understanding of AI on a technical level. They tend to attribute human-like characteristics or attributes to 
+AI systems and may have narrow views of AI’s scope, capabilities, and limitations. The review also shows that 
+learners often have binary and unspecific views about the threats, dangers, and benefits of AI. Effective 
+educational programs are key to empower learners’ understanding of AI, thus helping them make informed 
+decisions about the integration of AI in our society, rather than being swayed by misinformation and unnecessary 
+fear. This review may help inform the development of more effective teaching and outreach strategies in AI 
+education.   
+1. Introduction 
+The field of artificial intelligence (AI) has seen significant progress in 
+recent years, with advancements in many fields like machine learning 
+and natural language processing leading to the development of 
+increasingly sophisticated AI systems (Jiang, Li, Luo, Yin, & Kaynak, 
+2022; Latif et al., 2023). While AI is rushing into our lives and work
+places, there is still a significant amount of confusion, mis
+understandings and uncertainty surrounding AI (Oh et al., 2017). There 
+is confusion about technical terms concerning AI (Lindner & Berges, 
+2020), the misunderstanding to conceptualize AI as embodied (Kreinsen 
+& Schulz, 2021) and uncertainty like unspecific fear as well as hope 
+towards AI (Antonenko & Abramowitz, 2022). 
+Given the increasing importance of AI in our society, it is crucial that 
+the general public has a basic understanding of the capabilities and 
+limitations of AI, as well as the ethical implications of its use. Exploring 
+these myths, mis- and preconceptions about AI among learners can 
+provide valuable insights into their prior understanding of the field and 
+help develop effective learning programmes. Although there is some 
+research on how learners conceptualize AI (e.g. Antonenko & Abramo
+witz, 2022; Chounta, Bardone, Raudsep, & Pedaste, 2022; Lindner & 
+Berges, 2020; Lindner & Romeike, 2019; Teng et al., 2022), it is still 
+considered to be in the early stages of development (Mertala, Fagerlund, 
+& Calderon, 2022). This literature review synthesizes myths, mis- and 
+preconceptions about AI among learners, with the goal of informing the 
+development of more effective teaching and outreach strategies in the 
+field. Under the term ‘learners’ we summarize individuals engaged in a 
+formal process of learning, like students from schools and universities as 
+well as participants of professional developments. 
+The objectives of this review are 1) to identify and consolidate 
+common mis- and preconceptions about AI among learners, 2) cluster 
+them into themes under a framework, and 3) identify possible research 
+gaps in the literature. To identify these potential research gaps it will be 
+important to see which groups of learners are already covered quite 
+* Corresponding author. Technical University of Munich, Arcisstraße 31, 80333, Munich, Germany. 
+E-mail address: arne.bewersdorff@tum.de (A. Bewersdorff).  
+Contents lists available at ScienceDirect 
+Computers and Education: Artificial Intelligence 
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence 
+https://doi.org/10.1016/j.caeai.2023.100143 
+Received 18 March 2023; Received in revised form 2 May 2023; Accepted 25 May 2023   
+Computers and Education: Artificial Intelligence 4 (2023) 100143
+2
+satisfactorily by existing studies and which groups might be not repre
+sented yet. 
+The review is guided by the questions.  
+1. Which group of learners are already covered by existing studies; 
+which groups might be not represented?  
+2. What are some common myths, misconceptions, and preconceptions 
+that appear in the literature? 
+To obtain a comprehensive, qualitative understanding without 
+limiting our perspective we searched for any empirically reported myth 
+or pre- or misconception about AI among learners. We define the terms 
+pre- or misconception in line with Özdemir and Clark (2007) as 
+phenomenological primitives, facts, facets, narratives, concepts, and 
+mental models at various stages of development and sophistication and 
+enhance it with the understanding of myths in AI as an understanding of 
+beliefs and cultural implications about AI. To improve readability 
+throughout this paper we will substitute the term ‘pre- or misconception 
+and myths about AI’ with ‘conceptions of AI’. 
+2. Framework 
+While educational programs in the field of AI are gaining popularity 
+among instructors, researchers and in curricula (Su, Zhong, & Ng, 2022), 
+most learners did not have the opportunity to participate in any formal 
+AI courses (for university students: Hornberger et al. (in prep.)). How
+ever, AI has been a topic in the news and popular media for decades, and 
+learners have likely encountered it in various contexts (Leufer, 2020). 
+Research has shown that conceptions of AI are heavily influenced by the 
+way AI is represented in the media and the language used to describe it 
+(Chao, Hsu, Liu, & Cheng, 2021; Kerr, Barry, & Kelleher, 2020; Zhai & 
+Krajcik, 2022). Especially the concepts of embodied or general AI have a 
+long-standing tradition in media and the movies (e.g. The Terminator 
+Series; I, Robot). This can lead to the development of naive mental 
+models prior to the development of formal knowledge in that area 
+(Taber, 2014). Learners’ existing beliefs and knowledge about AI likely 
+guide the interpretation of new information they encounter. This pro
+cess can sometimes lead to or perpetuate misconceptions (Gooding & 
+Metz, 2011), as learners’ prior knowledge and believes may not align 
+with the true nature of AI. Driven by the diversity of prior knowledge, 
+believes and ideas acquired through informal learning, one central 
+model of learning in AI education is conceptual change. Conceptual 
+change means the commitment to a new conception about a principle or 
+a phenomenon, and the abandoning of an old one (White & Gunstone, 
+1989). In recent discussions, the term “conceptual change” has been 
+replaced with “conceptual reconstruction”, recognizing that current 
+conceptions frequently don’t require complete abandonment but instead 
+are more likely to evolve progressively toward formal knowledge (Pot
+vin, 2022). It builds on the precise and comprehensive knowledge of 
+learners pre- and misconceptions and believes (cf. Özdemir & Clark, 
+2007). Therefore, understanding of the pre- and misconceptions as well 
+as believes and myths about AI among learners is crucial. Deeper un
+derstanding of popular conceptions about AI could help educators and 
+researchers in the field develop more effective teaching and outreach 
+strategies. These teaching strategies could eventually support learners to 
+gain a more accurate and nuanced understanding of AI based on their 
+prior conceptions. 
+Additionally, exploring the myths, mis- and preconceptions about AI 
+among learners can provide valuable insights into the general public’s 
+understanding of the field. Given the increasing importance of AI in our 
+society, it is crucial that the general public has a basic understanding of 
+the capabilities and limitations of AI, as well as the ethical implications 
+of its use (Ng, Leung, Chu, & Qiao, 2021). 
+Often myths and pre- and misconceptions in the field of AI are re
+ported in gray literature like tech articles or reports lacking empirical 
+foundation (e.g.: Google, 2022; Liang, 2021; VK, 2022). It remains 
+uncertain whether these myths, preconceptions, and misconceptions 
+actually exist. This study provides an overview of common myths and 
+pre- and misconceptions about AI and consolidates them empirically. 
+Overall, this study of myths, mis- and preconceptions about AI among 
+learners has the potential to provide valuable insights into their un
+derstanding of the field, and can inform the development of more 
+effective teaching and outreach strategies in the field of AI. 
+There are alternative terms and labels to describe the naive mental 
+models held by learners prior to the development of formal knowledge 
+in an area (Taber, 2014). The terms preconceptions and misconceptions are 
+commonly invoked in discussions around conceptual change, though no 
+universal definition of these terms is agreed upon across disciplines (Chi 
+& Roscoe, 2002). Misconceptions are used to describe a flawed mental 
+model held by learners, which conflicts with commonly accepted sci
+entific consensus (Clement 1993; Sanger & Greenbowe 1997; Smith 
+et al. 1994). While the term of misconceptions may have a negative 
+connotation, alternative terms are preconception or naive knowledge 
+structures, which include, but are not limited to phenomenological 
+primitives, facts, facets, narratives, concepts, and mental models at 
+various stages of development and sophistication (Özdemir & Clark, 
+2007) without a negative bias. Preconceptions are generally loosely held 
+beliefs that, though incorrect, are easily replaced with instruction, 
+whereas misconceptions are more difficult to repair (Chi & Roscoe, 
+2002). By contrast, when discussing AI in popular scientific articles (e.g. 
+www.aimyths.org from Leufer, Steinbrück, & Liptakova, 2020), news 
+articles (e.g. Forbes, 2022) and articles in the scientific discipline of 
+computer science itself (Emmert-Streib, Yli-Harja, & Dehmer, 2020) as 
+well as the social sciences (e.g. Atkinson, 2016) the term of myths in AI 
+rather than the term pre- or misconceptions resonates widely. Myths are 
+not true or false and focus more on the beliefs and cultural aspects than 
+knowledge (Natale & Ballatore, 2020). 
+3. Method 
+3.1. Search procedure 
+The aim of this review is to get a broad, qualitative overview of any 
+empirically reported conceptions about AI among learners. In order to 
+maintain a comprehensive perspective, the original corpus consisted of 
+not just peer-reviewed papers but also conference proceedings and 
+institutional reports. 
+The systematic review presented in this paper was planned, con
+ducted, and reported according to the PRISMA 2020 statement (Page 
+et al., 2020). The PRISMA 2020 statement comprises a 27-item checklist 
+guiding the introduction, methods, results and discussion sections of a 
+literature review. 
+For the database search, we selected databases representing different 
+disciplines related to education, psychology and computer science. 
+These included the Education Resource Centre (ERIC, www.eric.org) by 
+the US Department of Education for the field of educational sciences, the 
+Web of Science by Thomson Reuters in all fields but limited to the topic 
+of ‘Education & Educational Research’ and the IEEE Xplore as academic 
+database in the field of engineering and computer science. 
+Search terms for IEEE Xplore were “artificial intelligence” AND 
+“students” AND “misconceptions“, “artificial intelligence” AND “stu
+dents” AND “preconceptions” and “artificial intelligence” AND “stu
+dents” AND “myths”. 
+The term “students” was omitted for the search of the ERIC and the 
+Web of Science database because of their a priori focus (ERIC) on the 
+field of educational research or by limiting the search to the topic of 
+‘Education & Educational Research’ (Web of Science). 
+To broaden the view on possible conceptions about AI the sample 
+was augmented by searches conducted by Google Scholar as Google 
+Scholar is considered to be important sources of gray literature, con
+ference proceedings and institutional reports (Haddaway, Collins, 
+Coughlin, & Kirk, 2015). Therefore, although Google Scholar has its 
+A. Bewersdorff et al.                                                                                                                                                                                                                           
+Computers and Education: Artificial Intelligence 4 (2023) 100143
+3
+limitations and should not be used as the only source for systematic 
+reviews, it seemed to be apt for the purposes of this qualitative and 
+explorative review. 
+Search terms for Google Scholar were identical to the search terms of 
+IEEE Xplore. We limited the included results for every single search with 
+Google Scholar to 150. 
+In the database search of IEEE Xplore and the search on Google 
+Scholar we included the term ‘students’ to focus on educational studies 
+and persons who are somehow engaged in a learning process as it was 
+not possible to limit the search to a specific field. Using the by far not so 
+prominent term of ‘learners’ would have cropped results too vigorous to 
+achieve the goal of a broad review. 
+We did not omit studies e.g. reporting misconceptions among 
+teachers from this qualitative literature review. Therefore, in this article 
+we use the broader term of ‘learners’. The search was conducted on 13th 
+and 14th of December 2022. Over all databases as well as the aug
+menting Google Scholar searches 591 records were identified. 
+3.3. Eligibility criteria 
+We first reduced redundant articles. All duplicates of articles were 
+removed. This led to the reduction of the corpus by 24 records. To 
+identify the most relevant literature, we then identified a set of eligi
+bility criteria.  
+a) Written in English  
+b) Original, empirical research  
+c) Scope relates to education and artificial intelligence  
+d) Report on any conceptions about AI  
+e) study conducted in context of a formal learning process or institution 
+(like school or university) 
+Based on the criteria, we screened the titles of the articles, and 
+removed any articles with obviously no connection to myths, pre- and 
+misconceptions about AI (in total 260 of 426). We then read the ab
+stracts of the 163 articles and further excluded 136 articles that do not 
+meet all five criteria. Five of the remaining articles could not be 
+retrieved and were excluded from the review, which resulted in 25 
+articles to be reviewed. The process is visualized in the flowchart shown 
+in Fig. 1. 
+3.3. Identifying AI conceptions via content analysis 
+All articles included in the analysis were reviewed by experts in AI 
+education with respect to the reported conceptions. Descriptions of the 
+items (individual myths, mis- or preconceptions) mentioned in the 
+studies were identified and extracted. This was done by highlighting 
+relevant texts in the results of the reviewed paper and saved for further 
+processing in a table document. We then further employed qualitative 
+content analysis to analyze the highlighted texts (Mayring, 2021). This 
+involved paraphrasing (deleting text components that do not fit the 
+content focus), splitting into separate conceptions if necessary, and 
+generalization (generalizing the conceptions to the desired abstraction 
+level, e.g. omitting references to the sample group). This led to 110 
+conceptions (items) which could be identified. An example of analysis is 
+illustrated in Table 1. 
+3.4. Clustering the conceptions into categories and themes 
+As our data basis we used the items gained from the content analysis 
+(see section 3.3). For pooling the conceptions (items) into categories and 
+the categories into themes, we followed a structured process containing 
+three steps: 
+Identifying the Conceptions. First, we read through the items multiple 
+times to become familiar with the content and identify recurring themes, 
+ideas, or patterns. After this, we started to identify relationships and 
+connections between the different items. This process, called axial 
+coding (Cliff & Melissa, 2017), created categories based on the patterns 
+and relationships observed in the data. Using the axial coding, we 
+identified categories that are closely related or overlap in meaning and 
+merged them into a single, more comprehensive category. Therefore we 
+defined an algorithm: We iterated through each of the 110 items. The 
+first item created an initial category. We checked if the next item was 
+similar to any existing category by comparing it with all existing cate
+gories. If the item was found to be similar to a category, it was included 
+in that category. The check for similarity was always guided by the 
+heuristics of internal homogeneity (maximizing cohesive validity with 
+Fig. 1. Prisma flowchart.  
+Table 1 
+Example of the process of qualitative content analysis (Mayring, 2021) on 
+reviewed papers.  
+Original finding Paraphrasing Splitting Generalization 
+“Medical students 
+were unsure if AI 
+would 
+particularly affect 
+their specialty of 
+choice (31.7% 
+agree, 35.1% 
+disagree), but 
+agreed that they 
+will need to 
+understand AI 
+throughout their 
+career (68.3% 
+agree; 104 
+strongly agree, 
+212 agree) and 
+that they would 
+use applications of 
+AI during their 
+careers (72.9% 
+agree; 110 
+strongly agree, 
+223 agree).” ( 
+Pucchio et al., 
+2022, p. 4, p. 4) 
+Medical students 
+agreed that they 
+will need to 
+understand AI 
+throughout their 
+career and that 
+they would use 
+applications of AI 
+during their 
+careers. 
+Medical students 
+agreed that they 
+will need to 
+understand AI 
+throughout their 
+career 
+thinking of the 
+need to 
+understand AI in 
+their careers 
+Medical students 
+agreed that they 
+would use 
+applications of AI 
+during their 
+careers 
+AI will be 
+essential and 
+commonly used 
+in medicine  
+A. Bewersdorff et al.                                                                                                                                                                                                                           

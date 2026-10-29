@@ -1,0 +1,120 @@
+Vol:.(1234567890)
+Journal for STEM Education Research (2023) 6:408–426
+https://doi.org/10.1007/s41979-023-00112-x
+1 3
+RESEARCH REVIEW
+A Systematic Review of AI‑Driven Educational Assessment 
+in STEM Education
+Fan Ouyang1   · Tuan Anh Dinh1 · Weiqi Xu1
+Accepted: 20 October 2023 / Published online: 9 November 2023 
+© The Author(s), under exclusive licence to Springer Nature Switzerland AG 2023
+Abstract
+Artificial intelligence (AI), as an emerging technology, has been widely used in 
+STEM education to promote the educational assessment. Although AI-driven edu-
+cational assessment has the potential to assess students’ learning automatically and 
+reduce the workload of instructors, there is still a lack of review works to holisti-
+cally examine the field of AI-driven educational assessment, especially in the STEM 
+education context. To gain an overview of the application of AI-driven educational 
+assessment in STEM education, this research conducted a systematic review based 
+on 17 empirical research published from 2011 January to 2023 April. Specifically, 
+this review examined the functions, algorithms, and effects of AI applications in 
+STEM educational assessment. The results clarified three main functions of AI-
+driven educational assessment, namely academic performance assessment, learn-
+ing status assessment, and instructional quality assessment. Moreover, the system-
+atic review found that both traditional algorithms (e.g., natural language processing, 
+machine learning) and advanced algorithms (e.g., deep learning, neural fuzzy sys-
+tems) were applied in STEM educational assessment. Furthermore, the educational 
+and technological effects of applying AI-driven educational assessment in STEM 
+education were revealed. Based on the results, this research proposed educational 
+and technological implications to guide the future practice and research of AI-driven 
+educational assessment in STEM education.
+Keywords  Artificial intelligence · Artificial intelligence in education · Educational 
+assessment · STEM education
+ *	 Fan Ouyang 
+	 fanouyang@zju.edu.cn
+1	 College of Education, Zhejiang University, #866, Yuhangtang Rd., Hangzhou 310058, Zhejiang, 
+China
+409
+1 3
+Journal for STEM Education Research (2023) 6:408–426	
+Artificial Intelligence in STEM Education
+STEM education, as an interdisciplinary learning approach in education, focuses 
+on the integration of science, technology, engineering, and mathematics, in order 
+to help students develop interdisciplinary knowledge through solving real-world 
+problems, enhance their higher-order thinking and collaboration skills, and trans-
+form education from the teacher-directed lectures to active learner-centered 
+learning (Henderson et  al., 2011; Kennedy & Odell, 2014). However, with the 
+development of STEM education, it usually faces challenges during the instruc-
+tional and learning processes, such as tracking students’ learning processes and 
+attitudes (Vennix et al., 2018), designing authentic, productive STEM problems 
+(Theobald et  al. 2020), and assessing their performances (Jiao et  al., 2022). To 
+address these issues, emerging technologies, particularly artificial intelligence 
+(AI), have been used in STEM education to decrease instructors’ workload and 
+promote students’ personalized and adaptive learning (Chen, et al., 2020; Hwang 
+et al., 2020; Jiao et al., 2022; Ouyang & Jiao, 2021). Specifically, the application 
+of AI technologies has great potential to bring opportunities for innovations in 
+STEM education, such as providing recommendations and feedback to students 
+(Debuse & Lawley, 2016), identifying at-risk students (Holstein et  al., 2018), 
+providing learning materials based on students’ needs (Chen et  al., 2020), and 
+assessing their learning automatically (Wang et al., 2011; Zampirolli et al., 2021). 
+Tseng et al. (2023) utilized machine learning and physiological signals to assess 
+students’ personality traits and aided students in improving their academic perfor-
+mance. Overall, AI technologies have been widely applied in STEM education to 
+enhance the efficiency of instruction, empower students’ learning, and transform 
+the educational system.
+Relevant Work
+Educational Assessment in STEM Education
+Educational assessment, as a process of gathering and analyzing information 
+about students’ learning performance, is usually applied in STEM education to 
+help instructors gain understanding of students’ learning status and make instruc-
+tional decisions (Conley, 2015). Specifically, educational assessment mainly 
+includes formative and summative assessment in STEM education. First, in form-
+ative assessment, the assessor (e.g., instructor, educational researcher) takes an 
+active approach to provide ongoing feedback on students’ performance during 
+the learning process, which helps students understand their learning status to fur-
+ther modify their learning behaviors (Hendriks et al., 2019). Second, summative 
+assessment is conducted at the end of the instructional and learning phase, which 
+is primarily used for the final scoring and accreditation, usually without providing 
+further feedback or adjustment opportunities for students (Lin & Lai, 2014). In 
+410	 Journal for STEM Education Research (2023) 6:408–426
+1 3
+STEM education, formative and summative assessments are usually used together 
+to track and evaluate students’ learning behaviors and performance during the 
+instructional and learning process (Chandio et  al. 2016). However, some chal-
+lenges and problems exist during the educational assessment process in STEM 
+education. For example, during the formative assessment in STEM education, 
+one of the challenges is how to provide adequate and timely feedback to students 
+about their learning performance (Tempelaar et  al. 2015). In addition, the sub-
+stantial and repetitive tasks during summative assessment also bring huge work-
+load to instructors in STEM education, which might reduce the time they spend 
+on the personalized student-centered instruction. Therefore, how to increase the 
+effects of educational assessment has become a critical problem to promote the 
+development of STEM education.
+AI‑Driven Educational Assessment in STEM Education
+The emergence and application of AI techniques brings great opportunities to 
+reshape educational assessment in STEM education (Ouyang et  al., 2022; Wang 
+et  al., 2011; Zampirolli et  al., 2021). AI-driven educational assessment highlights 
+using automated AI algorithms and models to assess or evaluate the instructional 
+and learning process, in order to improve the assessment efficiency and promote the 
+quality of STEM education (Gobert et al., 2013). First, in formative assessment, pre-
+vious researchers have started to use AI techniques to support the assessment process 
+through automated data collection and analysis. For example, Saito and Watanobe 
+(2020) proposed a learning path recommendation system designed with natural lan-
+guage processing (NLP) to assess students’ programming learning performance. 
+Xing et  al. (2021) used Bayesian networks to automatically assess students’ engi-
+neering learning performance during the STEM learning process. Through using AI 
+techniques, instructors can track and understand students’ learning status, and the 
+issue of delayed feedback in formative assessment can be solved. Second, in sum-
+mative assessment, AI technologies can also assist instructors to automatedly assess 
+students’ STEM learning performance. In addition, through analyzing and synthe-
+sizing large amounts of data, AI algorithms can provide insights and reveal students’ 
+learning patterns that may not be immediately obvious to instructors (Ekolu, 2021). 
+For example, Erickson et al. (2020) applied an NLP-enabled automated assessment 
+system in a mathematics curriculum to assess students’ learning performance. Yang 
+(2023) presented an approach for assessing undergraduate students’ digital literacy 
+through using natural language processing and other AI technologies. Bertolini et al. 
+(2023) argued that Bayesian methods offered a practical and interpretable way to 
+evaluate students’ learning performance, which was a promising AI model for sci-
+ence education research and assessment. Overall, the application of AI technologies 
+has the potential to empower the formative and summative assessment process, with 
+an ultimate goal to enhance the quality of STEM education.

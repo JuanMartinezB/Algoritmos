@@ -1,0 +1,185 @@
+Artificial intelligence for education
+and its emphasis on assessment
+and adversity quotient: a review
+Jyoti Mudkanna Gavhane and Reena Pagare
+MIT Art Design and Technology University, Pune, India
+Abstract
+Purpose – The purpose of this study was to analyze importance of artificial intelligence (AI) in education and
+its emphasis on assessment and adversity quotient (AQ).
+Design/methodology/approach – The study utilizes a systematic literature review of over 141 journal
+papers and psychometric tests to evaluate AQ. Thematic analysis of quantitative and qualitative studies
+explores domains of AI in education.
+Findings – Results suggest that assessing the AQ of students with the help of AI techniques is necessary.
+Education is a vital tool to develop and improve natural intelligence, and this survey presents the discourse use
+of AI techniques and behavioral strategies in the education sector of the recent era. The study proposes a
+conceptual framework of AQ with the help of assessment style for higher education undergraduates.
+Originality/value – Research on AQ evaluation in the Indian context is still emerging, presenting a potential
+avenue for future research. Investigating the relationship between AQ and academic performance among
+Indian students is a crucial area of research. This can provide insights into the role of AQ in academic
+motivation, persistence and success in different academic disciplines and levels of education. AQ evaluation
+offers valuable insights into how individuals deal with and overcome challenges. The findings of this study
+have implications for higher education institutions to prepare for future challenges and better equip students
+with necessary skills for success. The papers reviewed related to AI for education opens research opportunities
+in the field of psychometrics, educational assessment and the evaluation of AQ.
+Keywords Education, Artificial intelligence, Teaching-learning analytics, Assessment, Adversity Quotient
+Paper type Literature review
+1. Introduction
+Modern technology is conquering “artificial intelligence” (AI) (Chen et al., 2020a), which is the
+center of significant computer research, design and application. Humans are trying hard to
+embed AI in a machine by making use of natural intelligence. Why? Because it has been
+proved by earlier researchers, the need for time competes with smart systems (Carbonell,
+1970; Sarker, 2022; Spector and Ma, 2019), which take less effort to operate, work
+automatically, efficiently, etc. The field is in demand in the 21st century characterized by
+many varied and independent efforts. Intelligence (Atrizka and Pratama, 2022) means the
+capability to attain and apply information, knowledge and skills. AI does not exactly work
+like human cognitive intelligence, and it is closer to the realm on which this research review
+focuses. AI is spanning the education sector speedily. Education is multidimensional
+(Ouyang and Jiao, 2021). Education accommodates administration, academic monitoring,
+counseling, teaching-learning, assessments, exams and feedback. Some policies help to
+improve quality of education. Recently Indian education System devised New Education
+Policy in 2020 (NEP) (Aktar, 2021). It is introduced as NEP 2020. It signifies skill-based
+assessment. NEP 2020 talks about the 360-degree development of a student which is
+incorporated in the following section. NEP focuses on talent, capabilities and life skills. This
+literature discusses about AI-based assessment framework to evaluate the adversity quotient
+AI for
+education
+609
+Funding: This research received no external funding.
+Conflicts of interest: The authors declare no conflict of interest.
+The current issue and full text archive of this journal is available on Emerald Insight at:
+https://www.emerald.com/insight/0040-0912.htm
+Received 5 April 2023
+Revised 31 August 2023
+26 November 2023
+30 January 2024
+Accepted 3 March 2024
+Education þ Training
+Vol. 66 No. 6, 2024
+pp. 609-645
+© Emerald Publishing Limited
+0040-0912
+DOI 10.1108/ET-04-2023-0117
+(AQ) of a student with the help of technology. Table 1 consists of abbreviations used in the
+paper to understand the term’s meaning.
+A. Motivation
+I. In Goal 4 [Sustainable Development Goal (SDG) 4] of the 2030Agenda (Zhang et al., 2020;
+Cf, O. D. D. S., 2015), the worldwide education expansion agenda is reflected for
+sustainable development, embraced by India in 2015 – in pursuit of “guaranteeing all-
+encompassing and impartial quality education and promote learning opportunities for
+all which are lifelong” by the year 2030 (Vinuesa et al., 2020). In effect, all of the critical
+goals and objectives (SDGs) for sustainable development could be accomplished by 2030
+(Morrow-Gorton, 2022).
+It is an urge of qualitative, multidimensional, multidisciplinary education, which must focus
+on modernizing, acclimating and fascinating new significant viewpoints in unique and
+varying arenas.
+II. Education: Education is the most approachable aspect used to develop and improve
+natural intelligence. Many scientists (Pathak, 2007) have interpreted the term
+Education from their perspective.
+Table 2 gives different definitions that articulate the meaning of “Education”. After
+proceeding with the summarized meaning of these definitions, it can be outlined as
+“Education is a continuous process of learning with the aim of cultivating knowledge and
+imbibe life-skills to become an ideal citizen.”
+III. Role of National Education Policy [NEP] 2020 in current education:
+National Education Policy (2020), Aktar (2021) is the primary education strategic program of
+the current century. Its objective is to address themany growing developmental certainties of
+India in the first and foremost place. This policy recommends the amendment and renovating
+Abbreviation Meaning
+NEP 2020 National/New Education Policy 2020 (India)
+SDG Sustainable development goal
+AI Artificial intelligence
+NLP Natural language processing
+NN Neural network
+ML Machine learning
+DL Deep learning
+GA Genetic algorithm
+ASM Advanced statistical model
+IEEE Institute of Electrical and Electronics Engineers
+DARPA Defense Advanced Research Projects Agency
+AQ Adversity quotient
+MPSC Maharashtra Public Service Commission
+ICAI Intelligent Computer-Aided Instruction
+GALA Genetic Algorithm Learning Application
+RACE Reading comprehension dataset from examinations
+BLEU Bilingual evaluation understudy
+GRE Graduate record examinations
+CET Common entrance test
+AIED Artificial intelligence in education
+HE Higher education
+Table 1.
+List of abbreviations
+ET
+66,6
+610
+of all characteristics of the education structure as shown in Table 3. NEP 2020 is based on the
+trust that education must develop:
+(1) Cognitive abilities
+(2) Communal, moral and emotional (expressive) capacities and temperaments.
+This structure consists of guidelines and governance, to create a novel system that is
+affiliated with the aspirational goals of existing education, including SDG4.
+A. Objectives
+The fundamental research objectives:
+• To elaborate AI techniques used in the education sector.
+• To study the significance of the assessment strategies in teaching-learning.
+• To establish the relationship between assessment and AQ with the help of AI.
+B. Prior Research
+1. In education, intelligent quotient (IQ) has been considered an important factor for
+success in life. There is a new quotient called AQ which is an indicator to measure
+Sr.
+No. Scientist Education
+1 Aristotle (384–322 BC) “Education is the method of training a person to fulfill his intention by
+exercising all the abilities to the fullest extent as a member of society.”
+2 Martinus J. Langeveld
+(1905–1989)
+“Education is every interaction that happens is every association that
+occurs between adults with children is a field or a state where the
+educational work in progress (Standish and Saito, 2012)”
+3 Prof. H. Mahmud Yunus
+(1899–1982)
+“In order for the child to live a happy and all what he did be beneficial to
+himself and society (Srimulyani, 2011)”
+4 Socrates ((469–399 BC) “Educationmeans bringing out the ideas of universal validitywhich are
+latent in the mind of every man”
+5 Mahatma Gandhi (1869–
+1948)
+“By education I mean an all-round drawing out of the best in child and
+man-body, mind and spirit”
+National education policy
+year 1968
+National educational policy 1986
+(Revised in the year 1992) National educational policy year 2020
+1. The “Education to all”
+vision
+2. Focused on
+differently abled
+students and Girl’s
+education
+1. This policy is motivated byEarly
+Childhood Care and Education
+(ECCE) through a child-centered
+approach (CCA)
+2. Setting up autonomous colleges
+and countryside universities in
+rural India followed byGandhian
+ideology
+1. It is designed to enable complete
+essential learning
+2. Universal right of entry to education
+which leads towards the 100%
+Gross Enrollment Ratio (GER)
+3. Fundamental principles are
+3.1. Distinguish, categorize and foster
+the exceptional capabilities of each
+student
+3.2 Life skills- communication skills,
+collaboration skills, cooperative in a
+team, supportive skills and
+flexibility
+Table 2.
+Various definitions of
+“Education”
+Table 3.
+National educational
+policies analysis (India)
+AI for
+education
+611

@@ -1,0 +1,138 @@
+Open Access
+© The Author(s) 2024. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits 
+use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original 
+author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third 
+party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the mate-
+rial. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or 
+exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://​
+creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+REVIEW ARTICLE
+Xia et al. Int J Educ Technol High Educ           (2024) 21:40  
+https://doi.org/10.1186/s41239-024-00468-z
+International Journal of Educational
+Technology in Higher Education
+A scoping review on how generative artificial 
+intelligence transforms assessment in higher 
+education
+Qi Xia3   , Xiaojing Weng2   , Fan Ouyang3   , Tzung Jin Lin4 and Thomas K.F. Chiu1,5,6*    
+Abstract 
+Generative artificial intelligence provides both opportunities and challenges for higher 
+education. Existing literature has not properly investigated how this technology would 
+impact assessment in higher education. This scoping review took a forward-thinking 
+approach to investigate how generative artificial intelligence transforms assessment 
+in higher education. We used the PRISMA extension for scoping reviews to select articles 
+for review and report the results. In the screening, we retrieved 969 articles and selected 
+32 empirical studies for analysis. Most of the articles were published in 2023. We used 
+three levels—students, teachers, and institutions—to analyses the articles. Our results 
+suggested that assessment should be transformed to cultivate students’ self-regulated 
+learning skills, responsible learning, and integrity. To successfully transform assessment 
+in higher education, the review suggested that (i) teacher professional development 
+activities for assessment, AI, and digital literacy should be provided, (ii) teachers’ beliefs 
+about human and AI assessment should be strengthened, and (iii) teachers should be 
+innovative and holistic in their teaching to reflect the assessment transformation. Edu-
+cational institutions are recommended to review and rethink their assessment policies, 
+as well as provide more inter-disciplinary programs and teaching.
+Keywords:  Generative artificial intelligence, Scoping review, Higher education, 
+Assessment, Educational policy, Professional development, Assessment literacy, AI 
+literacy
+Introduction
+Artificial intelligence (AI) technologies have played an important role in improving learn-
+ing, teaching, assessment, and educational administration (Chen et  al., 2020; Zhang & 
+Aslan, 2021; Chiu et al., 2023). With the release of ChatGPT, generative artificial intelligence 
+(GenAI) is seen as having an unprecedented major impact on higher education. How GenAI 
+transforms and influences higher education is still unclear (Al-Zahrani, 2023). GenAI refers 
+to a subset of AI technologies capable of generating new content, ranging from text, images, 
+and music to code and synthetic data (Chiu, 2023, 2024). Unlike typical AI technologies pri-
+marily designed for analysis and pattern recognition, GenAI can create novel outputs based 
+on the data they have been trained on (Barrett & Pack, 2023). The advent of GenAI not only 
+*Correspondence:   
+Thomas.kf.chiu@gmail.com; 
+tchiu@cuhk.edu.hk
+1 Department of Curriculum 
+and Instruction, The Chinese 
+University of Hong Kong, Hong 
+Kong, China
+2 Department of Curriculum 
+and Instruction, The Education 
+University of Hong Kong, Hong 
+Kong, China
+3 College of Education, Zhejiang 
+University, Hangzhou, China
+4 Program of Learning Sciences, 
+National Taiwan Normal 
+University, Taipei, Taiwan
+5 Centre for Learning Sciences 
+and Technologies, The Chinese 
+University of Hong Kong, Hong 
+Kong, China
+6 Centre for University 
+and School Partnership, The 
+Chinese University of Hong 
+Kong, Hong Kong SAR, China
+Page 2 of 22Xia et al. Int J Educ Technol High Educ           (2024) 21:40 
+indicates a new era of efficiency and precision but also brings forth a set of challenges and 
+ethical considerations (Perera & Lankathilake, 2023; Chiu, 2024). GenAI stands out as a 
+transformative force at all levels of education, particularly in the field of higher education.
+Historically, assessment in higher education has predominantly been a manual and 
+time-intensive task, often constrained by limited human resources and teacher-centered 
+instruction (Broadbent, 2017; Knight & Drysdale, 2020; Penny & Coe, 2004). However, 
+GenAI is starting to reshape these limitations and add more challenges, offering innova-
+tive approaches for evaluating student performance, tailoring learning experiences, and 
+improving the overall quality of educational outcomes (Moorhouse et  al., 2023; Chiu, 
+2023; Chiu et al., 2023). Recent research suggests that tools like ChatGPT can aid college 
+students in completing tasks such as essay and proposal writing and take-home exami-
+nations, raising concerns about increased risks of cheating and undermining academic 
+integrity (Chiu et al, 2023; Moorhouse et al., 2023). These indicate that two of the major 
+affordances of GenAI will have been transforming what program goals and student learn-
+ing outcomes should be (Chiu et al., 2023; Chiu, 2024; Guo & Wang, 2023). First, with the 
+aid of this technology, students may be able to complete tasks for which they lack the nec-
+essary skills, such as creating photographs and getting some ideas from other disciplines 
+(Guo & Wang, 2023). This opportunity motivates higher education institutions to create 
+more interdisciplinary programs and instructors to employ more interdisciplinary teach-
+ing strategies. Second, GenAI could assist students in getting disciplinary subject content 
+by producing content-based assignments and providing answers to questions based on the 
+discipline (Chan, 2023; Chaudhry et al., 2023). The students could access the disciplinary 
+content easier than before for self-regulated learning. GenAI will have been utilized in the 
+workplace. Therefore, what skills graduates should nurture need to be revisited and recon-
+sidered. The traditional assessment method is becoming increasingly inadequate for accu-
+rately assessing students’ actual learning outcomes. These also indicate that the assessment 
+methods in higher education must evolve in response to the implications of GenAI.
+Assessment that is related to the programs and course objectives has a direct impact on 
+learning and teaching for students and teachers (Heeneman et  al., 2015; Popham, 2009). 
+Higher education institutions should design and redesign policy and curriculum to address 
+the changes brought about by GenAI; they must adapt to changing educational needs and 
+ensure equitable AI access (Perkins, 2023; Rajabi et al., 2023). However, research on its appli-
+cation in higher education assessment methods is still limited, and opinions vary widely as 
+the majority were conducted in 2023. For future high education, coexisting with evolving AI 
+technology and adapting to an AI-driven environment is a necessary path for employment 
+and life (Chiu, 2024). How GenAI transforms higher education needs more studies. Accord-
+ingly, this scoping review addresses this research gap by focusing on the impact of GenAI on 
+three aspects—students, teachers, and institutions—in higher education assessment over the 
+past five years. Through exploring these three aspects, the review aims to provide a detailed 
+understanding of GenAI’s role in modernizing and potentially revolutionizing the assess-
+ment landscape in higher education. The main research question is: How does GenAI trans-
+form assessment in higher education? This question is explored through three sub-questions:
+RQ1. How does GenAI add learning opportunities and challenges to student assessment?
+RQ2. How does GenAI impact teachers in assessing student learning?
+RQ3. How does GenAI impact institution policies on assessments?
+Page 3 of 22Xia et al. Int J Educ Technol High Educ           (2024) 21:40 	
+Method
+Scoping reviews are an ideal tool for determining the scope or coverage of a body of lit-
+erature on a given topic and giving a clear indication of the volume of the literature while 
+providing a broader overview of its focus (Munn et al., 2018). In particular, the explora-
+tory nature of scoping reviews informs areas for subsequent research. We conducted 
+this scoping review in accordance with the PRISMA Extension for Scoping Reviews 
+(PRISMA-ScR) reporting guidelines and checklist (Tricco et  al. 2018). This review 
+focuses on empirical studies conducted in the past five years regarding the application of 
+GenAI in higher education.
+Article selection process
+To find the targeted literature, we searched three widely used digital academic data-
+bases related to education and AI technologies: ERIC, Web of Science, and Scopus. The 
+search terms were constructed with a boolean logic as follows: (assess* OR evaluate*) 
+AND (“higher education” OR universit* OR college* OR undergrad* OR graduate* OR 
+postgrad* OR under-grad* OR post-grad*) AND (“generative artificial intelligence” OR 
+“ChatGPT” OR “generative AI”). During the search process, the following selection cri-
+teria were set in the search engine: (a) peer-reviewed journal articles; (b) written in Eng-
+lish; (c) published in the last 5 years. As the search engines of different databases have 
+different ways of setting options, the search criteria settings were adjusted to suit each 
+database. The initial search was completed on September 30, 2023.

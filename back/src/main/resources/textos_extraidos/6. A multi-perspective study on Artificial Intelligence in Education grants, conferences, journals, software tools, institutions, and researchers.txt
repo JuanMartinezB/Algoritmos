@@ -1,0 +1,291 @@
+Computers and Education: Artificial Intelligence 1 (2020) 100005Contents lists available at ScienceDirect
+Computers and Education: Artificial Intelligence
+journal homepage: www.elsevier.com/locate/caeaiA multi-perspective study on Artificial Intelligence in Education: grants,
+conferences, journals, software tools, institutions, and researchers
+Xieling Chen a, Haoran Xie b,*, Gwo-Jen Hwang c
+a Department of Mathematics and Information Technology, The Education University of Hong Kong, 10 Lo Ping Road, Tai Po, New Territories, Hong Kong Special
+Administrative Region
+b Department of Computing and Decision Sciences, Lingnan University, 8 Castle Peak Road, Tuen Mun, New Territories, Hong Kong Special Administrative Region
+c Graduate Institute of Digital Learning and Education, National Taiwan University of Science and Technology, Taipei, TaiwanA R T I C L E I N F O
+Keywords:
+Artificial intelligence in education
+Multiple perspectives
+Funding trend
+Major research issues* Corresponding author.
+E-mail addresses: xielingchen0708@gmail.com (
+https://doi.org/10.1016/j.caeai.2020.100005
+Received 14 August 2020; Received in revised form
+2666-920X/© 2020 The Author(s). Published by Els
+nc-nd/4.0/).A B S T R A C T
+With the rapid development of artificial intelligence (AI) technologies and a continuously growing interest in their
+application in educational contexts, there has been significant growth in the scientific literature in relation to the
+application of AI in education (AIEd). This study aims to present multiple perspectives on the development of
+AIEd in terms of relevant grants, conferences, journals, software tools, article trends, top issues, institutions, and
+researchers to provide an overview of AIEd for its further development and implementation. With this study, we
+contribute to the research field by enabling educators and scholars to understand the status and development of
+relevant grants and publications concerning AIEd. Also, findings concerning active actors can help educators and
+scholars identify the active researchers and institutions in the research on AIEd. Furthermore, researchers and
+educators are able to identify relevant journals and be more aware of major issues in AIEd studies. In addition, we
+also highlight the significance and necessity of the launch of the new Elsevier journal AIEd-related journal named
+Computers & Education: Artificial Intelligence.1. Introduction
+Technologies have a significant impact on today’s society and human
+beings. They have greatly changed the way we think, feel, act, and how
+we communicate and interact with each other. Meanwhile, technological
+advancements are rapidly and tremendously changing the ways in which
+we learn and teach. Consequently, the landscape of education is gradu-
+ally changing.
+Especially in recent years, with the advance and prevalence of
+interactive technologies, their applications within and outside of classes
+are steadily gaining in popularity. Such technologies aim to adapt to
+learners’ diverse needs and situations, as well as to enhance competi-
+tiveness in the global education market. Students utilize tablets rather
+than copybooks, and teachers use various educational tools and appli-
+cations such as Google Classroom and Moodle. Also, a great number of
+Massive Open Online Course (MOOC) platforms like Class Central, EdX,
+and Coursera are increasingly available for online learning. The
+increasing number of active MOOC users indicates the wide acceptance
+and appreciation of digital and distance learning technologies. Addi-
+tionally, there are MOOCs that even provide learners with opportunitiesX. Chen), hrxie2@gmail.com (H.
+12 October 2020; Accepted 12
+evier Ltd. This is an open access ato obtain official degrees from distinguished universities and institutes.
+Intrinsically, the future of education is, to a large degree, related to
+the advances in novel intelligent technologies and the rapid development
+of computational capacities. Hence, the educational community is facing
+the opportunity and challenge brought by the continuously developing
+artificial intelligence (AI) technologies, which can potentially and
+fundamentally change the structure, operation, and governance of
+educational institutes (Popenici & Kerr, 2017).
+The work in AI is dedicated to addressing cognitive problems that are
+commonly related to human intelligence. The educational sector is un-
+deniably significantly influenced by AI. AI applications in education
+(AIEd) are widely used by learners and educators nowadays and involve
+various tools and applications, for example, intelligent tutoring systems,
+teaching robots, and adaptive learning systems. AIEd supports learning
+occurring in both traditional classes and workplaces by combining AI and
+various learning sciences, for example, education, psychology, linguis-
+tics, and neuroscience, aiming at stimulating and advancing the devel-
+opment of AI-driven educational applications featuring flexibility,
+personalization, and effectiveness(Luckin, Holmes, Griffiths, & Forcier,
+2016).Xie), gjhwang.academic@gmail.com (G.-J. Hwang).
+October 2020
+rticle under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+Table 1
+Search query in Web of Science.
+TS ((“artificial intelligence” OR “machine intelligence” OR “artificial
+neural network*” OR “machine learning” OR “deep learn*” OR
+“natural language process*” OR “robotic*” OR “thinking computer
+system*” OR “expert system*” OR “evolutionary computation” OR
+“hybrid intelligent system*“) AND (“education*” OR “teaching”))
+Language English
+Article
+types
+“PROCEEDINGS PAPER” OR “ARTICLE”
+Time span 1999–2019
+Indexes SCI-EXPANDED, SSCI, A&HCI, CPCI-S, CPCI-SSH, BKCI-S, BKCI-SSH,
+ESCI
+1 https://www.nsf.gov/.
+2 https://www.arc.gov.au/.
+3 https://ec.europa.eu/research/fp7/index_en.cfm.
+4 https://ec.europa.eu/programmes/horizon2020/en/h2020-sections
+-projects.
+5 http://www.nsfc.gov.cn/english/site_1/index.html.
+X. Chen et al. Computers and Education: Artificial Intelligence 1 (2020) 100005To present a multi-perspective overview of the development of AIEd,
+this study examines relevant grants, conferences, journals, software tools,
+article trends, top issues, institutions, and researchers. Such an investi-
+gation is important for the following reasons. First, scholars and their
+projects largely depend on funding as the main research driver, and every
+year considerable financial resources are invested in facilitating scientific
+activities. The trend analysis of funding in a particular field is essential in
+terms of examining whether the field is of great importance and research
+interest, and has great potential to make advances. Such analysis is also
+helpful for decision-makers in the determination of effective funding
+policies in (re)allocating resources to the most promising research fields
+and projects (Ebadi& Schiffauerova, 2016). Second, analysis of trends in
+scientific publications in a particular field can reflect the evolution of
+production and interest, as well as global scientific progress and devel-
+opment tendency in the field (Loonen et al., 2007; Ye et al., 2018).
+Generally, the growth in the number of publications usually reflects an
+expansion of the global science system concerning the field (Aksnes et al.,
+2016). Third, analysis of conferences and journals helps researchers and
+students identify relevant publication sources with an international scope
+(Song, Chen, Hao, Liu, & Lan, 2019). Fourth, the analysis of institutions
+and researchers helps scholars identify major contributors to the field
+with the most potential to develop and share research (Mair & Rei-
+schauer, 2017). Furthermore, analysis of research issues helps identify
+the foci of research-based publications in a particular field in the past,
+current, and future (Snyder, 2011). In addition, a survey of relevant
+software and products provides a basic understanding of the market size
+concerning a particular field, as well as what types of products have been
+commonly invested in and what can be further improved. Accordingly,
+there are six research questions we aim to answer:
+RQ1: What was the trend of grants in relation to AIEd?
+RQ2: What were the major conferences and journals related to AIEd?
+RQ3: What were the major software tools concerning AIEd?
+RQ4: What was the trend of AIEd publications?
+RQ5: What were the top frequently used keywords in AIEd
+publications?
+RQ6: What were the active institutions and researchers in the field of
+AIEd?
+This study contributes to the research field in several aspects. First, it
+enables educators and scholars to understand the status and development
+of relevant grants and publications concerning AIEd. Second, it helps
+educators and scholars identify the active researchers and institutions in
+the research on AIEd. Third, researchers and educators are able to
+identify relevant journals dealing with AIEd to find channels to make
+contributions to the community. Fourth, it enables educators and
+scholars to be more aware of the top keywords being used in AIEd
+studies, which is especially helpful when they are making decisions about
+which types of issues to deal with. In addition, this research helps edu-
+cators and scholars identify relevant software tools concerning the
+application of AI for educational purposes.
+The rest of this article is outlined as follows. The data collection and
+analyses related to characteristics concerning AIEd are described in
+"Material and methods" section. The "Results" section presents the results
+and findings concerning grants, conferences, journals, software tools,
+article trends, top keywords, institutions, and researchers in relation to
+AIEd. In addition, we also introduce a newly developed AIEd-related
+Elsevier journal named Computers & Education: Artificial Intelligence. In
+the "Discussion" section, we provide a discussion on the findings and
+highlight the significance and necessity of the launch of the new journal.
+Finally, this study ends with a "Conclusion" section to summarize the
+major content and findings of our study.
+2. Material and methods
+To analyze the recent funding trends related to AIEd, we collected2
+funding data concerning educational technology funded by several well-
+known international funding bodies, including the National Science
+Foundation,1 the Australia Research Council,2 the European Union fp73
+and h2020 projects,4 as well as the National Natural Science Foundation
+of China.5 It should be noted that for the Australia Research Council,
+grants that are related to educational systems were considered. For each
+of the above funding bodies, the collected relevant grants were organized
+by funding year to calculate the annual number of grants, so as to depict
+how the number of grants evolved across time.
+We collected data from the Web of Science (WoS) using the advanced
+search query provided in Table 1. We chose the WoS for the following
+reasons. First, WoS is the most popularly used database for bibliometric
+studies (Roemer& Borchardt, 2015). Second, the published studies in the
+WoS were generally subjected to the meticulous and peer-review process,
+ensuring high-quality publications. Additionally, in comparison to other
+databases, the bibliographic data collected from the WoS were more
+consistent and normative in expression. The search terms were deter-
+mined by referring to previous studies (e.g., Heradio et al., 2016;
+Martí-Parre~no et al., 2016; Tran et al., 2019, 2019a). The search was
+conducted on October 3, 2020. A total of 9560 records were collected.
+We analyzed the AIEd publication and citation trends and the major
+keywords being used, as well as the major publication sources, in-
+stitutions, and countries/regions to understand the research status of
+AIEd research (e.g., Chen & Xie, 2020, Chen et al., 2018).
+To identify the active researchers in the field of AIEd, we used cita-
+tions provided by Google Scholar. Specifically, we included authors with
+a research interest in AIEd who had more than 1000 citations as of
+August 3, 2020.
+To identify the top frequently adopted keywords in the 9560 AIEd
+publications, we collected the author-defined keywords as well as the
+keywords provided by the WoS (i.e., WoS Keywords Plus) for each
+publication and calculated their frequencies to determine those that were
+most commonly used.
+We additionally provided an overview of some relevant journals,
+conferences, and software tools related to AIEd.
+3. Results
+3.1. Article and citation trends
+The trend for publications from 1999 to 2019 is illustrated in Fig. 1. In
+general, the number of AIEd publications showed a growing trend over
+the studied years. The evolution of the published article output generally
+followed three stages. The first stage was from 1999 to 2002, with a
+comparatively slow growth tendency. The second stage featured a steady
+Fig. 1. Publication trend of AI in education.
+Table 2
+Top WoS categories.
+WoS category A %
+EDUCATION EDUCATIONAL RESEARCH 2128 22.26%
+COMPUTER SCIENCE ARTIFICIAL INTELLIGENCE 1813 18.96%
+ENGINEERING ELECTRICAL ELECTRONIC 1788 18.70%
+COMPUTER SCIENCE THEORY METHODS 1309 13.69%
+EDUCATION SCIENTIFIC DISCIPLINES 1290 13.49%
+COMPUTER SCIENCE INTERDISCIPLINARY APPLICATIONS 1265 13.23%
+ROBOTICS 1070 11.19%
+COMPUTER SCIENCE INFORMATION SYSTEMS 919 9.61%
+AUTOMATION CONTROL SYSTEMS 603 6.31%
+ENGINEERING MULTIDISCIPLINARY 560 5.86%
+COMPUTER SCIENCE SOFTWARE ENGINEERING 336 3.52%
+SURGERY 312 3.26%
+TELECOMMUNICATIONS 293 3.07%
+COMPUTER SCIENCE CYBERNETICS 290 3.03%
+ENGINEERING MECHANICAL 201 2.10%
+HEALTH CARE SCIENCES SERVICES 153 1.60%
+MEDICAL INFORMATICS 152 1.59%
+SOCIAL SCIENCES INTERDISCIPLINARY 138 1.44%
+COMPUTER SCIENCE HARDWARE ARCHITECTURE 137 1.43%
+UROLOGY NEPHROLOGY 123 1.29%
+ENGINEERING BIOMEDICAL 121 1.27%
+ENGINEERING MANUFACTURING 117 1.22%
+OPERATIONS RESEARCH MANAGEMENT SCIENCE 115 1.20%
+ENGINEERING INDUSTRIAL 114 1.19%
+INFORMATION SCIENCE LIBRARY SCIENCE 106 1.11%
+EDUCATION EDUCATIONAL RESEARCH 2128 22.26%
+COMPUTER SCIENCE ARTIFICIAL INTELLIGENCE 1813 18.96%
+ENGINEERING ELECTRICAL ELECTRONIC 1788 18.70%
+COMPUTER SCIENCE THEORY METHODS 1309 13.69%
+EDUCATION SCIENTIFIC DISCIPLINES 1290 13.49%
+Note: A: publication count; %: the proportion of publications in the total corpus.
+X. Chen et al. Computers and Education: Artificial Intelligence 1 (2020) 100005growth tendency from 2003 to 2011. The third stage was a fast growth
+period from 2012 to 2019. The developmental trend of annual citations
+received by the studied publications (see Fig. 2) was quite similar, with a
+dramatic growing tendency during the past two decades. Figs. 1 and 2
+show that 2019 was the most prolific year with the most publications and
+citations. Such results demonstrate that increased attention and interest
+in AI’s application in educational contexts around the world led to a
+boost in publications about AIEd, with more than 74% of the literature
+being published between 2012 and 2019, leading to the conclusion that
+this is a rapidly emerging field of research.
+3.2. Top subjects
+The sample documents covered a total of 209 WoS subject categories.
+The research on AIEd covered a wide variety of themes and disciplines.
+The top 30 subject categories are displayed in Table 2, which shows that
+EDUCATION EDUCATIONAL RESEARCH ranked first with 2128 publi-
+cations, constituting 22.26%, followed by COMPUTER SCIENCE ARTI-
+FICIAL INTELLIGENCE with 1813 publications, and ENGINEERING
+ELECTRICAL ELECTRONIC with 1788 publications. COMPUTER SCI-
+ENCE THEORY METHODS, EDUCATION SCIENTIFIC DISCIPLINES,
+COMPUTER SCIENCE INTERDISCIPLINARY APPLICATIONS, and RO-
+BOTICS were also relevant subject categories. AIEd is a multi-disciplinary
+area with major coverage of computer science and education (Kandlhofer
+et al., 2016). Additionally, since AI is itself multi-disciplinary, it has close
+interactionwith various disciplines such as psychology and neuroscience.
+3.3. Conferences and journals
+1) Top publication sources
+The studied 9560 AIEd publications were distributed across a total of
+5240 sources, among which the top 30 are shown in Table 3. Among the
+listed sources, Lecture Notes in Computer Science published the most
+AIEd studies, with 222 publications (2.32%), followed by InternationalFig. 2. Citation trend of AI in education.
+3
+Conference on Education and New Learning Technologies (196 publi-
+cations), and International Technology, Education and Development
+Conference (178 publications). It should be noted that 18 out of the 30
+listed sources, and all of the top nine, were proceedings. Furthermore,
+among the 2358 publications published by the 30 sources, about 75%
+were proceedings papers. This indicates that, currently, themajor sources
+for researchers to make contributions to AIEd research are proceedings
+and conferences, which reflects the need to launch more international
+journals with a particular focus on AI in education, so as to increase the
+number of channels for scholars to make contributions to this field.
+2) Examples of other active journals and conferences in AIEd
+We further list here examples of other very relevant journals and
+conferences to AIEd research. There are four Elsevier journals which
+publish research papers on various facets of technology-enhanced edu-
+cation, including Computers & Education, The Internet and Higher Ed-
+ucation, Computers and Composition, and System, as well as several non-
+Elsevier scholarly journals that have partially overlapping topic coverage
+with AIEd, as shown in Table 4.
+Additionally, the following conferences, ICWL, ICALT, SIGITE, TEEM,
+AIED, ITS, L@S, EDM are quite relevant to AIEd. The statistics of sub-
+missions and accepted full papers are shown in Table 5.3.4. Countries/regions, institutions, and researchers
+The major contributors, including countries/regions and institutions
+for the publication of the 9560 AIEd studies, were identified. The top 20
+countries/regions are presented in Table 6, and the top 30 institutions are
+listed in Table 7. The most prolific country in the AIEd research was the
+USA with 2581 publications, constituting 27%, followed by China (751
+publications, 7.86%), and Spain (607 publications, 6.35%). In terms of
+prolific institutions, the top was the University of California System with
+146 publications, constituting 1.53%, followed by the University System
+of Georgia (103 publications, 1.08%), and Pennsylvania Commonwealth

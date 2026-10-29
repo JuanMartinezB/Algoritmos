@@ -1,0 +1,1056 @@
+Eur J Educ. 2024;59:e12663.	﻿	    | 1 of 21
+https://doi.org/10.1111/ejed.12663
+wileyonlinelibrary.com/journal/ejed
+Received: 9 January 2024  |  Revised: 23 March 2024  |  Accepted: 5 April 2024
+DOI: 10.1111/ejed.12663  
+R E V I E W  A R T I C L E
+A comprehensive exploration of artificial 
+intelligence competence frameworks for 
+educators: A critical review
+Tamar Mikeladze1,2  |   Paulien C. Meijer1 |   Roald P. Verhoeff1
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and 
+reproduction in any medium, provided the original work is properly cited.
+© 2024 The Authors. European Journal of Education published by John Wiley & Sons Ltd.
+1Radboud Teacher Academy, Radboud 
+University, Nijmegen, the Netherlands
+2Faculty of Education Sciences, Iakob 
+Gogebashvili Telavi State University, Telavi, 
+Georgia
+Correspondence
+Tamar Mikeladze, Radboud Teacher 
+Academy, Radboud University, 
+Erasmusplein 1, Nijmegen 6525 HT, 
+the Netherlands.
+Email: tamar.miqeladze@tesau.edu.ge
+Funding information
+EU; European Union, Grant/Award Number: 
+NEAR/TBS/2021/EA-RP/0086
+Abstract
+Recent literature underscores the need for teachers to 
+develop AI competencies with a recognition of the cur-
+rent lack of well-defined competence frameworks. This 
+critical review investigates teachers' Artificial Intelligence 
+(AI) competence frameworks (AI CFTs), analysing their 
+strengths, weaknesses and practical applications for re-
+searchers, educators and policymakers. It identifies five 
+distinct types of AI CFTs within Competence Construct 
+Claims (Child, S., & Shaw, S. 2023). A conceptual approach 
+to validating competence frameworks. Research Matters: 
+A Cambridge University Press & Assessment publication, 35, 
+27–40.), each addressing the complexities of AI in its early 
+stages. Notably, frameworks derived from empirical data 
+offer detailed descriptions of competencies, while those 
+based on conceptual models provide broader overviews. 
+Highlighting the need for further empirical research, this 
+review helps identify and understand existing approaches 
+to teacher AI competence development and paves the way 
+for integrating AI CFTs into teacher education, ultimately 
+enhancing educators' preparedness to harness AI in their 
+teaching practices.
+K E Y W O R D S
+AI competence frameworks for teachers, AI competencies for 
+educators, AI in education, competence models
+2 of 21  |    MIKELADZE et al.
+1  | INTRODUC TION
+Artificial Intelligence (AI) has brought transformative changes in education, offering innovative tools and ap-
+proaches that can enhance teaching and learning (Chakravorti, 2022; Gill et al., 2023; Grubaugh & Levitt, 2023). 
+AI in education promises to support students with special needs, reduce school dropout, personalise learning, 
+support decision-making, generate feedback, assess new skills, etc. (Bentley et al., 2018; Brundage, 2019; Vincent-
+Lancrin & van der Vlies, 2020). Additionally, AI in education (AIED) brings a fresh set of competencies that edu-
+cators should cultivate. The rapid advancement of AI technologies requires an understanding of AI capabilities 
+and limitations. This entails more than just basic digital literacy; it encompasses data literacy, algorithm literacy, 
+computational thinking and design thinking. Notably, the ethical use of AI in educational settings becomes a 
+paramount concern, making AI and data ethics a crucial aspect of teacher competence (Berendt et al., 2020; U.S. 
+Department of Education, Office of Educational Technology, 2023; European Commission, 2022).
+Even as schools increasingly embrace AI tools, teacher preparation is not prioritised and is experiencing delays. 
+A recent UNESCO global survey, which included over 450 schools and universities, revealed that fewer than 10% 
+of them have established institutional policies or formal guidance regarding the use of generative AI applications 
+(UNESCO survey, 2023).
+The rise of AI in education has provided food for discussion on teachers' AI competencies in recent litera-
+ture.2020 Trujillo-Cabezas (2020) proposed AI digital competencies for educators, including the utilisation of 
+applications, adept information management, content creation for learning and facilitating student connections 
+through technology. Teachers require both knowledge and tools to evaluate the appropriateness of AI-supported 
+activities in achieving their educational objectives and transform their way of teaching (Flogie & Krabonja, 2023). 
+Liu and Li (2022) defined teacher human capital for AI in education through three facets: expertise and proficiency 
+in AI in education, emotional disposition and attitudes relevant to AI in education, and ethical considerations for 
+using AI in education. Xu (2020) underscores educators developing AI competency for transformative roles, while 
+Markauskaite et al. (2022) support integrating digital technologies and gaining hands-on AI experience.
+Despite the growing interest in AI competencies, the existing literature highlights a significant gap in well-
+defined frameworks for educators to acquire competencies essential for using AI to the benefit of their learners. 
+Ng et al. (2021a) emphasise the limited exploration within current studies of enhancing teachers' AI digital com-
+petency through teacher education programmes. Polak et al.  (2022) conclude that, while examining various AI 
+frameworks, the development of AI competencies involves a broad spectrum of skills, knowledge and attitudes. 
+While some are specific to AI, others are adapted versions of digital competencies or essential competencies 
+irrespective of technology use (such as problem-solving and contextual consideration). Ng et al. (2022) reflect on 
+three educational theories; Bloom's taxonomy to view cognition levels of AI literacy education, the TPACK model 
+to understand how educators should learn to equip their students with AI literacy (Ng et al., 2021b), and the P21's 
+Framework to identify the four types of digital competencies in the 21st century. AI digital competencies, as out-
+lined by the P21's Framework for 21st Century Learning (National Research Council, 2012), recognise AI literacy 
+as a vital skill within a comprehensive framework. This perspective emphasises its role in fostering non-technical, 
+critical and complex literacies. Regardless of these early attempts to analyse the AI CFTs, the emergence of new AI 
+frameworks highlights challenges in understanding their purpose and utilising and adapting them for professional 
+development programmes.
+Currently, there are several critical issues related to AI CFTs that have been not addressed by previous study 
+of Ng et al. (2022) (see, Table 1). First, there might be a scattered landscape of various AI CFTs, making it difficult 
+for educators, researchers and policymakers to find and compare them efficiently. Second, different AI CFTs 
+might exhibit varying levels of quality and effectiveness in preparing educators to utilise AI. Third, there might 
+be a need for a deeper understanding of how AI CFTs are designed and how they can practically be incorporated 
+into teacher education programmes. Finally, educators might not feel adequately prepared to leverage AI in their 
+teaching practices due to a limited understanding of relevant frameworks.
+ 14653435, 2024, 3, D
+ow
+nloaded from
+ https://onlinelibrary.w
+iley.com
+/doi/10.1111/ejed.12663 by R
+eadcube (L
+abtiva Inc.), W
+iley O
+nline L
+ibrary on [18/10/2024]. See the T
+erm
+s and C
+onditions (https://onlinelibrary.w
+iley.com
+/term
+s-and-conditions) on W
+iley O
+nline L
+ibrary for rules of use; O
+A
+ articles are governed by the applicable C
+reative C
+om
+m
+ons L
+icense
+    |  3 of 21MIKELADZE et al.
+TA
+B
+LE
+ 1
+ 
+C
+om
+pa
+ris
+on
+ o
+f s
+tu
+di
+es
+ o
+n 
+A
+I C
+FT
+s.
+St
+ud
+ie
+s d
+is
+cu
+ss
+in
+g 
+se
+ve
+ra
+l A
+I c
+om
+pe
+te
+nc
+e/
+lit
+er
+ac
+y 
+fr
+am
+ew
+or
+ks
+ fo
+r t
+ea
+ch
+er
+s
+Pr
+ob
+le
+m
+s a
+dd
+re
+ss
+ed
+Co
+nt
+rib
+ut
+io
+n
+A
+dv
+an
+ta
+ge
+s
+D
+is
+ad
+va
+nt
+ag
+es
+N
+g 
+et
+ a
+l. 
+(2
+02
+2)
+In
+cl
+us
+io
+n 
+of
+ A
+I l
+ite
+ra
+cy
+ in
+ e
+du
+ca
+tio
+na
+l 
+th
+eo
+rie
+s 
+(A
+I i
+nc
+lu
+de
+d 
+in
+ B
+lo
+om
+'s 
+ta
+xo
+no
+m
+y,
+ T
+PA
+C
+K
+, P
+21
+'s 
+Fr
+am
+ew
+or
+k)
+•	
+La
+ck
+ o
+f E
+st
+ab
+lis
+he
+d 
+Fr
+am
+ew
+or
+ks
+•	
+C
+ha
+lle
+ng
+es
+ fo
+r 
+Ed
+uc
+at
+or
+s
+•	
+Fo
+rm
+ul
+at
+ed
+ th
+eo
+re
+tic
+al
+ b
+as
+is
+ 
+to
+ in
+ve
+st
+ig
+at
+e 
+ho
+w
+ A
+I l
+ite
+ra
+cy
+ 
+sh
+ou
+ld
+ b
+e 
+im
+pl
+em
+en
+te
+d
+•	
+C
+on
+ce
+pt
+ua
+l F
+ra
+m
+ew
+or
+k 
+m
+ap
+pi
+ng
+ d
+iff
+er
+en
+t c
+og
+ni
+tiv
+e 
+le
+ve
+ls
+•	
+In
+te
+gr
+at
+io
+n 
+St
+ra
+te
+gy
+ to
+ b
+rin
+g 
+A
+I l
+ite
+ra
+cy
+ in
+to
+ s
+ch
+oo
+ls
+ a
+nd
+ 
+br
+oa
+de
+n 
+A
+I L
+ite
+ra
+cy
+ to
+ 2
+1s
+t-
+
+ce
+nt
+ur
+y 
+sk
+ill
+•	
+H
+ol
+is
+tic
+ u
+nd
+er
+st
+an
+di
+ng
+ o
+f 
+di
+ff
+er
+en
+t l
+ea
+rn
+in
+g 
+le
+ve
+ls
+ 
+an
+d 
+pr
+ac
+tic
+al
+ in
+te
+gr
+at
+io
+n 
+m
+et
+ho
+ds
+ fo
+r A
+I l
+ite
+ra
+cy
+•	
+A
+dv
+oc
+at
+in
+g 
+fo
+r A
+I l
+ite
+ra
+cy
+ 
+fo
+r e
+ve
+ry
+on
+e
+•	
+Li
+m
+ite
+d 
+sc
+op
+e:
+ 
+O
+th
+er
+ c
+on
+ce
+pt
+ua
+l 
+fr
+am
+ew
+or
+ks
+ a
+re
+ n
+ot
+ 
+an
+al
+ys
+ed
+•	
+Ev
+ol
+vi
+ng
+ fi
+el
+d:
+ o
+ng
+oi
+ng
+ 
+re
+vi
+si
+on
+s 
+to
+ th
+e 
+fr
+am
+ew
+or
+k 
+w
+ith
+ th
+e 
+ev
+ol
+vi
+ng
+ n
+at
+ur
+e 
+of
+ A
+I 
+te
+ch
+no
+lo
+gi
+es
+O
+ur
+ s
+tu
+dy
+ a
+na
+ly
+si
+s 
+of
+ a
+va
+ila
+bl
+e 
+A
+I C
+FT
+s 
+in
+ re
+ce
+nt
+ li
+te
+ra
+tu
+re
+ H
+ig
+ue
+ra
+ (2
+01
+9)
+, 
+K
+im
+ a
+nd
+ K
+w
+on
+ (2
+02
+3)
+, L
+or
+en
+z 
+an
+d 
+Ro
+m
+ei
+ke
+ (2
+02
+3)
+, E
+th
+ic
+al
+ G
+ui
+de
+lin
+es
+ 
+on
+ th
+e 
+U
+se
+ o
+f A
+I, 
+20
+22
+ O
+la
+ri 
+an
+d 
+Ro
+m
+ei
+ke
+ (2
+02
+1)
+, U
+N
+ES
+CO
+ (2
+02
+3)
+, 
+H
+ol
+st
+ei
+n 
+et
+ a
+l. 
+(2
+02
+0)
+, M
+ol
+en
+aa
+r (
+20
+22
+), 
+C
+ar
+ol
+us
+ e
+t a
+l. 
+(2
+02
+3)
+, S
+u 
+an
+d 
+Ya
+ng
+ (2
+02
+3)
+, 
+Sa
+tt
+el
+m
+ai
+er
+ a
+nd
+ P
+aw
+lo
+w
+sk
+i (
+20
+23
+), 
+N
+g 
+et
+ a
+l. 
+(2
+02
+3)
+•	
+La
+ck
+ o
+f u
+nd
+er
+st
+an
+di
+ng
+ 
+of
+ A
+I C
+FT
+s
+•	
+D
+iff
+ic
+ul
+ty
+ in
+ c
+ho
+os
+in
+g 
+an
+d 
+ad
+ap
+tin
+g 
+fr
+am
+ew
+or
+ks
+•	
+Li
+m
+ite
+d 
+un
+de
+rs
+ta
+nd
+in
+g 
+in
+ p
+re
+pa
+rin
+g 
+ed
+uc
+at
+or
+s 
+fo
+r u
+si
+ng
+ A
+I
+•	
+C
+om
+pi
+la
+tio
+n 
+an
+d 
+ca
+te
+go
+ris
+at
+io
+n 
+of
+ A
+I C
+FT
+s
+•	
+En
+ha
+nc
+ed
+ u
+nd
+er
+st
+an
+di
+ng
+ 
+an
+d 
+pr
+ac
+tic
+al
+ a
+pp
+lic
+at
+io
+n 
+of
+ 
+fr
+am
+ew
+or
+ks
+•	
+Id
+en
+tif
+yi
+ng
+ g
+ap
+s 
+in
+ e
+xi
+st
+in
+g 
+fr
+am
+ew
+or
+ks
+ a
+nd
+ fu
+tu
+re
+ 
+di
+re
+ct
+io
+ns
+•	
+Fa
+ci
+lit
+at
+in
+g 
+di
+sc
+us
+si
+on
+ a
+nd
+ 
+co
+lla
+bo
+ra
+tio
+n 
+by
+ b
+rin
+gi
+ng
+ 
+to
+ge
+th
+er
+ v
+ar
+io
+us
+ A
+I C
+FT
+s
+•	
+Fa
+ci
+lit
+at
+io
+n 
+of
+ b
+ro
+ad
+er
+ 
+un
+de
+rs
+ta
+nd
+in
+g,
+ in
+fo
+rm
+ed
+ 
+se
+le
+ct
+io
+n 
+an
+d 
+ad
+ap
+ta
+tio
+n 
+of
+ A
+I C
+FT
+s
+•	
+Ex
+pl
+or
+at
+io
+n 
+of
+ th
+e 
+ch
+ar
+ac
+te
+ris
+tic
+s 
+of
+ v
+ar
+io
+us
+ 
+fr
+am
+ew
+or
+ks
+•	
+Li
+m
+ite
+d 
+sc
+op
+e:
+ 
+O
+th
+er
+ c
+on
+ce
+pt
+ua
+l 
+fr
+am
+ew
+or
+ks
+ m
+ay
+ 
+em
+er
+ge
+•	
+Su
+bj
+ec
+tiv
+ity
+ in
+ a
+na
+ly
+si
+s
+ 14653435, 2024, 3, D
+ow
+nloaded from
+ https://onlinelibrary.w
+iley.com
+/doi/10.1111/ejed.12663 by R
+eadcube (L
+abtiva Inc.), W
+iley O
+nline L
+ibrary on [18/10/2024]. See the T
+erm
+s and C
+onditions (https://onlinelibrary.w
+iley.com
+/term
+s-and-conditions) on W
+iley O
+nline L
+ibrary for rules of use; O
+A
+ articles are governed by the applicable C
+reative C
+om
+m
+ons L
+icense

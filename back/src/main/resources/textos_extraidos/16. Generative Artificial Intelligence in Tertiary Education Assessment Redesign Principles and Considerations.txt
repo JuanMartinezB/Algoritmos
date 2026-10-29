@@ -1,0 +1,174 @@
+Citation: Lye, C.Y.; Lim, L. Generative
+Artificial Intelligence in Tertiary
+Education: Assessment Redesign
+Principles and Considerations. Educ.
+Sci. 2024, 14, 569. https://doi.org/
+10.3390/educsci14060569
+Academic Editor: Randall S. Davies
+Received: 19 April 2024
+Revised: 8 May 2024
+Accepted: 24 May 2024
+Published: 26 May 2024
+Copyright: © 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+education 
+sciences
+Review
+Generative Artificial Intelligence in Tertiary Education:
+Assessment Redesign Principles and Considerations
+Che Yee Lye 1 and Lyndon Lim 1,2,*
+1 Teaching & Learning Centre, Singapore University of Social Sciences, 463 Clementi Road,
+Singapore 599494, Singapore
+2 Graduate School of Education, The University of Western Australia, 35 Stirling Highway,
+Perth, WA 6009, Australia
+* Correspondence: lyndonlimjk@suss.edu.sg
+Abstract: The emergence of generative artificial intelligence (AI) such as ChatGPT has sparked
+significant assessment concerns within tertiary education. Assessment concerns have largely revolved
+around academic integrity issues among students, such as plagiarism and cheating. Nonetheless, it is
+also critical to consider that generative AI models trained on information retrieved from the Internet
+could produce biased and discriminatory outputs, and hallucination issues in large language models
+upon which generative AI acts provide made-up and untruthful outputs. This article considers the
+affordances and challenges of generative AI specific to assessments within tertiary education. It
+illustrates considerations for assessment redesign with the existence of generative AI and proposes
+the Against, Avoid and Adopt (AAA) principle to rethink and redesign assessments. It argues that
+more generative AI tools will emerge exponentially, and hence, engaging in an arms race against
+generative AI and policing the use of these technologies may not address the fundamental issues
+in assessments.
+Keywords: assessment; generative artificial intelligence; ChatGPT; AAA principle; tertiary education
+1. Introduction
+Generative artificial intelligence (AI) has gained enormous attention since the release
+of ChatGPT in late 2022, given its capability to understand human language and conduct
+conversations with users using natural language or human-like language. Generative AI
+has transformed many industries, such as business and healthcare, offering promising
+applications to enhance their functions and productivity. For example, in the business
+sector, routine work such as customer service or basic financial assessment can be taken
+over by generative AI; in healthcare, health advice, education and promotion can be carried
+out by generative AI [1]. Further, in the creative and design industries, generative AI can
+assist designers and creative professionals in generating content such as images, graphics
+and videos, as well as architecture and fashion designs [2].
+Within the education landscape and particularly in tertiary education institutions, gen-
+erative AI has impacted how students learn, how teachers teach [3–6] and how assessments
+are conducted [6]. For instance, given access, students can now use ChatGPT or something
+similar to generate essays, reports, academic and scientific research papers, programming
+codes and creative content. While generative AI demonstrates impressive capabilities in
+tertiary education for learning and teaching, a key concern in most tertiary educational
+institutions is the potential risk of students using these generative AI tools to cheat and
+plagiarise their assignments or assessments [7]. Notably, the world’s 50 top-ranking tertiary
+education institutions have developed and published policies and guidelines to guide both
+students and teachers on academic integrity issues such as plagiarism, acknowledgement
+of generative AI, detection of generative AI use and assessment design [7]. While it seems
+possible to use generative AI detection tools such as Turnitin AI, ZeroGPT and GPTZero
+Educ. Sci. 2024, 14, 569. https://doi.org/10.3390/educsci14060569 https://www.mdpi.com/journal/education
+Educ. Sci. 2024, 14, 569 2 of 9
+to detect AI-generated outputs, concerns such as inaccuracy in AI-generated content or
+false alarms and ethical and privacy concerns, as well as trust issues between students
+and instructors, remain critical [7]. To this end, AI detectors are not tenable solutions to
+concerns with generative AI in tertiary education; it is also impractical to ban generative AI
+in assessments since students should be prepared for the future of work and life, which
+will probably require them to use generative AI.
+Current discussions and investigations into tertiary education tend to focus on the
+feasibility of banning or embracing generative AI in developing cognate policies and guide-
+lines. Also, there remains a dearth of research examining the reasons why students use
+generative AI in the ways they are not supposed to for their assignments. More impor-
+tantly, the emergence of generative AI has provided opportunities for tertiary educational
+institutions to rethink and redesign assessments in a way that is fit-for-purpose. Following
+this line of argument, this conceptual paper proposes key principles and considerations
+guiding assessment redesign in the era of generative AI by understanding the affordances
+and risks of generative AI in educational assessments and the issues surrounding academic
+integrity with generative AI.
+2. Affordances and Risks of Generative AI in Educational Assessments
+The potential affordances of generative AI tools in education and assessment have
+been widely investigated since 2023. In a review conducted by Wang et al. [5], four clusters
+of affordances of generative AI in education were identified. These include (1) accessibil-
+ity: the capability of generative AI to provide timely help and its accessibility for remote
+learning; (2) personalisation: to provide students with personalised learning recommen-
+dations; (3) automation: to generate ideas, drafts and instructional materials based on
+human-provided prompts with speedy performance and well-structured responses; and
+(4) interactivity: to act as an interlocutor for the development of conversational skills,
+either in written or oral form. In relation to the cluster on automation via human-provided
+prompts by Wang et al. [5], Pack and Maloney [4] demonstrated how they created language
+learning and teaching materials and assessments using ChatGPT by supplying appropriate
+prompts to the generative AI. Park and Maloney [4] have shown the potential of generative
+AI in generating discussion questions, modifying material appropriate for students of dif-
+ferent proficiency levels, generating writing samples for comparison, generating handouts
+with explanations and practice exercises, generating transcripts for listening assessments,
+creating rubrics and evaluating student writing based on a rubric.
+In particular, for educational assessment, Swiecki et al. [6] highlighted some potential
+ways AI could be used to automate traditional assessment practices, as well as to transform
+from a discrete to a continuous assessment and from a uniform to an adaptive assessment,
+thereby making assessment practices more feasible and meaningful in learning. Examples
+of AI-based assessment techniques include automated assessment construction, AI-assisted
+peer assessment, writing analytics, tracking student actions to be incorporated into models
+of performance and learning via stealth assessment, automated scoring and adaptive
+learning with instant assessment feedback.
+What has been discussed so far includes some potential ways generative AI could be
+useful for learning, teaching and assessment for students, instructors and those involved in
+assessment development. Despite these, generative AI is not without flaws and limitations.
+Miao and Holmes [8], authors of the UNESCO guidance for generative AI in education and
+research, pointed out some challenges and the emerging ethical implications of generative
+AI in tertiary education. One major issue highlighted was the lack of explainability and
+transparency in generative AI, specifically that it currently operates like a ‘black box’, with
+its processes and how and why the outputs are generated in a certain way being unknown
+to users.
+Wang et al. [5] highlighted five categories of challenges that generative AI could bring
+to educational assessment. These include academic integrity risk, response errors and
+bias, overdependence on generative AI, digital divide issues and privacy and security
+Educ. Sci. 2024, 14, 569 3 of 9
+concerns. Nah et al. [1] also noted similar challenges from generative AI in terms of ethical
+and technological issues. Common to these two studies is the quality of training data
+for generative AI models and their associated ethical issues. As generative models are
+trained on information retrieved from the Internet, biased and discriminatory outputs
+can be produced. When inappropriate training data are used, harmful content can also
+be produced [1,5]. Additionally, hallucination issues in large language models in which
+generative AI provides made-up and untruthful outputs could be critical and dangerous
+in specific contexts, such as scholarly activities and seeking medical advice [1]. Evidently,
+within education, overreliance on generative AI may lead to students blindly adopting
+answers without verification, impeding their problem solving as well as their creative
+and critical thinking skills [1,5]. Generative AI could also present equity issues as the gap
+between students with and without access to it widens. A critical question is then whether
+higher marks should be awarded to students who are highly skilled in using generative AI
+to produce assessment output as compared to students who do not use generative AI [5].
+Data privacy and security are another prominent challenge in educational assessment [1,5].
+While it is generally thought that generative AI is efficient and could be applied to marking
+assignments, these scripts usually contain students’ personal data. Additionally, since
+generative AI appears to be a ‘black’ box, little is known about its data security protocol
+and processes.
+3. Assessment Redesign: Unpacking Causes of Academic Integrity Problems with
+Generative AI
+Much of the discussion and debate about the emergence of generative AI in tertiary
+education has been surrounded by concerns about academic integrity. Such concern is
+evident in a review by Moorhouse et al. [7], who reported the development and publication
+of policies and guidelines related to academic integrity by the world’s 50 top-ranking
+tertiary institutions. While academic integrity issues are not new and existed even before
+the emergence of generative AI, it is important to note that only a minority of students
+would commit academic dishonesty, with the majority wanting to learn and not commit
+academic dishonesty [9]. In the past, when there was no generative AI, it would require
+some effort for students to copy the work of someone else or be involved in contract
+cheating. Of late, it has evidently become significantly less onerous to commit academic
+dishonesty since generative AI is widely available and accessible, and the detection of
+AI-generated content is challenging and almost impossible. Despite these challenges, it is
+critical to unpack issues related to academic integrity impacted by generative AI to provide
+insights into redesigning assessments that are fit-for-purpose in the context of tertiary
+education. The following sections discuss some of these issues in relation to students’
+intentions when using generative AI, assessment purposes, types of assessment outputs
+and assessment load.
+3.1. Students’ Intentions in Using Generative AI
+The Theory of Planned Behaviour [10,11] can be used to describe students’ violations
+of academic integrity such that the intention to perform a behaviour (i.e., cheating or pla-
+giarism) is determined by their attitudes towards cheating, subjective norms and perceived
+behavioural control. Intention, as defined by Ajzen [11], refers to “indications of how hard
+people are willing to try, of how much of an effort they are planning to exert, in order to
+perform the behaviour” (p. 113). This intention is affected by the extent to which students
+perceive academic dishonesty as unfavourable behaviour, the normative perception of
+other people regarding academic dishonesty and the extent to which students perceive
+academic dishonesty as difficult.
+Many researchers have conducted studies related to academic integrity and the Theory
+of Planned Behaviour (e.g., [12–16]). What has been commonly found is that students’
+perceived attitudes towards academic integrity, subjective norms and perceived behavioural
+control significantly and positively predict their intentions to cheat or plagiarise their

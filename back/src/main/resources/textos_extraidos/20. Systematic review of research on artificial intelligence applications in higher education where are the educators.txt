@@ -1,0 +1,140 @@
+REVIEW ARTICLE Open Access
+Systematic review of research on artificial
+intelligence applications in higher
+education – where are the educators?
+Olaf Zawacki-Richter* , Victoria I. Marín , Melissa Bond and Franziska Gouverneur
+* Correspondence: olaf.zawacki.
+richter@uni-oldenburg.de
+Faculty of Education and Social
+Sciences, University of Oldenburg,
+Ammerländer Heerstr. 138, 26129
+Oldenburg, Germany
+Abstract
+According to various international reports, Artificial Intelligence in Education (AIEd) is
+one of the currently emerging fields in educational technology. Whilst it has been
+around for about 30 years, it is still unclear for educators how to make pedagogical
+advantage of it on a broader scale, and how it can actually impact meaningfully on
+teaching and learning in higher education. This paper seeks to provide an overview
+of research on AI applications in higher education through a systematic review. Out
+of 2656 initially identified publications for the period between 2007 and 2018, 146
+articles were included for final synthesis, according to explicit inclusion and exclusion
+criteria. The descriptive results show that most of the disciplines involved in AIEd
+papers come from Computer Science and STEM, and that quantitative methods were
+the most frequently used in empirical studies. The synthesis of results presents four
+areas of AIEd applications in academic support services, and institutional and
+administrative services: 1. profiling and prediction, 2. assessment and evaluation, 3.
+adaptive systems and personalisation, and 4. intelligent tutoring systems. The
+conclusions reflect on the almost lack of critical reflection of challenges and risks of
+AIEd, the weak connection to theoretical pedagogical perspectives, and the need for
+further exploration of ethical and educational approaches in the application of AIEd
+in higher education.
+Keywords: Artificial intelligence, Higher education, Machine learning, Intelligent
+tutoring systems, Systematic review
+Introduction
+Artificial intelligence (AI) applications in education are on the rise and have received a
+lot of attention in the last couple of years. AI and adaptive learning technologies are
+prominently featured as important developments in educational technology in the
+2018 Horizon report (Educause, 2018), with a time to adoption of 2 or 3 years. Accord-
+ing to the report, experts anticipate AI in education to grow by 43% in the period
+2018–2022, although the Horizon Report 2019 Higher Education Edition (Educause,
+2019) predicts that AI applications related to teaching and learning are projected to
+grow even more significantly than this. Contact North, a major Canadian non-profit
+online learning society, concludes that “there is little doubt that the [AI] technology is
+inexorably linked to the future of higher education” (Contact North, 2018, p. 5). With
+heavy investments by private companies such as Google, which acquired European AI
+© The Author(s). 2019 Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 International
+License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium,
+provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and
+indicate if changes were made.
+Zawacki-Richter et al. International Journal of Educational Technology in Higher
+Education           (2019) 16:39 
+https://doi.org/10.1186/s41239-019-0171-0
+start-up Deep Mind for $400 million, and also non-profit public-private partnerships such
+as the German Research Centre for Artificial Intelligence1 (DFKI), it is very likely that this
+wave of interest will soon have a significant impact on higher education institutions
+(Popenici & Kerr, 2017). The Technical University of Eindhoven in the Netherlands, for
+example, recently announced that they will launch an Artificial Intelligence Systems Insti-
+tute with 50 new professorships for education and research in AI.2
+The application of AI in education (AIEd) has been the subject of research for about
+30 years. The International AIEd Society (IAIED) was launched in 1997, and publishes
+the International Journal of AI in Education (IJAIED), with the 20th annual AIEd con-
+ference being organised this year. However, on a broader scale, educators have just
+started to explore the potential pedagogical opportunities that AI applications afford
+for supporting learners during the student life cycle.
+Despite the enormous opportunities that AI might afford to support teaching and
+learning, new ethical implications and risks come in with the development of AI appli-
+cations in higher education. For example, in times of budget cuts, it might be tempting
+for administrators to replace teaching by profitable automated AI solutions. Faculty
+members, teaching assistants, student counsellors, and administrative staff may fear
+that intelligent tutors, expert systems and chat bots will take their jobs. AI has the po-
+tential to advance the capabilities of learning analytics, but on the other hand, such sys-
+tems require huge amounts of data, including confidential information about students
+and faculty, which raises serious issues of privacy and data protection. Some institu-
+tions have recently been established, such as the Institute for Ethical AI in Education3
+in the UK, to produce a framework for ethical governance for AI in education, and the
+Analysis & Policy Observatory published a discussion paper in April 2019 to develop
+an AI ethics framework for Australia.4
+Russel and Norvig (2010) remind us in their leading textbook on artificial
+intelligence, “All AI researchers should be concerned with the ethical implications of
+their work” (p. 1020). Thus, we would like to explore what kind of fresh ethical implica-
+tions and risks are reflected by the authors in the field of AI enhanced education. The
+aim of this article is to provide an overview for educators of research on AI applications
+in higher education. Given the dynamic development in recent years, and the growing
+interest of educators in this field, a review of the literature on AI in higher education is
+warranted.
+Specifically, this paper addresses the following research questions in three areas,
+by means of a systematic review (see Gough, Oliver, & Thomas, 2017; Petticrew &
+Roberts, 2006):
+ How have publications on AI in higher education developed over time, in which
+journals are they published, and where are they coming from in terms of
+geographical distribution and the author’s disciplinary affiliations?
+1https://www.dfki.de/en/web/ (accessed 22 July, 2019)
+2https://www.tue.nl/en/news/news-overview/11-07-2019-tue-announces-eaisi-new-institute-for-intelligent-
+machines/ (accessed 22 July, 2019)
+3http://instituteforethicalaiineducation.org (accessed 22 July, 2019)
+4https://apo.org.au/node/229596 (accessed 22 July, 2019)
+Zawacki-Richter et al. International Journal of Educational Technology in Higher Education           (2019) 16:39 Page 2 of 27
+ How is AI in education conceptualised and what kind of ethical implications,
+challenges and risks are considered?
+ What is the nature and scope of AI applications in the context of higher education?
+The field AI originates from computer science and engineering, but it is strongly in-
+fluenced by other disciplines such as philosophy, cognitive science, neuroscience, and
+economics. Given the interdisciplinary nature of the field, there is little agreement
+among AI researchers on a common definition and understanding of AI – and
+intelligence in general (see Tegmark, 2018). With regard to the introduction of AI-
+based tools and services in higher education, Hinojo-Lucena, Aznar-Díaz, Cáceres-
+Reche, and Romero-Rodríguez (2019) note that “this technology [AI] is already being
+introduced in the field of higher education, although many teachers are unaware of its
+scope and, above all, of what it consists of” (p. 1). For the purpose of our analysis of
+artificial intelligence in higher education, it is desirable to clarify terminology. Thus, in
+the next section, we explore definitions of AI in education, and the elements and
+methods that AI applications might entail in higher education, before we proceed with
+the systematic review of the literature.
+AI in education (AIEd)
+The birth of AI goes back to the 1950s when John McCarthy organised a two-month
+workshop at Dartmouth College in the USA. In the workshop proposal, McCarthy used
+the term artificial intelligence for the first time in 1956 (Russel & Norvig, 2010, p. 17):
+The study [of artificial intelligence] is to proceed on the basis of the conjecture that
+every aspect of learning or any other feature of intelligence can in principle be so pre-
+cisely described that a machine can be made to simulate it. An attempt will be made to
+find how to make machines use language, form abstractions and concepts, solve kinds
+of problems now reserved for humans, and improve themselves.
+Baker and Smith (2019) provide a broad definition of AI: “Computers which per-
+form cognitive tasks, usually associated with human minds, particularly learning
+and problem-solving” (p. 10). They explain that AI does not describe a single tech-
+nology. It is an umbrella term to describe a range of technologies and methods,
+such as machine learning, natural language processing, data mining, neural net-
+works or an algorithm.
+AI and machine learning are often mentioned in the same breath. Machine learning
+is a method of AI for supervised and unsupervised classification and profiling, for
+example to predict the likelihood of a student to drop out from a course or being ad-
+mitted to a program, or to identify topics in written assignments. Popenici and Kerr
+(2017) define machine learning “as a subfield of artificial intelligence that includes soft-
+ware able to recognise patterns, make predictions, and apply newly discovered patterns
+to situations that were not included or covered by their initial design” (p. 2).
+The concept of rational agents is central to AI: “An agent is anything that can be
+viewed as perceiving its environment through sensors and acting upon that environ-
+ment through actuators” (Russel & Norvig, 2010, p. 34). The vacuum-cleaner robot is a
+very simple form of an intelligent agent, but things become very complex and open-
+ended when we think about an automated taxi.
+Zawacki-Richter et al. International Journal of Educational Technology in Higher Education           (2019) 16:39 Page 3 of 27

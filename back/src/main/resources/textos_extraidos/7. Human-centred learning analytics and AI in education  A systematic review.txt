@@ -1,0 +1,328 @@
+Computers and Education: Artificial Intelligence 6 (2024) 100215
+Contents lists available at ScienceDirect
+Computers and Education: Artificial Intelligence
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence
+Human-centred learning analytics and AI in education: A systematic 
+literature review
+Riordan Alfredo a,∗, Vanessa Echeverria a,b, Yueqiao Jin a, Lixiang Yan a, Zachari Swiecki a, 
+Dragan Gašević a, Roberto Martinez-Maldonado a
+a Centre for Learning Analytics Monash (CoLAM), Monash University, Clayton, 3800, Victoria, Australia
+b Escuela Superior Politécnica del Litoral, 30.5 Via Perimetral, Guayaquil, Ecuador
+A R T I C L E I N F O A B S T R A C T
+Keywords:
+Human-centered AI
+Human-centered learning analytics
+AI in education
+Stakeholders involvement
+Education technology
+Ethical considerations
+The rapid expansion of Learning Analytics (LA) and Artificial Intelligence in Education (AIED) offers new 
+scalable, data-intensive systems but raises concerns about data privacy and agency. Excluding stakeholders—
+like students and teachers—from the design process can potentially lead to mistrust and inadequately aligned 
+tools. Despite a shift towards human-centred design in recent LA and AIED research, there remain gaps in our 
+understanding of the importance of human control, safety, reliability, and trustworthiness in the design and 
+implementation of these systems. We conducted a systematic literature review to explore these concerns and 
+gaps. We analysed 108 papers to provide insights about i) the current state of human-centred LA/AIED research; 
+ii) the extent to which educational stakeholders have contributed to the design process of human-centred 
+LA/AIED systems; iii) the current balance between human control and computer automation of such systems; 
+and iv) the extent to which safety, reliability and trustworthiness have been considered in the literature. Results 
+indicate some consideration of human control in LA/AIED system design, but limited end-user involvement 
+in actual design. Based on these findings, we recommend: 1) carefully balancing stakeholders’ involvement in 
+designing and deploying LA/AIED systems throughout all design phases 2) actively involving target end-users, 
+especially students, to delineate the balance between human control and automation, and 3) exploring safety, 
+reliability, and trustworthiness as principles in future human-centred LA/AIED systems.1. Introduction
+Artificial Intelligence (AI) advancements are rapidly changing how 
+we carry out our daily activities (Chakraborty et al., 2022). In educa-
+tional contexts, AI and LA innovations are prompting a significant trans-
+formation by both enabling innovative teaching and learning strategies 
+(Markauskaite et al., 2022) and, at the same time, challenging current 
+assessment practices (Swiecki et al., 2022). Emerging Learning Analyt-
+ics and AI in education (LA/AIED) systems offer novel data-intensive 
+solutions that promise to enable adaptive and personalised teaching 
+and learning experiences at scale (Buckingham Shum & Luckin, 2019). 
+For instance, various intelligent tutoring systems and LA solutions pro-
+vide personalised learning support and automated feedback (e.g. Maier 
+& Klotz, 2022, Cavalcanti et al., 2021). LA dashboards are providing 
+educators with new means to track student progress and offer tar-
+geted support, potentially leading to improved student outcomes (e.g. 
+* Corresponding author.
+Williamson & Kizilcec, 2022, Fernandez Nieto et al., 2022). LA/AIED 
+systems, paired with novel interaction innovations, such as gamifica-
+tion and mixed reality (e.g. Carter & Egliston, 2023), are also enabling 
+new pedagogical strategies that can potentially make learning more 
+engaging and interactive for students. In sum, educational providers 
+are increasingly adopting LA/AIED systems because data-intensive tech-
+nologies hold the promise of making learning more accessible, scalable, 
+effective, and personalised for students (Macfadyen, 2022) by provid-
+ing various forms of teacher-facing and student-facing user interfaces 
+(Mavrikis & Cukurova, 2021, Buckingham Shum & Luckin, 2019).
+Yet, the proliferation of LA/AIED systems raises key concerns about 
+the privacy of students and security of educational data (Viberg et 
+al., 2022), as well as the potential for algorithms to perpetuate bi-
+ases and discrimination (Uttamchandani & Quick, 2022). The lack of 
+involvement of students and teachers in the design and development of 
+LA/AIED systems can potentially lead to a lack of understanding and Available online 13 March 2024
+2666-920X/© 2024 The Author(s). Published by Elsevier Ltd. This is an open acces
+nc/4.0/).
+E-mail address: riordan.alfredo@monash.edu (R. Alfredo).
+https://doi.org/10.1016/j.caeai.2024.100215
+Received 20 December 2023; Received in revised form 2 March 2024; Accepted 7 Ms article under the CC BY-NC license (http://creativecommons.org/licenses/by-
+arch 2024
+R. Alfredo, V. Echeverria, Y. Jin et al.
+trust in the technology (Shibani et al., 2022, Dollinger et al., 2019, 
+Sarmiento & Wise, 2022, Alzahrani et al., 2023). This lack of involve-
+ment also raises questions about the accountability and transparency 
+of AI in education (Tsai et al., 2020). Furthermore, increased student 
+adoption of generative AI systems may recurrently challenge existing 
+assessment practices and blur the lines of academic integrity (Moya et 
+al., 2023). It is thus essential to address these concerns and incorporate 
+the perspectives and authentic needs of students and teachers in design-
+ing and implementing LA/AIED systems. This can potentially contribute 
+to creating ethical, effective, and inclusive ways to adopt LA/AIED sys-
+tems (Williamson & Kizilcec, 2021, 2022).
+In response to the above challenges, there has been a growing inter-
+est in adopting human-centred design (HCD) approaches that prioritise 
+human needs, values, and perspectives in the design and deployment of 
+LA/AIED systems (Lang & Davis, 2023, Viberg et al., 2023, Luckin et al., 
+2006, Buckingham Shum et al., 2019). Beyond education, there is also 
+a growing interest in applying similar human-centred principles in the 
+emerging discipline of Human-Centred AI (HCAI). An HCAI approach 
+views AI as systems aimed at serving human interests rather than as 
+a means of achieving technical goals or replacing humans (Shneider-
+man, 2022, Usmani et al., 2023). Thus, the design of HCAI systems is to 
+be guided by a set of ethical principles and design guidelines that em-
+power end-users. The aim is to ensure that technologies providing high 
+automation capabilities are created in ways that guarantee their trust-
+worthiness, transparency, and benefit to society (Usmani et al., 2023, 
+Shneiderman, 2020a, Ozmen Garibay et al., 2023).
+In recent years, the concept of HCAI has gained significant attention 
+in LA/AIED with a growing recognition of the importance of consid-
+ering educational stakeholders’ needs and perspectives in the design 
+and deployment of data-intensive innovations (Buckingham Shum et 
+al., 2019, Yang et al., 2021, Sarmiento & Wise, 2022, Holmes et al., 
+2022, Kloos et al., 2022). This includes, for example, the use of partici-
+patory design and co-design methods to involve teachers (e.g. Ahn et al., 
+2021, Holstein et al., 2019), students (e.g. Prieto-Alvarez et al., 2018, 
+Sarmiento et al., 2020), and other educational stakeholders (such as 
+educational decision-makers, learning designers, IT developers and edu-
+cational researchers) (e.g. Prieto et al., 2019, Schmitz et al., 2022) in the 
+co-creation of LA/AIED systems, the development of ethical frameworks 
+particularly tailored to LA/AIED (e.g. Dollinger et al., 2019, Holmes et 
+al., 2022, Brossi et al., 2022), the exploration of new methods for incor-
+porating teachers perspectives and experiences into machine learning 
+algorithms and end-user LA interface designs (Luckin et al., 2006, Wise 
+et al., 2021), and ways to open the AI algorithmic “black box” to pro-
+vide insight to teachers and students into the analytics or communicate 
+analysis outputs to them in ways they can easily understand (Khosravi 
+et al., 2022).
+Given the rapidly growing interest in applying human-centred de-
+sign principles in LA/AIED research and practice, a timely systematic 
+literature review (SLR) in this area offers a crucial opportunity to syn-
+thesise and evaluate the existing body of research. This can inform the 
+direction of future research and ensure that new work is building upon 
+the foundations established by previous studies. The closest work to 
+ours was presented by Sarmiento and Wise (2022), who conducted an 
+initial, non-systematic review of the literature in participatory and co-
+design of LA. The authors surveyed the design systems and techniques 
+used in the participatory design of learning analytics. To the best of our 
+knowledge, no previous research has conducted comprehensive and sys-
+tematic review of the body of work focused on applying human-centred 
+design and HCAI principles in LA/AIED literature.
+This paper presents an SLR that goes beyond previous works and 
+aims to address the knowledge gap about the state of the art of human-
+centredness in LA/AIED systems. We used the HCAI framework (Shnei-
+derman, 2022) as a lens to motivate and structure our review. This 
+framework helped us to focus on key themes of HCD, balance human 
+control and computer automation, safety, reliability, and trustworthi-2
+ness, and to identify relevant studies that address these themes in the Computers and Education: Artificial Intelligence 6 (2024) 100215
+context of stakeholder involvement in LA/AIED. The findings of this SLR 
+contribute insights into gaps in the existing research, highlighting areas 
+where further investigation is needed and methodological challenges 
+that need to be addressed for human-centred LA/AIED data-intensive 
+systems to remain relevant and potentially become part of the main-
+stream practices in the foreseeable future.
+2. Background
+2.1. Foundations of human-centred AI and learning analytics in education
+While AI and analytics technologies exhibit potential for augmenting 
+human decision-making, concerns over transparency, accountability, 
+algorithmic bias, discrimination, and potential threats to human auton-
+omy and agency can mitigate their benefits (van Berkel et al., 2022). 
+Consequently, governments – such as the G20 members (Jelinek et al., 
+2021) – and large tech companies (e.g., see review by Jobin et al., 
+2019) have proposed guidelines for AI application design centred on 
+human values (e.g., safety, reliability, and trustworthiness). In this con-
+text, HCAI is emerging as a new research discipline that can be broadly 
+defined as an approach to creating “software designs that give users high 
+levels of understanding and control over their AI-enabled systems to pre-
+serve human agency” (Shneiderman, 2021, p.56). HCAI has its roots in 
+fields such as human-computer interaction, HCD, and human factors 
+engineering (Chignell et al., 2022), which focus on understanding and 
+incorporating human perspectives and experiences into technology de-
+sign (Grudin, 2009). HCAI aims to extend human-computer interaction 
+and HCD principles to address unique issues and unforeseen impacts of 
+AI autonomy (Xu et al., 2023).
+Echoing Engelbart’s (1962) seminal research on augmenting intelli-
+gence, an HCAI approach emphasises the complementarity of humans 
+and machines, aiming to design AI systems that amplify, augment, 
+and empower individuals by considering safety, reliability, and trust-
+worthiness principles (Shneiderman, 2022). In educational contexts, 
+Buckingham Shum et al. (2019) and Luckin et al. (2006) were among 
+the pioneers advocating for the integration of human-computer interac-
+tion, and HCD approaches (Giacomin, 2014) in the fields of LA and 
+AIED, respectively. They emphasised the need to fully comprehend 
+educational stakeholders’ needs, preferences and challenges, often ne-
+cessitating their inclusion in some stages of the design process using 
+HCD methods. This reinforces the relevance of HCAI and HCD methods 
+in designing the technical, social, and data-related aspects of LA/AIED, 
+mitigating potential social harms related to the spectrum of analytics 
+use, from rule-based and descriptive to AI and machine learning-driven 
+predictive and prescriptive forms (Davenport, 2018).
+2.1.1. Human and computer automation complementarity
+To articulate the balance between humans and AI, Shneiderman 
+(2022) developed a two-dimensional framework. This framework, de-
+signed for a broad audience, distinguishes between varying levels of
+human control and computer automation. These factors are not con-
+sidered mutually exclusive.
+The notion of human control is closely related to the sense of agency. 
+This subjective experience stems from perceived control over one’s ac-
+tions to make decisions and influence events (Moore, 2016). Viewed 
+through the HCD lens, a sense of agency is crucial in designing inter-
+faces that support an internal locus of control (i.e., individuals’ percep-
+tions of controlling their outcomes). In an educational setting, human 
+control can range widely, from learners or teachers exercising a high 
+level of agency over the outcomes of LA/AIED systems to simply receiv-
+ing and understanding information (Hooshyar et al., 2023). A high level 
+of human control may involve learners using their expertise to strate-
+gically make informed decisions and take appropriate actions in their 
+learning environment. In contrast, a low level of control might occur 
+when individuals receive and understand information but lack auton-
+omy in their learning or teaching environment. This notion of human 
+R. Alfredo, V. Echeverria, Y. Jin et al.
+control encompasses key elements of intentional, purposeful, and mean-
+ingful learning (Jääskelä et al., 2021) and teaching (Biesta et al., 2015).
+The notion of computer automation in an HCAI context refers to 
+the characteristics of systems that use computer technology or algo-
+rithms to perform tasks automatically, streamlining and expediting op-
+erations that were previously completed by human actors (e.g., teachers 
+or students) (Parasuraman et al., 2000). The level of automation is 
+determined by its complexity (e.g., ranging from simple rule-based al-
+gorithms to complex machine learning and AI models) and the number
+of information process stages the automation supports (i.e., acquiring 
+information, information analysis, decision-making, or action imple-
+mentation) in the decision-making process (Onnasch et al., 2014). In 
+educational setting, a high level of automation commonly refers to 
+LA/AIED system capabilities that can automatically capture learner data 
+and make predictions, commonly achieved using multiple algorithms 
+or AI techniques, such as machine learning, computer vision, natu-
+ral language processing, or intelligent agents (e.g. Dogan et al., 2023, 
+Jamalova et al., 2022). On the other hand, a low level of computer 
+automation typically involves a system where information is manu-
+ally prepared or a system follows a fixed set of rules strictly deter-
+ministically. Examples can include non-data-intensive solutions (e.g., 
+presentation slide decks) and manually pre-configured visualisations in 
+LA dashboards (Fernandez Nieto et al., 2022). Such systems often lack 
+autonomy and adaptability when faced with situations beyond their pro-
+grammed capabilities.
+In turn, a single LA/AIED system can provide various features that 
+combine different levels of human control and computer automation, 
+catering to different tasks and intended users (Holstein et al., 2020). 
+This results in the following four quadrants (two-dimensional HCAI 
+framework) contextualised for LA/AIED systems, each representing a 
+different combination of human control and computer automation:
+Q1: LOW human control & LOW computer automation. This quad-
+rant represents systems with limited user control or configuration 
+and minimal or no automation. After receiving information from 
+the system, end-users can only comprehend it but cannot person-
+alise or modify it. Some examples in this quadrant include learning 
+resources in the learning management system; student-facing report-
+ing systems that generate reports for awareness or reflection in an 
+asynchronous manner (e.g., Bodily & Verbert, 2017); and rule-based 
+visual data stories (e.g., Echeverria et al., 2018, 2024), which pro-
+vide feedback to students about their collaboration process and task 
+completion after a learning activity.
+Q2: HIGH human control & LOW computer automation. This quad-
+rant represents systems where end-users can personalise and con-
+figure aspects of the information process and maintain a sense of 
+agency over the learning environment. In contrast, the system fa-
+cilitates exploration through manual operation with minimal or no 
+automation. Examples include personalised visualisation dashboards
+(e.g., Muslim et al., 2016), which allow end-users to control or co-
+configure the descriptive analytics that learners can use to reflect 
+on the achievement of learning goals; and educator-driven data ana-
+lytics systems (e.g., Fernandez Nieto et al., 2022), which may rely on 
+educators’ experience, intuition, and informal observations for ed-
+ucators themselves to make decisions about instructional strategies 
+and feedback.
+Q3: LOW human control & HIGH computer automation. This quad-
+rant represents systems that heavily rely on automation with min-
+imal end-user control. Here, automated processes and algorithms 
+handle decision-making and action-taking processes. Examples in-
+clude systems that capture interactions of students or teachers and 
+utilise them in predictive analytics components to provide fully au-
+tomated feedback (e.g., Ochoa et al., 2018, Maier & Klotz, 2022) 
+and automated grading systems (e.g., Shetty et al., 2022), which may 3
+fully or partly replace the teacher’s role in specific assessment tasks.Computers and Education: Artificial Intelligence 6 (2024) 100215
+Q4: HIGH human control & HIGH computer automation. This quad-
+rant represents systems that enable manual operation while bene-
+fiting from automated assistance to enhance the decision-making 
+process in the learning environment for teachers or learners. Ex-
+amples in this quadrant include intelligent teaching assistants that 
+support classroom orchestration (e.g., Lawrence et al., 2023)), rec-
+ommender systems that promote the development of metacognitive 
+skills (e.g., Khosravi et al., 2019, Darvishi et al., 2024), and sophis-
+ticated modelling/predictive features in analytics reports or dash-
+boards that provide guidance and support (e.g., Khachatryan et al., 
+2014). Here, teachers or students can utilise the highly automated 
+features of the tool to perceive and make sense of learning data 
+and make informed pedagogical decisions about the next course of 
+action (Holstein et al., 2019).
+2.1.2. The HCAI principles of safety, reliability, and trustworthiness
+In addition to defining these levels of control, designing any 
+LA/AIED systems that offer a significant level of human control and 
+computer automation must consider the fundamental principles of 
+safety, reliability, and trustworthiness to ensure ethical practices and 
+reduce the risk of data misuse (Cavalcante Siebert et al., 2023, Shneider-
+man, 2022). In educational contexts, LA/AIED systems should embrace 
+a safety culture, which implies that researchers, designers, and system 
+operators should establish strong relationships with end-users and rele-
+vant educational stakeholders, as well as implement strict data privacy 
+measures (Holmes et al., 2022). These may include involving stakehold-
+ers in data-sharing decisions, ensuring data collection transparency, and 
+granting data access only to specific users (Drachsler & Greller, 2016).
+An LA/AIED system is deemed reliable when it delivers accurate
+information as anticipated by the user while interacting with it (Shnei-
+derman, 2022). However, no predictive model can achieve such perfec-
+tion (Baker, 2016). Therefore, LA/AIED systems designers may benefit 
+from accepting the existence of imperfection by studying how users val-
+idate and respond to whether such systems may adversely affect their 
+learning (Kitto et al., 2018). This can potentially be done by educating 
+humans about AI capabilities and human biases, allowing for a balanced 
+delegation of automation tasks while incorporating elements of human 
+oversight (Pinski et al., 2023). Finally, an LA/AIED system is considered 
+trustworthy when users have confidence (and, therefore, it is regarded as 
+‘trusted’ by users). Aiming to foster greater trust and confidence among 
+users, the system could actively seek feedback from users, learn from 
+its mistakes, and adapt to improve its performance while aligning with 
+user expectations (Usmani et al., 2023). Designers ought to adopt a 
+practical approach that prioritises transparency (Nazaretsky, Ariely et 
+al., 2022, Nazaretsky, Cukurova et al., 2022) and accountability (Pardo 
+& Siemens, 2014) and aim to understand the features of a system that 
+would increase users’ trust in it.
+2.1.3. Human-centred design in LA/AIED
+An HCAI approach strongly advocates for the participation of per-
+tinent stakeholders, such as end-users with lived experience, potential 
+future users, policymakers, and experts in ethics and human values, in 
+the design and deployment of AI systems (Usmani et al., 2023, Shnei-
+derman, 2020b). HCD thus plays a crucial role in HCAI as it focuses 
+on the needs and requirements of the people for whom the system is 
+intended, rather than the designer’s creative process or the technology 
+capabilities (Giacomin, 2014). As a participatory practice, HCD involves 
+an iterative process of understanding the context, identifying end-user 
+requirements, and involving stakeholders with lived experiences in the 
+design and evaluation of the system, ideally engaging with stakeholders 
+as equal partners (Xu et al., 2023, Bødker et al., 2022). From Hanington 
+and Martin’s (2012) perspective, the HCD process includes five multi-
+faceted phases: (1) planning, scoping, and definition – clearly defining the 
+parameters of the project; (2) exploration, synthesis, and design implica-
+tions – conducting immersive research and design ethnography to gather 
+information and derive insights that will guide design choices; (3) con-

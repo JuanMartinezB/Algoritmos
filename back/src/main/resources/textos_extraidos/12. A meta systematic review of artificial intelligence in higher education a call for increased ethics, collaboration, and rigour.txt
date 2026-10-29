@@ -1,0 +1,159 @@
+Open Access
+© The Author(s) 2024. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits 
+use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original 
+author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third 
+party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the mate-
+rial. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or 
+exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://
+creativecommons.org/licenses/by/4.0/.
+REVIEW ARTICLE
+Bond et al. Int J Educ Technol High Educ            (2024) 21:4  
+https://doi.org/10.1186/s41239-023-00436-z
+International Journal of Educational
+Technology in Higher Education
+A meta systematic review of artificial 
+intelligence in higher education: a call 
+for increased ethics, collaboration, and rigour
+Melissa Bond1,2,3*   , Hassan Khosravi4, Maarten De Laat5, Nina Bergdahl6,7, Violeta Negrea3, Emily Oxley3, 
+Phuong Pham5, Sin Wang Chong3,8 and George Siemens5 
+Abstract 
+Although the field of Artificial Intelligence in Education (AIEd) has a substantial history 
+as a research domain, never before has the rapid evolution of AI applications in edu-
+cation sparked such prominent public discourse. Given the already rapidly grow-
+ing AIEd literature base in higher education, now is the time to ensure that the field 
+has a solid research and conceptual grounding. This review of reviews is the first 
+comprehensive meta review to explore the scope and nature of AIEd in higher educa-
+tion (AIHEd) research, by synthesising secondary research (e.g., systematic reviews), 
+indexed in the Web of Science, Scopus, ERIC, EBSCOHost, IEEE Xplore, ScienceDirect 
+and ACM Digital Library, or captured through snowballing in OpenAlex, ResearchGate 
+and Google Scholar. Reviews were included if they synthesised applications of AI solely 
+in formal higher or continuing education, were published in English between 2018 
+and July 2023, were journal articles or full conference papers, and if they had a method 
+section 66 publications were included for data extraction and synthesis in EPPI 
+Reviewer, which were predominantly systematic reviews (66.7%), published by authors 
+from North America (27.3%), conducted in teams (89.4%) in mostly domestic-only col-
+laborations (71.2%). Findings show that these reviews mostly focused on AIHEd gener-
+ally (47.0%) or Profiling and Prediction (28.8%) as thematic foci, however key findings 
+indicated a predominance of the use of Adaptive Systems and Personalisation in higher 
+education. Research gaps identified suggest a need for greater ethical, methodologi-
+cal, and contextual considerations within future research, alongside interdisciplinary 
+approaches to AIHEd application. Suggestions are provided to guide future primary 
+and secondary research.
+Keywords:  Artificial Intelligence, AIEd, AI, Evidence synthesis, Tertiary review, 
+Research methods, Quality assessment, Intelligent tutoring systems, Adaptive systems, 
+Prediction, Personalisation, Automatic assessment
+Introduction
+Artificial Intelligence (AI) has existed since the 1960s and its adoption in education, par-
+ticularly with the early introduction of intelligent tutoring systems, has become a sub-
+stantive research domain (AIEd). Despite the growing realisation of the potential for AI 
+*Correspondence:   
+melissa.bond@ucl.ac.uk
+1 EPPI Centre, University College 
+London, London, UK
+2 Knowledge Center 
+for Education, University 
+of Stavanager, Stavanger, Norway
+3 National Institute of Teaching, 
+London, UK
+4 Institute for Teaching 
+and Learning Innovation, The 
+University of Queensland, St 
+Lucia, Australia
+5 Centre for Change 
+and Complexity in Learning, 
+Education Futures, University 
+of South Australia, Adelaide, 
+Australia
+6 Halmstad University, Halmstad, 
+Sweden
+7 Stockholm University, 
+Stockholm, Sweden
+8 International Education 
+Institute, University of St 
+Andrew’s, St Andrews, UK
+Page 2 of 41Bond et al. Int J Educ Technol High Educ            (2024) 21:4 
+within education, influenced by educational evidence-based policy, including education 
+departments and international organisations (e.g., OECD, 2021), it has arguably only 
+now transitioned from work in labs to active practice in classrooms, and broken through 
+the veil of public discourse. The introduction of ChatGPT1 and DALL-E,2 for example, 
+has both captured our imagination and shocked in equal measure (Bozkurt et al., 2023), 
+requiring schools, universities, and organisations to respond to generative AI’s growing 
+capabilities, with increasing numbers of publicly available AI chatbots on the horizon 
+(e.g., Google’s Bard3 and LLaMA4). The uptake of these tools has given rise to a debate 
+in education about readiness, ethics, trust, impact and value add of AI, as well as the 
+need for governance, regulation, research and training to cope with the speed and scale 
+at which AI is transforming teaching and learning. Globally, governments are putting 
+measures in place to respond to this unfolding phenomenon, for example in Europe they 
+introduced the EU AI Act, which they claim is the world’s first comprehensive AI law.5 
+Australia established a taskforce to outline a framework for generative artificial intel-
+ligence in schools6 and in the United States, the Department of Education calls for an AI 
+bill of rights to develop a comprehensive approach towards the adoption of AI in edu-
+cation.7 Needless to say, it is important that these actions are based on a solid founda-
+tion of research and conceptual grounding. Even though there is a vibrant AIEd research 
+community, much of this foundational work is still in development. This tertiary review,8 
+which is the first of its kind in AIEd, provides the foundation for future conceptualisa-
+tion and utilisation of AI in higher education.
+Contribution of this review
+Whilst evidence synthesis is a welcome approach to gaining insight into effective appli-
+cations of AI in education, there is a risk of ‘research waste’ in every field of research 
+due to a duplication of efforts, by conducting reviews on the same or similar topics 
+(Grainger et al., 2020; Siontis & Ioannidis, 2018). This can occur when researchers do 
+not give enough consideration to work that has already been published, costing valuable 
+time, effort, and money (Robinson et al., 2021). In order to help avoid research waste, 
+and to map the state of the AIEd field in higher education (AIHEd), this review is the 
+first to undertake a tertiary review approach (Kitchenham et al., 2009). A tertiary review 
+is a type of research that synthesises evidence from secondary studies, such as system-
+atic reviews, and is sometimes known as a review of reviews or as an overview (Sut-
+ton et al., 2019). This method allows researchers to gain an overarching meta view of a 
+field through a systematic process, identifying and analysing types of evidence and key 
+characteristics, exploring how research has been conducted, and identifying gaps in the 
+1  https://​chat.​openai.​com/.
+2  https://​openai.​com/​dall-e-2.
+3  https://​blog.​google/​techn​ology/​ai/​bard-​google-​ai-​search-​updat​es/.
+4  https://​ai.​meta.​com/​blog/​large-​langu​age-​model-​llama-​meta-​ai/.
+5  https://​www.​europ​arl.​europa.​eu/​news/​en/​headl​ines/​socie​ty/​20230​601ST​O93804/​eu-​ai-​act-​first-​regul​ation-​on-​artif​
+icial-​intel​ligen​ce.
+6  https://​educa​tion.​nsw.​gov.​au/​about-​us/​strat​egies-​and-​repor​ts/​draft-​natio​nal-​ai-​in-​schoo​ls-​frame​work.
+7  https://​www.​ed.​gov/​news/​press-​relea​ses/​us-​depar​tment-​educa​tion-​shares-​insig​hts-​and-​recom​menda​tions-​artif​icial-​
+intel​ligen​ce.
+8  Otherwise known as a review of reviews (see Kitchenham et al., 2009; Sutton et al., 2019).
+Page 3 of 41Bond et al. Int J Educ Technol High Educ            (2024) 21:4 	
+literature to better guide future field development (Polanin et al., 2017). Given the cur-
+rent interest around the uptake of generative AI, now is the perfect time to take stock of 
+where we have been, in order to provide suggestions for where we might go in the future.
+Research questions
+Against this background, the following research question and sub questions guide this 
+review:
+1.	 What is the nature and scope of AIEd evidence synthesis in higher education 
+(AIHEd)?
+a.	 What kinds of evidence syntheses are being conducted?
+b.	 In which conference proceedings and academic journals are AIHEd evidence 
+syntheses published?
+c.	 What is the geographical distribution of authorship and authors’ affiliations?
+d.	 How collaborative is AIHEd evidence synthesis?
+e.	 What technology is being used to conduct AIHEd evidence synthesis?
+f.	 What is the quality of evidence synthesis exploring AIHEd?
+g.	 What main applications are explored in AIHEd secondary research?
+h.	 What are the key findings of AIHEd research?
+i.	 What are the benefits and challenges reported within AIHEd reviews?
+j.	 What research gaps have been identified in AIHEd secondary research?
+Literature review
+Artificial intelligence in education (AIEd)
+The evolution of AIEd can be traced back several decades, exhibiting a rich history of 
+intertwining educational theory and emergent technology (Doroudi, 2022). As the field 
+matured through the 1990s and into the 2000s, research began to diversify and deepen, 
+exploring varied facets of AIEd such as intelligent tutoring systems (Woolf, 2010), 
+adaptive learning environments (Desmarais & Baker, 2012) as well as supporting col-
+laborative learning environments (Dillenbourg & Jermann, 2007). In the last decade, 
+the synergies between AI technologies and educational practices have further intensi-
+fied, propelled by advancements in machine learning, natural language processing, and 
+cognitive computing. This era explored innovative applications, including chatbots for 
+student engagement, automated grading and feedback, predictive analytics for student 
+success, and various adaptive platforms for personalised learning. Yet, amid the techno-
+logical strides, researchers also continued to grapple with persistent challenges and new 
+dilemmas such as ensuring ethical use (Holmes et al., 2021), enhancing system transpar-
+ency and explainability (Khosravi et al., 2022), and navigating the pedagogical implica-
+tions of increasingly autonomous AI systems in educational settings (Han et al., 2023).
+In order to gain further understanding of the applications of AI in higher education, 
+and to provide guidance to the field, Zawacki-Richter et  al. (2019) developed a typol-
+ogy (see. Figure 1), classifying research into four broad areas; Profiling and prediction, 

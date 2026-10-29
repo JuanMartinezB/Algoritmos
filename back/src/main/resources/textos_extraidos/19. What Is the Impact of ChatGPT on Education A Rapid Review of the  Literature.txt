@@ -1,0 +1,170 @@
+Citation: Lo, C.K. What Is the Impact
+of ChatGPT on Education? A Rapid
+Review of the Literature. Educ. Sci.
+2023, 13, 410. https://doi.org/
+10.3390/educsci13040410
+Academic Editor: Maiga Chang
+Received: 13 March 2023
+Revised: 6 April 2023
+Accepted: 13 April 2023
+Published: 18 April 2023
+Copyright: © 2023 by the author.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+education 
+sciences
+Review
+What Is the Impact of ChatGPT on Education? A Rapid Review
+of the Literature
+Chung Kwan Lo
+Department of Mathematics and Information Technology, The Education University of Hong Kong,
+Hong Kong SAR 999077, China; chungkwanlo@eduhk.hk
+Abstract: An artificial intelligence-based chatbot, ChatGPT, was launched in November 2022 and
+is capable of generating cohesive and informative human-like responses to user input. This rapid
+review of the literature aims to enrich our understanding of ChatGPT’s capabilities across subject
+domains, how it can be used in education, and potential issues raised by researchers during the
+first three months of its release (i.e., December 2022 to February 2023). A search of the relevant
+databases and Google Scholar yielded 50 articles for content analysis (i.e., open coding, axial coding,
+and selective coding). The findings of this review suggest that ChatGPT’s performance varied across
+subject domains, ranging from outstanding (e.g., economics) and satisfactory (e.g., programming)
+to unsatisfactory (e.g., mathematics). Although ChatGPT has the potential to serve as an assistant
+for instructors (e.g., to generate course materials and provide suggestions) and a virtual tutor for
+students (e.g., to answer questions and facilitate collaboration), there were challenges associated with
+its use (e.g., generating incorrect or fake information and bypassing plagiarism detectors). Immediate
+action should be taken to update the assessment methods and institutional policies in schools and
+universities. Instructor training and student education are also essential to respond to the impact of
+ChatGPT on the educational environment.
+Keywords: ChatGPT; OpenAI; artificial intelligence; natural language processing; chatbot
+1. Introduction
+Artificial intelligence (AI) has developed rapidly in recent years, leading to various
+applications in different disciplines, such as healthcare [1] and education [2]. AI systems can
+be trained to simulate the human brain and carry out routine work using large amounts of
+data [3]. In healthcare, for example, AI can aid professionals in their work by synthesising
+patient records, interpreting diagnostic images, and highlighting health concerns [4]. AI
+applications have also been utilised in education to enhance administrative services and
+academic support [2]. One representative example is intelligent tutoring systems (ITS),
+which can be used to simulate one-to-one personal tutoring. The results of a meta-analysis
+indicated that ITS generally had a moderately positive effect on the academic achievement
+of college students [5]. However, the development of ITS can be challenging, as it involves
+not only content creation and design but also the refinement of feedback phrasing and
+dialogue strategies [6].
+ChatGPT, a recently developed conversational chatbot created by OpenAI [7], may
+make it easier for instructors to apply AI in teaching and learning. ChatGPT uses natural
+language processing to generate human-like responses to user input. It has gained atten-
+tion worldwide for its impressive performance in generating coherent, systematic, and
+informative responses [8]. In a surprising achievement, ChatGPT passed four separate
+examinations at the University of Minnesota Law School [9]. Although its scores were
+not (yet) very good, the results demonstrate that this AI application is capable of earning
+a university degree [10]. Since its release on 30 November 2022, ChatGPT has become
+the fastest-growing user application in history, reaching 100 million active users as of
+January 2023, just two months after its launch [11].
+Educ. Sci. 2023, 13, 410. https://doi.org/10.3390/educsci13040410 https://www.mdpi.com/journal/education
+Educ. Sci. 2023, 13, 410 2 of 15
+Despite its success, ChatGPT has introduced new challenges and threats to education.
+With its ability to provide specific answers to user questions, it can be used to complete
+written assignments and examinations on behalf of students, leading to concerns about
+AI-assisted cheating. In response, some schools have banned access to ChatGPT on cam-
+pus [12]. The implications of GhatGPT in the field of education were explored in a review
+by Mhlanga [13]. He analysed eight articles on ChatGPT and revealed that educators had
+concerns regarding the use of ChatGPT in education. They expressed worries that students
+may outsource their work to ChatGPT because of its ability to rapidly generate acceptable
+texts. Therefore, Mhlanga [13] emphasised the importance of the responsible and ethical
+use of ChatGPT. Sallam [14] reviewed 60 articles on ChatGPT in the fields of healthcare,
+medical education, and academia. He found various concerns across the studies, ranging
+from plagiarism to incorrect responses and inaccurate citations. Therefore, the implications
+of ChatGPT-assisted learning require immediate attention to ensure that its benefits are
+optimised while its drawbacks are minimised.
+Although Mhlanga [13] and Sallam [14] shed some light on the concerns regarding the
+use of ChatGPT, a more comprehensive review is needed to gain a deeper understanding of its
+potential benefits and threats to education. Furthermore, current knowledge about ChatGPT’s
+capabilities comes mainly from media reports (e.g., [9,15]). It is necessary to examine the results
+of research on ChatGPT to evaluate its true performance across different subject domains. Hence,
+the following research questions (RQ1 to RQ3) are posed to guide the review.
+• RQ1: How does ChatGPT perform in different subject domains?
+• RQ2: How can ChatGPT be used to enhance teaching and learning?
+• RQ3: What are the potential issues associated with ChatGPT, and how can they
+be addressed?
+2. Methods
+2.1. The Rapid Review Approach
+As ChatGPT continues to receive great attention and is increasingly used by students,
+there is a pressing need to understand its impact on education and take immediate action
+in response to its possible threats. However, a comprehensive systematic review can
+take several months or even years to conduct [16,17], which is not ideal for catching up
+with the rapidly evolving ChatGPT landscape. Therefore, a rapid review approach was
+used. According to Tricco et al. [17], “a rapid review is a type of knowledge synthesis in
+which components of the systematic review process are simplified or omitted to produce
+information in a short period of time” (p. 2). This approach enabled a timely synthesis and
+overview of recently published articles and their key findings. Accordingly, this review
+could provide valuable insights enabling researchers, practitioners, and policymakers to
+respond promptly to the influence of ChatGPT on the field of education.
+2.2. Search Strategies
+This rapid review followed the Preferred Reporting Items for Systematic Reviews and
+Meta-Analysis (PRISMA) statement when selecting relevant articles [18]. The final search was
+conducted on 28 February 2023 (i.e., three months after the release of ChatGPT). Therefore, the
+ChatGPT involved in these articles was its original release (dated 30 November 2022) based
+on Generative Pre-trained Transformer 3.5 (GPT-3.5). Seven electronic databases were used:
+(1) Academic Search Ultimate, (2) ACM Digital Library, (3) Education Research Complete,
+(4) ERIC, (5) IEEE Xplore, (6) Scopus, and (7) Web of Science. The search string “ChatGPT”
+was used in each database to search for relevant articles that included the term “ChatGPT” in
+their title, abstract, or keywords. The publication period was specified as 2022 to the present.
+Despite the use of multiple databases, only a limited number of relevant articles were found.
+Therefore, a title search for the term “ChatGPT” was conducted using Google Scholar within
+the same publication period. This approach enabled the retrieval of additional relevant articles
+that were not captured in the initial database search.
+Educ. Sci. 2023, 13, 410 3 of 15
+2.3. Inclusion and Exclusion Criteria
+Academic articles published between 1 January 2022 and 28 February 2023 (the date
+of the final search) were reviewed, including advanced online publications and preprints.
+Non-academic articles (e.g., articles from mass and social media) were excluded. At the time
+of writing, this period covered all of the articles that had been published about ChatGPT,
+as it was released on 30 November 2022. To be included in this rapid review, articles had to
+discuss ChatGPT in the field of education, with no constraints on any specific educational
+contexts. Literature reviews, if retrieved, were used as background references. However,
+they were excluded from the synthesis to avoid duplicate findings. In addition, only
+English-language articles were included in this review. Table 1 summarises the inclusion
+and exclusion criteria for article selection.
+Table 1. Inclusion and exclusion criteria for article selection.
+Criterion Inclusion Exclusion
+Article topic Discuss ChatGPT in the field
+of education
+Do not discuss GhatGPT in the
+field of education
+Article type Academic articles Non-academic articles, such as
+articles from mass and social media
+Time period 1 January 2022 to 28 February 2023 Articles outside the time period
+Language English Non-English
+2.4. Content Analysis
+Guided by the research questions set forth above, a content analysis of the included
+articles was conducted. Creswell’s [19] coding techniques were employed in the process of
+analysis and interpretation. His approach comprised of the following three main stages.
+1. Open coding: Open coding is the initial stage of coding in which the researcher
+examines the data and generates codes to describe and categorise the data. It allows a
+deep exploration and understanding of the data without imposing preconceived ideas.
+2. Axial coding: After the initial process of open coding, axial coding is used to analyse
+the relationships and connections between the codes generated during open coding.
+It involves organising the codes into broader categories or themes and establishing
+the relationships between them.
+3. Selective coding: Selective coding is the final stage of coding. It involves further
+refining and integrating the categories or themes identified during open and axial
+coding to develop a comprehensive picture. It identifies the core category or central
+phenomenon that emerged from the data.
+Following Creswell’s [19] approach, codes were assigned to pieces of data without
+using predominant frameworks in the stage of open coding. After the completion of coding
+the first 15 articles, all the codes assigned were reviewed and grouped by similarity, thereby
+reducing redundant codes in the stage of axial coding. The preliminary list of codes was
+used to analyse the remaining articles. Hence, any new codes that emerged were added to
+the list. Specific quotes were identified to further support the codes. Finally, similar codes
+were organised into categories in the stage of selective coding. To enhance the consistency of
+classification, several exemplary quotes that clearly illustrated each category were identified.
+Multiple reviews of the data were performed to maintain consistency in coding.
+3. Findings
+3.1. General Description of the Literature
+Figure 1 shows that 50 and 367 outcomes were retrieved through the database search
+and Google Scholar, respectively. Due to duplication across databases and Google Scholar,
+some of the articles were removed, yielding 363 unique records for screening. Notably, many
+records retrieved were outside the scope of this review, including articles from mass and

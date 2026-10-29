@@ -1,0 +1,243 @@
+Computers and Education: Artificial Intelligence 4 (2023) 100118
+Available online 20 December 2022
+2666-920X/© 2022 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+Systematic literature review on opportunities, challenges, and future 
+research recommendations of artificial intelligence in education 
+Thomas K.F. Chiu a,*, Qi Xia b, Xinyan Zhou b, Ching Sing Chai b, Miaoting Cheng c 
+a Department of Curriculum and Instruction, Centre for Learning Sciences and Technologies, Hong Kong Institute of Asia-Pacific Studies at The Chinese University of Hong 
+Kong, Hong Kong Special Administrative Region 
+b The Department of Curriculum and Instruction Faculty of Education, The Chinese University of Hong Kong, Hong Kong Special Administrative Region 
+c Faculty of Education & Institute of KEEP Collaborative Innovation, Shenzhen University, China   
+A R T I C L E  I N F O   
+Keywords: 
+Artificial intelligence 
+Artificial intelligence in education 
+Systematic review 
+Learning 
+Teaching 
+Assessment 
+A B S T R A C T   
+Applications of artificial intelligence in education (AIEd) are emerging and are new to researchers and practi
+tioners alike. Reviews of the relevant literature have not examined how AI technologies have been integrated 
+into each of the four key educational domains of learning, teaching, assessment, and administration. The re
+lationships between the technologies and learning outcomes for students and teachers have also been neglected. 
+This systematic review study aims to understand the opportunities and challenges of AIEd by examining the 
+literature from the last 10 years (2012–2021) using matrix coding and content analysis approaches. The results 
+present the current focus of AIEd research by identifying 13 roles of AI technologies in the key educational 
+domains, 7 learning outcomes of AIEd, and 10 major challenges. The review also provides suggestions for future 
+directions of AIEd research.   
+1. Introduction 
+Artificial intelligence (AI) refers to the ability of a digital machine to 
+perform tasks commonly associated with intelligent beings, and its 
+associated technologies are divided into various branches, such as 
+computer vision, speech, machine learning, big data, and natural lan
+guage processing (Chiu, 2021; Chiu et al., 2022; Xia et al., 2022). Its 
+explosive growth is increasingly transforming the ways people interact, 
+communicate, live, learn, and work (Chiu, 2021; Chiu et al., 2022; Xia 
+et al., 2022; Pedró et al., 2019; ). In this study, AI in education (AIEd) 
+refers to the application of AI technologies, such as intelligent tutoring 
+systems, chatbots, robots, and the automated assessment of all modes of 
+digitized artifacts that support and enhance education. AIEd has enor
+mous potential to improve learning, teaching, assessment, and educa
+tional administration by offering students more personalized and 
+adaptive learning, fostering teachers’ understanding of students’ 
+learning process, and providing anywhere anytime machine supported 
+queries and immediate feedback. . AIEd is stimulating an evolution of 
+teaching and learning practices and program development, and it is one 
+of the most important areas for educational research. 
+The importance of AIEd research and practice is reflected in various 
+national and international initiatives and reports. For example, in 2019, 
+the government of China launched a strategic policy of education 
+modernization to encourage greater integration of intelligent technol
+ogy into education and more teacher professional development activ
+ities related to AI and AIEd (Chiu, 2021; Chiu et al., 2022; Xia et al., 
+2022). In the United States, resources and grants are being provided to 
+designated institutions and organizations for researching and devel
+oping AI-driven personalized learning platforms that have great poten
+tial to boost academic performance by deepening students’ cognitive 
+engagement and to reduce educational inequalities by assisting under
+privileged students (Boninger et al., 2020; Williamson & Eynon, 2020). 
+Jacobs Foundation has awarded CHF 2 million to University of Oulu, 
+Finland, and Radboud University, the Netherlands, to establish a global 
+research center that will prepare young learners for the age of artificial 
+intelligence (AI) - Center for Learning and Living with AI (CELLA). A 
+report from the Organization for Economic Co-operation and Develop
+ment recommended additional research aimed at translating research 
+findings into educational practice, and for educators to make use of big 
+data and learning analytics to improve teaching and learning (Kuhl 
+et al., 2019). With the continuous advancement of AI technologies and 
+implementation of relevant policies, AIEd has become an important 
+* Corresponding author. 
+E-mail addresses: thomas.kf.chiu@gmail.com (T.K.F. Chiu), qxiabo@link.cuhk.edu.hk, Thomas.kf.chiu@gmail.com (Q. Xia), XinyanZ@link.cuhk.edu.hk 
+(X. Zhou), CSChai@cuhk.edu.hk (C.S. Chai), Chengmt1@szu.edu.cn (M. Cheng).  
+Contents lists available at ScienceDirect 
+Computers and Education: Artificial Intelligence 
+journal homepage: www.sciencedirect.com/journal/computers-and-education-artificial-intelligence 
+https://doi.org/10.1016/j.caeai.2022.100118 
+Received 5 September 2022; Received in revised form 10 November 2022; Accepted 17 December 2022   
+Computers and Education: Artificial Intelligence 4 (2023) 100118
+2
+emerging research area for setting out the future of learning (Holmes 
+et al., 2021), and its effects are felt across the domains of learning, 
+teaching, assessment, and administration (González-Calatayud et al., 
+2021; Luckin, 2017). 
+Given AI affordances in enhancing education, the spotlight has been 
+placed on AIEd for educational researchers, policymakers, and practi
+tioners. However, most of the early research was focused on engineering 
+aspects, such as developing new algorithms and enhancing machine 
+learning/deep learning techniques. Compared to other fields of educa
+tional technology, such as gamification and blended learning, AIEd 
+research is more scattered and less organized. The impact of AI on ed
+ucation remains unclear (Holmes et al., 2021), and more research is 
+needed to understand whether and how these emerging technologies 
+benefit education. A lack of familiarity with the technologies makes it 
+challenging to introduce or integrate them into schools and universities 
+(Hussin, 2018). Therefore, more review studies are needed to organize 
+the literature, provide an overview of the opportunities and challenges 
+of AIEd, and thereby suggest future research directions. 
+Accordingly, the number of review papers on this topic has recently 
+increased. For example, Zhai and colleagues (2021) conducted a sys
+tematic review focusing on trends in educational AI technologies and 
+tools, and therefore they mainly attended to the engineering aspects. 
+Bozkurt et al. (2021) explored trends in publications on AIEd, including 
+topic areas, geographical distribution, and patterns in textual data. 
+Other review articles have focused on particular disciplines, such as 
+languages, mathematics, and medicine (Karaca et al., 2021), on specific 
+educational activities, such as assessment González-Calatayud et al., 
+2021, and on certain technologies or applications, such as assistive ro
+bots, adaptive learning, or proctoring systems (Nigam et al., 2021; 
+Papadopoulos et al., 2020). However, these review papers focused on a 
+specific key domain (either learning, teaching, assessment, or adminis
+tration) or an educational outcome. We need a more holistic perspective 
+to analyze the role of AIED (Nigam et al., 2021). To fill these research 
+gaps, this study aims to give an overview study to understand the op
+portunities and challenges of integrating AIEd in the four key educa
+tional domains and two major learning outcomes, with the main goal of 
+engaging researchers, policymakers, teachers, students, and engineers in 
+the pressing dialogue of how the future of AIEd should unfold. This re
+view is guided by the following research questions: 
+RQ1. How do AI technologies support learning, teaching, assessment, 
+and administration in education, and what are the challenges in their 
+Fig. 1. Flowchart of article selection.  
+T.K.F. Chiu et al.                                                                                                                                                                                                                               
+Computers and Education: Artificial Intelligence 4 (2023) 100118
+3
+research and development? 
+RQ2. What student and teacher learning outcomes are fostered by AI 
+technologies? 
+2. Method 
+This review adopted the PRISMA Statement (Preferred Reporting 
+Items for Systematic Reviews and Meta-Analyses) approach (Page et al., 
+2021) and proceeded in three steps: (i) article selection, (ii) article 
+screening and inclusion, and (iii) data coding, extraction, and analysis. 
+2.1. Article identification 
+Only articles relevant to AIEd were selected for this review. To 
+identify relevant published articles, three of the authors collaboratively 
+discussed and developed the criteria depicted in Fig. 1. Based on the 
+previous studies (Nigam et al., 2021), the search query [(“AI” OR 
+“artificial intelligence”) AND “education”] was used to include papers 
+with these terms in the titles, keywords, or abstracts published from 
+January 1, 2012, to October 24, 2021. The search was executed in ERIC, 
+ProQuest, Scopus, and Web of Science (WOS), and it returned 100,355 
+initial articles: 1,788 in ERIC, 6,355 in ProQuest, 16,513 in Scopus, and 
+75,699 in WOS. The investigation covered only peer-reviewed journal 
+article published in English. The inclusion and exclusion criteria varied 
+slightly for each database due to the unique characteristics and functions 
+of the search engines (as shown in Fig. 1). Additionally, the articles 
+selected from ERIC were limited to full-text publications, those from 
+Scopus included those in the final stages of publication, and those from 
+WOS were limited to studies in the area of educational research. After 
+applying the criteria, 1,418 publications were selected for further 
+screening. 
+2.2. Article screening and inclusion 
+Screening and inclusion procedures were then used to select articles 
+for the main analysis. First, 40 duplicate articles were eliminated using 
+the duplication detection function of EndNote X9. Two of the authors 
+then examined the titles and abstracts of the articles to identify empir
+ical studies related to AIEd published in journals, thus excluding sys
+tematic literature reviews, meta-analyses, conceptual papers, 
+commentaries, editorials, and conference papers. A further 1,234 arti
+cles were excluded based on these criteria. When the two authors dis
+agreed on paper identification, another author assessed the paper and 
+made a final decision. The full texts of the remaining articles were then 
+read and 24 duplicates that were not detected by EndNote were 
+removed, leaving 120 articles. A review study, 7 commentaries or 
+theoretical articles, and 20 studies that did not focus on AIEd were also 
+eliminated at this stage. Ultimately, 92 articles were retained, see 
+Table 1 and Fig. 2. 
+2.3. Coding and analysis 
+AIEd is often classified into three domains: learning, teaching, and 
+assessment (González-Calatayud et al., 2021 Luckin, 2017). However, 
+educational administration is also a very important domain of AIEd 
+research. Accordingly, this study extends the educational research do
+mains of AI applications to four: learning, teaching, assessment, and 
+administration. We have categorized the reviewed AI according to its 
+role as reported by the authors. For example, if the AI is used to analyze 
+student performance, it would fall into the assessment category. It is 
+important to note that as some AI-based systems were applied across 
+multiple domains, an article may be classified into more than one of 
+these four domains. 
+Coding categories were established to answer the two research 
+questions by inductive approach (Scott & Howell, 2008). To address the 
+two RQs, two non-corresponding authors were coders, and coded the 
+selected articles independently, they first tried to code 20 articles by 
+extracting and examining AI technologies and their applications in the 
+four key educational domains and learning outcomes of the applications. 
+Then they had a meeting with the corresponding authors to discuss and 
+confirm the coding approaches, domains and outcomes. As explained 
+above, some articles fell into more than one domain. We extract infor
+mation on AI technologies and outcomes for further analyses. These 
+results in the four domains. As for the results of the learning outcomes, 
+an open coding format was used and then finally summarized according 
+to the student and teacher perspectives. Moreover, to retrieve data 
+related to challenges of using AI in the four domains, we read the 
+manuscript with focus on the sections of discussion and limitation. Three 
+of the authors were involved in the coding. All of the authors discussed 
+the results and made decisions by consensus if the findings were unclear. 
+3. Results 
+3.1. The roles of AI in the four key domains and research challenges 
+(RQ1) 
+Thirteen roles were identified from the selected articles across the 
+four key domains. The contribution of the reviewed studies to each of 
+these domains and the challenges they reveal are described below. 
+3.1.1. AI in student learning 
+The application of AI to student learning can be classified into four 
+main roles: (i) assigning tasks based on individual competence, (ii) 
+providing human–machine conversations, (iii) analyzing student work 
+for feedback, and (iv) increasing adaptability and interactivity in digital 
+environments.  
+• Assigning tasks based on individual competence: AI-based environments 
+have been used to personalize tasks for student learning. For 
+example, Hirankerd and Kittisunthonphisarn (2020) built an 
+AI-integrated management system with augmented, virtual, and 
+mixed reality technologies to monitor student learning progress for 
+assigning adaptive tasks; Kong et al. (2021) developed a virtual pa
+tient for medical student training; Munawar et al. (2018) created and 
+developed an intelligent virtual laboratory to cater for students’ 
+needs by assigning laboratory tasks at an appropriate level; and Yang 
+and Shulruf (2019) used an AI-enhanced skin to provide real-time 
+feedback and adaptive tasks to medical students. However, these 
+studies highlight a lack of supportive learning resources as one of the 
+biggest challenges for fitting tasks to individual competence. As the 
+student learning tasks provided by the intelligent systems were 
+developed in advance, and not dynamically generated, the tasks were 
+not always adequate to meet individual needs (Hirankerd & Kitti
+sunthonphisarn, 2020; Munawar et al., 2018; Yang & Shulruf, 2019). 
+The results of these studies indicate that the personalized learning 
+offered by AI technologies is at an experimental stage in technology 
+and implementation, with a lack of appropriate learning resources 
+presenting the biggest challenge. 
+• Providing human–machine conversations: Most of the studies imple
+mented AI chatbots and interactive books that allowed students to 
+have conversations with machines about their learning. AI tech
+niques emulate the processes of human thought using structures that 
+contain the knowledge and experience of human experts. AI chatbots 
+and books built with these techniques have been applied to language 
+learning to help students develop their communication abilities 
+through ongoing dialogue (Chew & Chua, 2020; Kim et al., 2021; 
+Koc-Januchta et al., 2020; Palasundram et al., 2019; Vazquez-Cano 
+et al., 2021). Students interacted with AI agents using a 
+question-and-answer approach. Most of the students found that this 
+was a useful and enjoyable method of gaining answers to simple 
+questions. Nevertheless, these articles also present some challenges 
+T.K.F. Chiu et al.                                                                                                                                                                                                                               

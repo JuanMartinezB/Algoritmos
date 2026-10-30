@@ -1,0 +1,69 @@
+/* Estilos de la página de Agrupamiento (Requerimiento 2) */
+.agr-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin: 16px 0;
+}
+.agr-controles label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.agr-controles select,
+.agr-controles input {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.agr-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+.agr-tabla-scroll,
+.agr-svg {
+  overflow-x: auto;
+}
+.agr-tabla {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+}
+.agr-tabla th,
+.agr-tabla td {
+  border: 1px solid #e2e8f0;
+  padding: 6px 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+.agr-tabla th:first-child,
+.agr-tabla td:first-child {
+  text-align: left;
+}
+.agr-tabla th {
+  background: #f1f5f9;
+}
+.agr-fila-ganadora {
+  background: #ecfdf5;
+}
+.agr-celda-mejor {
+  font-weight: 700;
+  color: #047857;
+}
+.agr-conclusion {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.agr-grupos {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  display: grid;
+  gap: 4px;
+}

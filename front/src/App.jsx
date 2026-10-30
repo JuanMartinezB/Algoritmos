@@ -3,17 +3,18 @@ import Sidebar from './componentes/Sidebar';
 import Informacion from './paginas/Informacion';
 import Similitud from './paginas/Similitud';
 import SimilitudGlove from './paginas/SimilitudGlove';
+import Agrupamiento from './paginas/Agrupamiento';
 import './App.css';
 
 /**
  * App.jsx
  * Componente raíz del Frontend.
- * Controla la pestaña activa del menú lateral ('informacion', 'fasttext' o 'glove')
+ * Controla la pestaña activa del menú lateral ('informacion', 'fasttext', 'glove' o 'agrupamiento')
  * y el contador total de artículos del corpus.
  */
 function App() {
   const [totalArticulos, setTotalArticulos] = useState(0);
-  const [pestanaActiva, setPestanaActiva] = useState('informacion'); // 'informacion' | 'fasttext' | 'glove'
+  const [pestanaActiva, setPestanaActiva] = useState('informacion'); // 'informacion' | 'fasttext' | 'glove' | 'agrupamiento'
 
   return (
     <div className="layout-root">
@@ -36,6 +37,8 @@ function App() {
       {pestanaActiva === 'glove' && (
         <SimilitudGlove onArticulosChange={setTotalArticulos} />
       )}
+
+      {pestanaActiva === 'agrupamiento' && <Agrupamiento />}
     </div>
   );
 }

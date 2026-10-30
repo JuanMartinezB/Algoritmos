@@ -16,11 +16,11 @@ export default function FormularioBusqueda({
 }) {
   const [errorLocal, setErrorLocal] = useState('');
 
-  // Algoritmos soportados y previstos
+  // Algoritmos soportados
   const ALGORITMOS = [
     { id: 'kmp', nombre: 'Knuth-Morris-Pratt (KMP)', disponible: true, badge: 'Disponible' },
     { id: 'boyer-moore', nombre: 'Boyer-Moore', disponible: true, badge: 'Disponible' },
-    { id: 'rabin-karp', nombre: 'Rabin-Karp', disponible: false, badge: 'Próximamente' }
+    { id: 'rabin-karp', nombre: 'Rabin-Karp', disponible: true, badge: 'Disponible' }
   ];
 
   const handleSubmit = (e) => {

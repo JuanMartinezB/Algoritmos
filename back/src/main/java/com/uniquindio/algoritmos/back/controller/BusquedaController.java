@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.uniquindio.algoritmos.back.algoritmos.busqueda.BoyerMoore;
 import com.uniquindio.algoritmos.back.algoritmos.busqueda.Kmp;
+import com.uniquindio.algoritmos.back.algoritmos.busqueda.RabinKarp;
 import com.uniquindio.algoritmos.back.modelo.Articulo;
 import com.uniquindio.algoritmos.back.modelo.RespuestaBusqueda;
 import com.uniquindio.algoritmos.back.modelo.RespuestaBusqueda.ResultadoArticulo;
@@ -93,5 +94,40 @@ public class BusquedaController {
         }
 
         return new RespuestaBusqueda("Boyer-Moore", patron, tabla, tiempoPre, tiempoBusqueda, total, resultados);
+    }
+
+    @GetMapping("/rabin-karp")
+    public RespuestaBusqueda rabinKarp(@RequestParam String patron) {
+        if (patron.isBlank()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El patron no puede estar vacio");
+        }
+        String patronMin = patron.toLowerCase();
+
+        // Preprocesamiento: hash del patron
+        long inicio = System.nanoTime();
+        long hashPatron = RabinKarp.hash(patronMin);
+        long tiempoPre = System.nanoTime() - inicio;
+
+        List<ResultadoArticulo> resultados = new ArrayList<>();
+        long tiempoBusqueda = 0;
+        int total = 0;
+
+        for (Articulo a : corpus.articulos()) {
+            String texto = a.resumenOriginal().toLowerCase();
+
+            inicio = System.nanoTime();
+            List<Integer> posiciones = RabinKarp.buscar(texto, patronMin, hashPatron);
+            tiempoBusqueda += System.nanoTime() - inicio;
+
+            if (!posiciones.isEmpty()) {
+                total += posiciones.size();
+                resultados.add(new ResultadoArticulo(
+                        a.id(), a.titulo(), a.autores(), a.resumenOriginal(), posiciones.size(), posiciones));
+            }
+        }
+
+        // La "tabla" de Rabin-Karp es solo el hash del patron
+        int[] tabla = { (int) hashPatron };
+        return new RespuestaBusqueda("Rabin-Karp", patron, tabla, tiempoPre, tiempoBusqueda, total, resultados);
     }
 }

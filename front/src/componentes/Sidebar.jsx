@@ -72,9 +72,9 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
             </div>
             <div className="nav-item-text">
               <span className="nav-item-title">Búsqueda de Patrones</span>
-              <span className="nav-item-subtitle">KMP & Boyer-Moore</span>
+              <span className="nav-item-subtitle">KMP, BM & Rabin-Karp</span>
             </div>
-            <span className="nav-item-badge kmp-badge">KMP · BM</span>
+            <span className="nav-item-badge kmp-badge">3 Algos</span>
           </div>
 
           {/* Pestaña: IA: FastText */}

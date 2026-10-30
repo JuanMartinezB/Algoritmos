@@ -5,6 +5,7 @@ import ResumenBusqueda from '../componentes/busqueda/ResumenBusqueda';
 import TarjetasTiempo from '../componentes/busqueda/TarjetasTiempo';
 import TablaPrefijosKmp from '../componentes/busqueda/TablaPrefijosKmp';
 import TablaCaracterMaloBm from '../componentes/busqueda/TablaCaracterMaloBm';
+import TablaRollingHashRk from '../componentes/busqueda/TablaRollingHashRk';
 import ListaResultadosBusqueda from '../componentes/busqueda/ListaResultadosBusqueda';
 import EstadoVacio from '../componentes/busqueda/EstadoVacio';
 
@@ -12,7 +13,7 @@ import EstadoVacio from '../componentes/busqueda/EstadoVacio';
  * BusquedaPatrones.jsx
  * Página principal para la Búsqueda Exacta de Patrones en los abstracts del corpus.
  * Consume exclusivamente la API de Spring Boot (/api/busqueda/{algoritmo}).
- * Soporta KMP y Boyer-Moore, extensible a Rabin-Karp.
+ * Soporta KMP, Boyer-Moore y Rabin-Karp.
  */
 export default function BusquedaPatrones({ totalArticulos = 20 }) {
   const [algoritmo, setAlgoritmo] = useState('kmp');
@@ -129,6 +130,13 @@ export default function BusquedaPatrones({ totalArticulos = 20 }) {
             <TablaCaracterMaloBm
               patron={resultado.patron}
               tablaCaracterMalo={resultado.tablaPrefijos}
+            />
+          )}
+
+          {resultado.algoritmo === 'Rabin-Karp' && (
+            <TablaRollingHashRk
+              patron={resultado.patron}
+              tablaPrefijos={resultado.tablaPrefijos}
             />
           )}
 

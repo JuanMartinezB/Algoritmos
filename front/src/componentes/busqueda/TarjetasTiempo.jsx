@@ -21,8 +21,7 @@ function formatearTiempo(ns) {
 /**
  * TarjetasTiempo.jsx
  * Muestra el tiempo de preprocesamiento y el tiempo de búsqueda por separado.
- * Esta separación es crucial para comparar la complejidad del preprocesamiento
- * frente a la búsqueda sobre los textos de los artículos.
+ * Adapta los subtítulos y explicaciones según el algoritmo (KMP, Boyer-Moore, Rabin-Karp).
  */
 export default function TarjetasTiempo({
   algoritmo = 'KMP',
@@ -34,7 +33,27 @@ export default function TarjetasTiempo({
   const tiempoTotalNs = (tiempoPreprocesamientoNs || 0) + (tiempoBusquedaNs || 0);
   const tiempoTotal = formatearTiempo(tiempoTotalNs);
 
-  const esBm = (algoritmo || '').toLowerCase().includes('boyer');
+  const algoLimpio = (algoritmo || '').toLowerCase();
+  const esBm = algoLimpio.includes('boyer');
+  const esRk = algoLimpio.includes('rabin');
+
+  // Subtítulos y descripciones dinámicas
+  let subtituloPre = 'Tabla auxiliar de prefijos O(m)';
+  let descPre = 'Cálculo de saltos previo a la búsqueda (se ejecuta una sola vez para el patrón).';
+  let subtituloBus = 'Escaneo de los 20 resúmenes O(n)';
+  let descBus = 'Recorrido eficiente aprovechando la tabla de prefijos sin retrocesos en el texto.';
+
+  if (esBm) {
+    subtituloPre = 'Tabla de carácter malo O(σ + m)';
+    descPre = 'Mapeo de la última posición de los 256 caracteres del alfabeto en el patrón.';
+    subtituloBus = 'Comparaciones de der. a izq. O(n/m)';
+    descBus = 'Avanza rápidamente mediante saltos cuando ocurre un carácter discrepante.';
+  } else if (esRk) {
+    subtituloPre = 'Hash modular polinomial O(m)';
+    descPre = 'Cálculo de la huella digital numérica con Base 256 y Primo 101.';
+    subtituloBus = 'Rolling Hash deslizante O(n) prom.';
+    descBus = 'Actualiza el hash en O(1) por desplazamiento y verifica caracteres si hay coincidencia.';
+  }
 
   return (
     <div className="busqueda-tiempos-contenedor">
@@ -52,9 +71,7 @@ export default function TarjetasTiempo({
           </div>
           <div className="tiempo-card-titulos">
             <h4 className="tiempo-card-nombre">Preprocesamiento</h4>
-            <span className="tiempo-card-subtitulo">
-              {esBm ? 'Tabla de carácter malo O(σ + m)' : 'Tabla auxiliar de prefijos O(m)'}
-            </span>
+            <span className="tiempo-card-subtitulo">{subtituloPre}</span>
           </div>
         </div>
 
@@ -69,11 +86,7 @@ export default function TarjetasTiempo({
         </div>
 
         <div className="tiempo-card-footer">
-          <small>
-            {esBm
-              ? 'Mapeo de la última posición de los 256 caracteres del alfabeto en el patrón.'
-              : 'Cálculo de saltos previo a la búsqueda (se ejecuta una sola vez para el patrón).'}
-          </small>
+          <small>{descPre}</small>
         </div>
       </div>
 
@@ -91,9 +104,7 @@ export default function TarjetasTiempo({
           </div>
           <div className="tiempo-card-titulos">
             <h4 className="tiempo-card-nombre">Búsqueda en Textos</h4>
-            <span className="tiempo-card-subtitulo">
-              {esBm ? 'Comparaciones de der. a izq. O(n/m)' : 'Escaneo de los 20 resúmenes O(n)'}
-            </span>
+            <span className="tiempo-card-subtitulo">{subtituloBus}</span>
           </div>
         </div>
 
@@ -108,11 +119,7 @@ export default function TarjetasTiempo({
         </div>
 
         <div className="tiempo-card-footer">
-          <small>
-            {esBm
-              ? 'Avanza rápidamente mediante saltos cuando ocurre un carácter discrepante.'
-              : 'Recorrido eficiente aprovechando la tabla de prefijos sin retrocesos en el texto.'}
-          </small>
+          <small>{descBus}</small>
         </div>
       </div>
 

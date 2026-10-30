@@ -59,7 +59,7 @@ export default function DetallePasoAPaso({
     return () => {
       activo = false;
     };
-  }, [idA, idB]);
+  }, [idA, idB, obtenerDetalle]);
 
   // Manejar Escape para cerrar
   useEffect(() => {

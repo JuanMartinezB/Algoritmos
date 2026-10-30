@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.uniquindio.algoritmos.back.algoritmos.busqueda.BoyerMoore;
 import com.uniquindio.algoritmos.back.algoritmos.busqueda.Kmp;
 import com.uniquindio.algoritmos.back.modelo.Articulo;
 import com.uniquindio.algoritmos.back.modelo.RespuestaBusqueda;
@@ -60,5 +61,37 @@ public class BusquedaController {
         }
 
         return new RespuestaBusqueda("KMP", patron, tabla, tiempoPre, tiempoBusqueda, total, resultados);
+    }
+
+    @GetMapping("/boyer-moore")
+    public RespuestaBusqueda boyerMoore(@RequestParam String patron) {
+        if (patron.isBlank()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El patron no puede estar vacio");
+        }
+        String patronMin = patron.toLowerCase();
+
+        long inicio = System.nanoTime();
+        int[] tabla = BoyerMoore.tablaCaracterMalo(patronMin);
+        long tiempoPre = System.nanoTime() - inicio;
+
+        List<ResultadoArticulo> resultados = new ArrayList<>();
+        long tiempoBusqueda = 0;
+        int total = 0;
+
+        for (Articulo a : corpus.articulos()) {
+            String texto = a.resumenOriginal().toLowerCase();
+
+            inicio = System.nanoTime();
+            List<Integer> posiciones = BoyerMoore.buscar(texto, patronMin, tabla);
+            tiempoBusqueda += System.nanoTime() - inicio;
+
+            if (!posiciones.isEmpty()) {
+                total += posiciones.size();
+                resultados.add(new ResultadoArticulo(
+                        a.id(), a.titulo(), a.autores(), a.resumenOriginal(), posiciones.size(), posiciones));
+            }
+        }
+
+        return new RespuestaBusqueda("Boyer-Moore", patron, tabla, tiempoPre, tiempoBusqueda, total, resultados);
     }
 }

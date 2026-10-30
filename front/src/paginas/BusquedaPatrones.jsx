@@ -4,6 +4,7 @@ import FormularioBusqueda from '../componentes/busqueda/FormularioBusqueda';
 import ResumenBusqueda from '../componentes/busqueda/ResumenBusqueda';
 import TarjetasTiempo from '../componentes/busqueda/TarjetasTiempo';
 import TablaPrefijosKmp from '../componentes/busqueda/TablaPrefijosKmp';
+import TablaCaracterMaloBm from '../componentes/busqueda/TablaCaracterMaloBm';
 import ListaResultadosBusqueda from '../componentes/busqueda/ListaResultadosBusqueda';
 import EstadoVacio from '../componentes/busqueda/EstadoVacio';
 
@@ -11,7 +12,7 @@ import EstadoVacio from '../componentes/busqueda/EstadoVacio';
  * BusquedaPatrones.jsx
  * Página principal para la Búsqueda Exacta de Patrones en los abstracts del corpus.
  * Consume exclusivamente la API de Spring Boot (/api/busqueda/{algoritmo}).
- * Arquitectura modular preparada para KMP (activo), Boyer-Moore y Rabin-Karp.
+ * Soporta KMP y Boyer-Moore, extensible a Rabin-Karp.
  */
 export default function BusquedaPatrones({ totalArticulos = 20 }) {
   const [algoritmo, setAlgoritmo] = useState('kmp');
@@ -111,15 +112,23 @@ export default function BusquedaPatrones({ totalArticulos = 20 }) {
 
           {/* 2. Tarjetas de Tiempo (Preprocesamiento vs Búsqueda) */}
           <TarjetasTiempo
+            algoritmo={resultado.algoritmo}
             tiempoPreprocesamientoNs={resultado.tiempoPreprocesamientoNs}
             tiempoBusquedaNs={resultado.tiempoBusquedaNs}
           />
 
-          {/* 3. Tabla Auxiliar específica según el algoritmo (KMP: Tabla de prefijos) */}
+          {/* 3. Tabla Auxiliar específica según el algoritmo */}
           {resultado.algoritmo === 'KMP' && resultado.tablaPrefijos && (
             <TablaPrefijosKmp
               patron={resultado.patron}
               tablaPrefijos={resultado.tablaPrefijos}
+            />
+          )}
+
+          {resultado.algoritmo === 'Boyer-Moore' && resultado.tablaPrefijos && (
+            <TablaCaracterMaloBm
+              patron={resultado.patron}
+              tablaCaracterMalo={resultado.tablaPrefijos}
             />
           )}
 

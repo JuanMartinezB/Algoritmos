@@ -7,6 +7,8 @@ import React from 'react';
  * 1. Información (Corpus y preprocesamiento)
  * 2. Búsqueda de Patrones (KMP, Boyer-Moore, Rabin-Karp)
  * 3. IA: FastText (Similitud semántica de embeddings)
+ * 4. IA: GloVe (Similitud semántica 50d + IDF)
+ * 5. Agrupamiento (Dendrogramas)
  */
 export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informacion', onCambiarPestana }) {
   return (
@@ -53,7 +55,7 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
             <span className="nav-item-badge">{totalArticulos}</span>
           </div>
 
-          {/* Nueva Pestaña: Búsqueda de Patrones */}
+          {/* Pestaña: Búsqueda de Patrones */}
           <div
             className={`sidebar-nav-item ${pestanaActiva === 'busqueda' ? 'active' : ''}`}
             onClick={() => onCambiarPestana && onCambiarPestana('busqueda')}
@@ -70,9 +72,9 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
             </div>
             <div className="nav-item-text">
               <span className="nav-item-title">Búsqueda de Patrones</span>
-              <span className="nav-item-subtitle">KMP & Coincidencias</span>
+              <span className="nav-item-subtitle">KMP & Boyer-Moore</span>
             </div>
-            <span className="nav-item-badge kmp-badge">KMP</span>
+            <span className="nav-item-badge kmp-badge">KMP · BM</span>
           </div>
 
           {/* Pestaña: IA: FastText */}
@@ -96,7 +98,7 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
             <span className="nav-item-badge ft-badge">IA</span>
           </div>
 
-          {/* Nueva Pestaña: IA: GloVe */}
+          {/* Pestaña: IA: GloVe */}
           <div
             className={`sidebar-nav-item ${pestanaActiva === 'glove' ? 'active' : ''}`}
             onClick={() => onCambiarPestana && onCambiarPestana('glove')}

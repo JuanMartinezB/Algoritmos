@@ -19,7 +19,7 @@ export default function FormularioBusqueda({
   // Algoritmos soportados y previstos
   const ALGORITMOS = [
     { id: 'kmp', nombre: 'Knuth-Morris-Pratt (KMP)', disponible: true, badge: 'Disponible' },
-    { id: 'boyer-moore', nombre: 'Boyer-Moore', disponible: false, badge: 'Próximamente' },
+    { id: 'boyer-moore', nombre: 'Boyer-Moore', disponible: true, badge: 'Disponible' },
     { id: 'rabin-karp', nombre: 'Rabin-Karp', disponible: false, badge: 'Próximamente' }
   ];
 

@@ -21,10 +21,11 @@ function formatearTiempo(ns) {
 /**
  * TarjetasTiempo.jsx
  * Muestra el tiempo de preprocesamiento y el tiempo de búsqueda por separado.
- * Esta separación es crucial para comparar la complejidad O(m) del preprocesamiento
- * frente a la búsqueda O(n) sobre los textos de los artículos.
+ * Esta separación es crucial para comparar la complejidad del preprocesamiento
+ * frente a la búsqueda sobre los textos de los artículos.
  */
 export default function TarjetasTiempo({
+  algoritmo = 'KMP',
   tiempoPreprocesamientoNs = 0,
   tiempoBusquedaNs = 0
 }) {
@@ -32,6 +33,8 @@ export default function TarjetasTiempo({
   const tiempoBus = formatearTiempo(tiempoBusquedaNs);
   const tiempoTotalNs = (tiempoPreprocesamientoNs || 0) + (tiempoBusquedaNs || 0);
   const tiempoTotal = formatearTiempo(tiempoTotalNs);
+
+  const esBm = (algoritmo || '').toLowerCase().includes('boyer');
 
   return (
     <div className="busqueda-tiempos-contenedor">
@@ -49,7 +52,9 @@ export default function TarjetasTiempo({
           </div>
           <div className="tiempo-card-titulos">
             <h4 className="tiempo-card-nombre">Preprocesamiento</h4>
-            <span className="tiempo-card-subtitulo">Tabla auxiliar de prefijos O(m)</span>
+            <span className="tiempo-card-subtitulo">
+              {esBm ? 'Tabla de carácter malo O(σ + m)' : 'Tabla auxiliar de prefijos O(m)'}
+            </span>
           </div>
         </div>
 
@@ -64,7 +69,11 @@ export default function TarjetasTiempo({
         </div>
 
         <div className="tiempo-card-footer">
-          <small>Cálculo de saltos previo a la búsqueda (se ejecuta una sola vez para el patrón).</small>
+          <small>
+            {esBm
+              ? 'Mapeo de la última posición de los 256 caracteres del alfabeto en el patrón.'
+              : 'Cálculo de saltos previo a la búsqueda (se ejecuta una sola vez para el patrón).'}
+          </small>
         </div>
       </div>
 
@@ -82,7 +91,9 @@ export default function TarjetasTiempo({
           </div>
           <div className="tiempo-card-titulos">
             <h4 className="tiempo-card-nombre">Búsqueda en Textos</h4>
-            <span className="tiempo-card-subtitulo">Escaneo de los 20 resúmenes O(n)</span>
+            <span className="tiempo-card-subtitulo">
+              {esBm ? 'Comparaciones de der. a izq. O(n/m)' : 'Escaneo de los 20 resúmenes O(n)'}
+            </span>
           </div>
         </div>
 
@@ -97,7 +108,11 @@ export default function TarjetasTiempo({
         </div>
 
         <div className="tiempo-card-footer">
-          <small>Recorrido eficiente aprovechando la tabla de prefijos sin retrocesos en el texto.</small>
+          <small>
+            {esBm
+              ? 'Avanza rápidamente mediante saltos cuando ocurre un carácter discrepante.'
+              : 'Recorrido eficiente aprovechando la tabla de prefijos sin retrocesos en el texto.'}
+          </small>
         </div>
       </div>
 
@@ -115,7 +130,7 @@ export default function TarjetasTiempo({
           </div>
           <div className="tiempo-card-titulos">
             <h4 className="tiempo-card-nombre">Tiempo Total</h4>
-            <span className="tiempo-card-subtitulo">Preprocesamiento + Búsqueda</span>
+            <span className="tiempo-card-subtitulo">{algoritmo} en Backend</span>
           </div>
         </div>
 
@@ -130,7 +145,7 @@ export default function TarjetasTiempo({
         </div>
 
         <div className="tiempo-card-footer">
-          <small>Tiempo total de ejecución del algoritmo en el servidor backend.</small>
+          <small>Tiempo total de ejecución del algoritmo en el servidor Spring Boot.</small>
         </div>
       </div>
     </div>

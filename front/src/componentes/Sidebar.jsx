@@ -3,7 +3,10 @@ import React from 'react';
 /**
  * Sidebar.jsx
  * Barra lateral de navegación con estilo minimalista y paleta verde institucional.
- * Ahora incluye la pestaña "Información" y la nueva pestaña solicitada "IA: FastText".
+ * Pestañas disponibles:
+ * 1. Información (Corpus y preprocesamiento)
+ * 2. Búsqueda de Patrones (KMP, Boyer-Moore, Rabin-Karp)
+ * 3. IA: FastText (Similitud semántica de embeddings)
  */
 export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informacion', onCambiarPestana }) {
   return (
@@ -50,7 +53,29 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
             <span className="nav-item-badge">{totalArticulos}</span>
           </div>
 
-          {/* Nueva Pestaña: IA: FastText */}
+          {/* Nueva Pestaña: Búsqueda de Patrones */}
+          <div
+            className={`sidebar-nav-item ${pestanaActiva === 'busqueda' ? 'active' : ''}`}
+            onClick={() => onCambiarPestana && onCambiarPestana('busqueda')}
+            role="button"
+            tabIndex={0}
+            title="Búsqueda exacta de patrones: KMP, Boyer-Moore, Rabin-Karp"
+          >
+            <div className="nav-item-icon busqueda-nav-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <div className="nav-item-text">
+              <span className="nav-item-title">Búsqueda de Patrones</span>
+              <span className="nav-item-subtitle">KMP & Coincidencias</span>
+            </div>
+            <span className="nav-item-badge kmp-badge">KMP</span>
+          </div>
+
+          {/* Pestaña: IA: FastText */}
           <div
             className={`sidebar-nav-item ${pestanaActiva === 'fasttext' ? 'active' : ''}`}
             onClick={() => onCambiarPestana && onCambiarPestana('fasttext')}

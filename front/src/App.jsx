@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './componentes/Sidebar';
 import Informacion from './paginas/Informacion';
 import Similitud from './paginas/Similitud';
+import BusquedaPatrones from './paginas/BusquedaPatrones';
 import SimilitudGlove from './paginas/SimilitudGlove';
 import Agrupamiento from './paginas/Agrupamiento';
 import './App.css';
@@ -28,6 +29,10 @@ function App() {
       {/* Vistas según la pestaña activa */}
       {pestanaActiva === 'informacion' && (
         <Informacion onArticulosChange={setTotalArticulos} />
+      )}
+
+      {pestanaActiva === 'busqueda' && (
+        <BusquedaPatrones totalArticulos={totalArticulos || 20} />
       )}
 
       {pestanaActiva === 'fasttext' && (

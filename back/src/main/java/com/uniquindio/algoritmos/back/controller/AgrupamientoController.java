@@ -162,10 +162,31 @@ public class AgrupamientoController {
             return new SimilitudGlove(modelo, articulos);
         }
         if (algoritmo.equals("fasttext")) {
-            ModeloFastText modelo = new ModeloFastText(resolver(fasttextCompleto), resolver(fasttextFiltrado), corpus.vocabulario());
+            Path completo = resolverFastText();
+            // El filtrado se guarda junto al archivo completo (igual que en el controller de FastText)
+            Path filtrado = Files.exists(completo)
+                    ? completo.getParent().resolve("vectores-corpus.vec").normalize()
+                    : resolver(fasttextFiltrado);
+            ModeloFastText modelo = new ModeloFastText(completo, filtrado, corpus.vocabulario());
             return new SimilitudFastText(modelo);
         }
         throw new IllegalArgumentException("Algoritmo de similitud no soportado: " + algoritmo);
+    }
+
+    /** Busca wiki-news-300d-1M.vec en las ubicaciones habituales (con o sin carpeta fasttext, desde back/ o desde la raiz). */
+    private Path resolverFastText() {
+        for (String candidata : new String[]{
+                fasttextCompleto,
+                "../datos/wiki-news-300d-1M.vec",
+                "datos/wiki-news-300d-1M.vec",
+                "../datos/fasttext/wiki-news-300d-1M.vec",
+                "datos/fasttext/wiki-news-300d-1M.vec"}) {
+            Path p = Path.of(candidata).toAbsolutePath().normalize();
+            if (Files.exists(p)) {
+                return p;
+            }
+        }
+        return Path.of(fasttextCompleto).toAbsolutePath().normalize();
     }
 
     /** Busca el archivo con la ruta configurada y, si no existe, sin el "../" (ejecucion desde la raiz). */

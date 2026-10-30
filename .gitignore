@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Modelo FastText completo (~2 GB). Se descarga aparte, no se sube al repositorio.
+datos/wiki-news-300d-1M.vec

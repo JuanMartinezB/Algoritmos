@@ -18,5 +18,15 @@
     "name": "fasttext.vec-filtrado",
     "type": "java.lang.String",
     "description": "A description for 'fasttext.vec-filtrado'"
+  },
+  {
+    "name": "glove.vec-completo",
+    "type": "java.lang.String",
+    "description": "A description for 'glove.vec-completo'"
+  },
+  {
+    "name": "glove.vec-filtrado",
+    "type": "java.lang.String",
+    "description": "A description for 'glove.vec-filtrado'"
   }
 ]}

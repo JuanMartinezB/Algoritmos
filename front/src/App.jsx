@@ -3,12 +3,14 @@ import Sidebar from './componentes/Sidebar';
 import Informacion from './paginas/Informacion';
 import Similitud from './paginas/Similitud';
 import BusquedaPatrones from './paginas/BusquedaPatrones';
+import SimilitudGlove from './paginas/SimilitudGlove';
 import './App.css';
 
 /**
  * App.jsx
  * Componente raíz del Frontend.
  * Controla la pestaña activa del menú lateral ('informacion', 'busqueda', 'fasttext')
+ * Controla la pestaña activa del menú lateral ('informacion', 'fasttext' o 'glove')
  * y el contador total de artículos del corpus.
  */
 function App() {
@@ -35,6 +37,10 @@ function App() {
 
       {pestanaActiva === 'fasttext' && (
         <Similitud onArticulosChange={setTotalArticulos} />
+      )}
+
+      {pestanaActiva === 'glove' && (
+        <SimilitudGlove onArticulosChange={setTotalArticulos} />
       )}
     </div>
   );

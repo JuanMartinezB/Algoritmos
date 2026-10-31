@@ -10,7 +10,7 @@ echo.
 set JAVA_HOME=C:\Program Files\Android\Android Studio\jbr
 set PATH=C:\Program Files\nodejs;%JAVA_HOME%\bin;%PATH%
 
-echo [1/3] Compilando el Frontend para produccion (1 solo paquete rapido)...
+echo [1/3] Compilando el Frontend para produccion...
 cd /d "%~dp0front"
 call npm run build
 if %errorlevel% neq 0 (
@@ -31,15 +31,14 @@ start "Frontend Preview (5173)" cmd /k "cd /d "%~dp0front" && npm run preview --
 echo Esperando 4 segundos...
 timeout /t 4 /nobreak >nul
 
-echo Abriendo el Tunel Publico con Localtunnel...
+echo Abriendo el Tunel Publico FIJO con Localtunnel...
 echo.
 echo ========================================================
-echo  ATENCION: Copia la URL que aparecera a continuacion
-echo  (Ejemplo: https://xxxx-xxxx-xxxx.loca.lt)
-echo  y pasasela al profesor o abrela en tu navegador.
+echo  ENLACE FIJO DEL PROYECTO:
+echo  https://bibliometria-uq-2026.loca.lt
 echo ========================================================
 echo.
 
-call npx localtunnel --port 5173 --local-host 127.0.0.1
+call npx localtunnel --port 5173 --local-host 127.0.0.1 --subdomain bibliometria-uq-2026
 
 pause

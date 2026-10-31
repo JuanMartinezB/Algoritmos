@@ -1,14 +1,10 @@
+import BASE_HOST from './config';
+
 /**
  * Servicio de llamadas a la API de similitud con Algoritmos Clásicos.
- * Base URL: http://localhost:8080/api/similitud/clasicos
- *
- * Algoritmos implementados:
- *  1. Levenshtein (Programación Dinámica)
- *  2. Needleman-Wunsch (Programación Dinámica)
- *  3. Jaccard (Teoría de Conjuntos)
- *  4. Coseno TF-IDF (Espacio Vectorial)
+ * Base URL: /api/similitud/clasicos
  */
-const BASE_URL = '/api/similitud/clasicos';
+const BASE_URL = `${BASE_HOST}/api/similitud/clasicos`;
 
 async function procesarRespuesta(response) {
   if (!response.ok) {

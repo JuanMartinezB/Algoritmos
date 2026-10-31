@@ -1,7 +1,9 @@
+import BASE_HOST from './config';
+
 /**
  * Servicio API para interactuar exclusivamente con el backend de Spring Boot.
  */
-const API_BASE_URL = '/api/articulos';
+const API_BASE_URL = `${BASE_HOST}/api/articulos`;
 
 /**
  * Obtiene la lista de artículos preprocesados consumiendo el endpoint GET del Backend.

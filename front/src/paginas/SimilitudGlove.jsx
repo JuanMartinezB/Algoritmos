@@ -6,6 +6,7 @@ import DetallePasoAPaso from '../componentes/glove/DetallePasoAPaso';
 import CoberturaModelo from '../componentes/glove/CoberturaModelo';
 import Toast from '../componentes/Toast';
 import { obtenerArticulos } from '../api/api';
+import { formatearTiempoMs } from '../componentes/glove/formatoTiempo';
 import { compararGloVe, obtenerCoberturaGloVe, obtenerDetalleGloVe } from '../api/gloveApi';
 
 // Configuración del algoritmo GloVe (página independiente de FastText).
@@ -49,6 +50,8 @@ export default function SimilitudGlove({ onArticulosChange }) {
   // Resultados de la comparación
   const [pares, setPares] = useState([]);
   const [comparando, setComparando] = useState(false);
+  const [tiempoTotalMs, setTiempoTotalMs] = useState(null);
+  const [tiempoCargaModeloMs, setTiempoCargaModeloMs] = useState(null);
 
   // Par seleccionado para el modal de detalle
   const [parDetalle, setParDetalle] = useState(null); // { idA, idB }
@@ -136,9 +139,13 @@ export default function SimilitudGlove({ onArticulosChange }) {
     mostrarToast(`Iniciando comparación con ${cfg.nombre}... La primera vez puede tardar unos minutos mientras el backend carga el modelo.`, 'info', 0);
 
     try {
-      const resultadoPares = await cfg.comparar(seleccionados);
-      setPares(resultadoPares || []);
-      mostrarToast(`¡Comparación completada con éxito! Se evaluaron ${resultadoPares.length} pares.`, 'success', 5000);
+      const respuesta = await cfg.comparar(seleccionados);
+      // El backend devuelve un objeto { pares, tiempoTotalMs, tiempoCargaModeloMs }
+      const listaPares = respuesta?.pares || (Array.isArray(respuesta) ? respuesta : []);
+      setPares(listaPares);
+      setTiempoTotalMs(respuesta?.tiempoTotalMs ?? null);
+      setTiempoCargaModeloMs(respuesta?.tiempoCargaModeloMs ?? null);
+      mostrarToast(`¡Comparación completada con éxito! Se evaluaron ${listaPares.length} pares.`, 'success', 5000);
     } catch (err) {
       console.error('Error en comparación GloVe:', err);
       setErrorVisible(err.message || `Error al ejecutar la comparación con ${cfg.nombre}`);
@@ -270,6 +277,30 @@ export default function SimilitudGlove({ onArticulosChange }) {
           {/* Resultados de la comparación */}
           {pares.length > 0 && !comparando && (
             <div className="similitud-resultados-container">
+              {/* Resumen de tiempos arriba de los resultados */}
+              {tiempoTotalMs !== null && (
+                <div className="ft-resumen-tiempos-banner">
+                  <div className="ft-resumen-tiempo-principal">
+                    <div className="ft-tiempo-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div className="ft-tiempo-info">
+                      <span className="ft-tiempo-label">
+                        Tiempo de ejecución del algoritmo: <strong>{formatearTiempoMs(tiempoTotalMs)}</strong>
+                      </span>
+                      {tiempoCargaModeloMs !== null && (
+                        <span className="ft-tiempo-secundario">
+                          Carga del modelo: <strong>{formatearTiempoMs(tiempoCargaModeloMs)}</strong> (solo ocurre la primera vez)
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Matriz de similitud con mapa de calor */}
               <MatrizSimilitud
                 pares={pares}

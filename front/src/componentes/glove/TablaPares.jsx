@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatearTiempoMs } from './formatoTiempo';
 
 /**
  * TablaPares.jsx
@@ -46,6 +47,9 @@ export default function TablaPares({
               <th className="th-num" title="Similitud Euclidiana: 1 / (1 + distancia)">
                 Sim. Euclidiana
               </th>
+              <th className="th-num" title="Tiempo de cálculo del par">
+                Tiempo (ms)
+              </th>
               <th style={{ width: '90px', textAlign: 'center' }}>Detalle</th>
             </tr>
           </thead>
@@ -91,6 +95,13 @@ export default function TablaPares({
                   <td className="td-metric">
                     <span className="metric-pill euclidean">
                       {Number(par.similitudEuclidiana).toFixed(4)}
+                    </span>
+                  </td>
+                  <td className="td-metric">
+                    <span className="metric-num tiempo-par">
+                      {par.tiempoMs !== undefined && par.tiempoMs !== null
+                        ? formatearTiempoMs(par.tiempoMs)
+                        : '-'}
                     </span>
                   </td>
                   <td style={{ textAlign: 'center' }}>

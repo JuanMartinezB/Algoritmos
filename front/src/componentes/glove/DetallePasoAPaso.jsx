@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { obtenerDetalleGloVe } from '../../api/gloveApi';
+import { formatearTiempoMs } from './formatoTiempo';
 
 /**
  * DetallePasoAPaso.jsx
@@ -79,6 +80,10 @@ export default function DetallePasoAPaso({
     const vecA10 = (detalle.vectorA || []).slice(0, 10).map((v) => v.toFixed(6)).join(', ');
     const vecB10 = (detalle.vectorB || []).slice(0, 10).map((v) => v.toFixed(6)).join(', ');
 
+    const tiempoTexto = detalle.tiempoMs !== undefined && detalle.tiempoMs !== null
+      ? formatearTiempoMs(detalle.tiempoMs)
+      : 'No disponible';
+
     return `=== DETALLE MATEMÁTICO ${modelo.toUpperCase()} ===
 Par: Artículo #${idA} vs Artículo #${idB}
 Artículo A (#${idA}): ${tituloA}
@@ -105,6 +110,9 @@ Artículo B (#${idB}): ${tituloB}
 - Suma de diferencias cuadradas sum((Ai - Bi)^2): ${detalle.sumaDiferenciasCuadradas}
 - Distancia Euclidiana d = sqrt(${detalle.sumaDiferenciasCuadradas}) = ${detalle.distancia}
 - Similitud Euclidiana = 1 / (1 + d) = 1 / (1 + ${detalle.distancia}) = ${detalle.similitudEuclidiana}
+
+5. Tiempo de ejecución del cálculo:
+- Tiempo de ejecución del cálculo: ${tiempoTexto}
 ====================================`;
   };
 
@@ -346,6 +354,25 @@ Artículo B (#${idB}): ${tituloB}
                   </div>
                 </div>
               </div>
+
+              {/* Sección f: Tiempo de ejecución del cálculo de este par */}
+              {detalle.tiempoMs !== undefined && detalle.tiempoMs !== null && (
+                <div className="ft-detalle-seccion ft-seccion-tiempo">
+                  <div className="ft-tiempo-calculo-box">
+                    <div className="ft-tiempo-calculo-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div className="ft-tiempo-calculo-texto">
+                      <span className="ft-tiempo-calculo-label">
+                        Tiempo de ejecución del cálculo: <strong>{formatearTiempoMs(detalle.tiempoMs)}</strong>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </>
           ) : null}
         </div>

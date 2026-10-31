@@ -113,15 +113,24 @@ public class SimilitudGlove implements AlgoritmoSimilitud {
             List<String> noEncontradasA, List<String> noEncontradasB,
             double[] vectorA, double[] vectorB,
             double productoPunto, double normaA, double normaB, double coseno,
-            double sumaDiferenciasCuadradas, double distancia, double similitudEuclidiana) {
+            double sumaDiferenciasCuadradas, double distancia, double similitudEuclidiana,
+            double tiempoMs) {
     }
 
     public Detalle detalle(Articulo a, Articulo b) {
+        long inicio = System.nanoTime();   // empieza a medir el tiempo del calculo
         double[] va = vector(a);
         double[] vb = vector(b);
-        return new Detalle(noEncontradas(a), noEncontradas(b), va, vb,
-                Vectores.productoPunto(va, vb), Vectores.norma(va), Vectores.norma(vb),
-                Vectores.coseno(va, vb), Vectores.sumaDiferenciasCuadradas(va, vb),
-                Vectores.distanciaEuclidiana(va, vb), similitudEuclidiana(a, b));
+        List<String> faltantesA = noEncontradas(a);
+        List<String> faltantesB = noEncontradas(b);
+        double productoPunto = Vectores.productoPunto(va, vb);
+        double normaA = Vectores.norma(va);
+        double normaB = Vectores.norma(vb);
+        double coseno = Vectores.coseno(va, vb);
+        double sumaCuadrados = Vectores.sumaDiferenciasCuadradas(va, vb);
+        double distancia = Vectores.distanciaEuclidiana(va, vb);
+        double tiempoMs = (System.nanoTime() - inicio) / 1_000_000.0;   // nanosegundos a milisegundos
+        return new Detalle(faltantesA, faltantesB, va, vb, productoPunto, normaA, normaB, coseno,
+                sumaCuadrados, distancia, 1.0 / (1.0 + distancia), tiempoMs);
     }
 }

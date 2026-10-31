@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    allowedHosts: true, // Permite cualquier host de túnel (localtunnel, ngrok, etc.)
     proxy: {
       '/api': {
         target: 'http://localhost:8080',

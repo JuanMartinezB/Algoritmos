@@ -9,9 +9,25 @@ export default function MatrizClasicos({
   pares = [],
   articulosSeleccionados = [],
   articulosMap = {},
+  algoritmo = 'todos',
   onSeleccionarPar
 }) {
-  const [metrica, setMetrica] = useState('cosenoTfIdf');
+  const mapeoModo = {
+    levenshtein: 'levenshtein',
+    needleman: 'needlemanWunsch',
+    jaccard: 'jaccard',
+    tfidf: 'cosenoTfIdf'
+  };
+
+  const initialMetrica = (algoritmo && mapeoModo[algoritmo]) ? mapeoModo[algoritmo] : 'cosenoTfIdf';
+  const [metrica, setMetrica] = useState(initialMetrica);
+
+  // Sincronizar si cambia el algoritmo externo
+  React.useEffect(() => {
+    if (algoritmo && mapeoModo[algoritmo]) {
+      setMetrica(mapeoModo[algoritmo]);
+    }
+  }, [algoritmo]);
 
   const etiquetas = {
     levenshtein: 'Levenshtein',

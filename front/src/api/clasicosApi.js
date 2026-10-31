@@ -24,13 +24,14 @@ async function procesarRespuesta(response) {
 
 /**
  * POST /comparar
- * Envía una lista de IDs y devuelve la similitud con los 4 algoritmos para cada par.
+ * Envía una lista de IDs y opcionalmente el algoritmo ('todos', 'levenshtein', 'needleman', 'jaccard', 'tfidf').
+ * Devuelve la similitud y tiempos medidos por cada algoritmo.
  */
-export async function compararClasicos(ids) {
+export async function compararClasicos(ids, algoritmo = 'todos') {
   const response = await fetch(`${BASE_URL}/comparar`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ ids })
+    body: JSON.stringify({ ids, algoritmo })
   });
   return await procesarRespuesta(response);
 }

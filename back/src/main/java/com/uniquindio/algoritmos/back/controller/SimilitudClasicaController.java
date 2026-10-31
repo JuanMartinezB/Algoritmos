@@ -31,21 +31,33 @@ public class SimilitudClasicaController {
 
     // ---------- Records de entrada / salida ----------
 
-    public record SolicitudComparacion(List<Long> ids) {}
+    public record SolicitudComparacion(
+        List<Long> ids,
+        String algoritmo // "todos", "levenshtein", "needleman", "jaccard", "tfidf"
+    ) {}
 
     public record ParResultado(
         long idA,
         long idB,
-        double levenshtein,
-        double needlemanWunsch,
-        double jaccard,
-        double cosenoTfIdf,
-        double tiempoMs
+        Double levenshtein,
+        Double needlemanWunsch,
+        Double jaccard,
+        Double cosenoTfIdf,
+        double tiempoLevenshteinMs,
+        double tiempoNeedlemanMs,
+        double tiempoJaccardMs,
+        double tiempoTfIdfMs,
+        double tiempoTotalMs
     ) {}
 
     public record ResultadoComparacion(
         List<ParResultado> pares,
-        double tiempoTotalMs
+        double tiempoTotalMs,
+        double tiempoTotalLevenshteinMs,
+        double tiempoTotalNeedlemanMs,
+        double tiempoTotalJaccardMs,
+        double tiempoTotalTfIdfMs,
+        String algoritmoEjecutado
     ) {}
 
     public record DetalleCompleto(
@@ -82,8 +94,9 @@ public class SimilitudClasicaController {
 
     /**
      * POST /api/similitud/clasicos/comparar
-     * Recibe una lista de IDs de articulos (minimo 2).
-     * Devuelve la similitud de cada par con los 4 algoritmos y los tiempos.
+     * Recibe una lista de IDs de articulos (minimo 2) y opcionalmente el algoritmo deseado:
+     * "todos", "levenshtein", "needleman", "jaccard", "tfidf".
+     * Devuelve la similitud y mediciones detalladas de tiempo por cada algoritmo.
      */
     @PostMapping("/comparar")
     public ResultadoComparacion comparar(@RequestBody SolicitudComparacion solicitud) {
@@ -92,12 +105,26 @@ public class SimilitudClasicaController {
             throw new IllegalArgumentException("Selecciona al menos dos artículos");
         }
 
-        Levenshtein lev = new Levenshtein();
-        NeedlemanWunsch nw = new NeedlemanWunsch();
-        SimilitudJaccard jac = new SimilitudJaccard();
-        SimilitudCosenoTfIdf cos = cosenoTfIdf();
+        String modo = (solicitud.algoritmo() == null || solicitud.algoritmo().trim().isEmpty())
+                ? "todos"
+                : solicitud.algoritmo().trim().toLowerCase();
+
+        boolean hacerLev = "todos".equals(modo) || "levenshtein".equals(modo);
+        boolean hacerNw  = "todos".equals(modo) || "needleman".equals(modo);
+        boolean hacerJac = "todos".equals(modo) || "jaccard".equals(modo);
+        boolean hacerCos = "todos".equals(modo) || "tfidf".equals(modo);
+
+        Levenshtein lev = hacerLev ? new Levenshtein() : null;
+        NeedlemanWunsch nw = hacerNw ? new NeedlemanWunsch() : null;
+        SimilitudJaccard jac = hacerJac ? new SimilitudJaccard() : null;
+        SimilitudCosenoTfIdf cos = hacerCos ? cosenoTfIdf() : null;
 
         List<ParResultado> pares = new ArrayList<>();
+        double acumuladoLev = 0;
+        double acumuladoNw = 0;
+        double acumuladoJac = 0;
+        double acumuladoCos = 0;
+
         long inicioTotal = System.nanoTime();
 
         for (int i = 0; i < ids.size(); i++) {
@@ -105,25 +132,64 @@ public class SimilitudClasicaController {
                 Articulo a = corpus.porId(ids.get(i));
                 Articulo b = corpus.porId(ids.get(j));
 
-                long inicioPar = System.nanoTime();
+                Double simLev = null;
+                double tLev = 0.0;
+                if (hacerLev) {
+                    long t0 = System.nanoTime();
+                    simLev = lev.similitud(a, b);
+                    tLev = (System.nanoTime() - t0) / 1_000_000.0;
+                    acumuladoLev += tLev;
+                }
 
-                double simLev = lev.similitud(a, b);
-                double simNw  = nw.similitud(a, b);
-                double simJac = jac.similitud(a, b);
-                double simCos = cos.similitud(a, b);
+                Double simNw = null;
+                double tNw = 0.0;
+                if (hacerNw) {
+                    long t0 = System.nanoTime();
+                    simNw = nw.similitud(a, b);
+                    tNw = (System.nanoTime() - t0) / 1_000_000.0;
+                    acumuladoNw += tNw;
+                }
 
-                double tiempoPar = (System.nanoTime() - inicioPar) / 1_000_000.0;
+                Double simJac = null;
+                double tJac = 0.0;
+                if (hacerJac) {
+                    long t0 = System.nanoTime();
+                    simJac = jac.similitud(a, b);
+                    tJac = (System.nanoTime() - t0) / 1_000_000.0;
+                    acumuladoJac += tJac;
+                }
+
+                Double simCos = null;
+                double tCos = 0.0;
+                if (hacerCos) {
+                    long t0 = System.nanoTime();
+                    simCos = cos.similitud(a, b);
+                    tCos = (System.nanoTime() - t0) / 1_000_000.0;
+                    acumuladoCos += tCos;
+                }
+
+                double tParTotal = tLev + tNw + tJac + tCos;
 
                 pares.add(new ParResultado(
                     a.id(), b.id(),
                     simLev, simNw, simJac, simCos,
-                    tiempoPar
+                    tLev, tNw, tJac, tCos,
+                    tParTotal
                 ));
             }
         }
 
         double tiempoTotal = (System.nanoTime() - inicioTotal) / 1_000_000.0;
-        return new ResultadoComparacion(pares, tiempoTotal);
+
+        return new ResultadoComparacion(
+            pares,
+            tiempoTotal,
+            acumuladoLev,
+            acumuladoNw,
+            acumuladoJac,
+            acumuladoCos,
+            modo
+        );
     }
 
     /**

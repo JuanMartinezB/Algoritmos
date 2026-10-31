@@ -23,6 +23,12 @@ export default function SimilitudClasicos({ onArticulosChange }) {
   const [seleccionados, setSeleccionados] = useState([]);
   const [pares, setPares] = useState([]);
   const [tiempoTotalMs, setTiempoTotalMs] = useState(null);
+  const [tiempoLevenshteinMs, setTiempoLevenshteinMs] = useState(null);
+  const [tiempoNeedlemanMs, setTiempoNeedlemanMs] = useState(null);
+  const [tiempoJaccardMs, setTiempoJaccardMs] = useState(null);
+  const [tiempoTfIdfMs, setTiempoTfIdfMs] = useState(null);
+  const [modoAlgoritmo, setModoAlgoritmo] = useState('todos');
+  const [modoEjecutado, setModoEjecutado] = useState('todos');
   const [comparando, setComparando] = useState(false);
   const [parDetalle, setParDetalle] = useState(null);
   const [notificacion, setNotificacion] = useState(null);
@@ -84,14 +90,26 @@ export default function SimilitudClasicos({ onArticulosChange }) {
 
     setComparando(true);
     setErrorVisible(null);
-    mostrarToast('Calculando similitud con los 4 algoritmos clásicos…', 'info', 0);
+    const mensajeInicio = modoAlgoritmo === 'todos'
+      ? 'Calculando similitud con los 4 algoritmos clásicos…'
+      : `Ejecutando algoritmo ${modoAlgoritmo.toUpperCase()}…`;
+    mostrarToast(mensajeInicio, 'info', 0);
 
     try {
-      const respuesta = await compararClasicos(seleccionados);
+      const respuesta = await compararClasicos(seleccionados, modoAlgoritmo);
       const listaPares = respuesta?.pares || [];
       setPares(listaPares);
       setTiempoTotalMs(respuesta?.tiempoTotalMs ?? null);
-      mostrarToast(`¡Comparación completada! Se evaluaron ${listaPares.length} pares con 4 algoritmos.`, 'success', 5000);
+      setTiempoLevenshteinMs(respuesta?.tiempoTotalLevenshteinMs ?? null);
+      setTiempoNeedlemanMs(respuesta?.tiempoTotalNeedlemanMs ?? null);
+      setTiempoJaccardMs(respuesta?.tiempoTotalJaccardMs ?? null);
+      setTiempoTfIdfMs(respuesta?.tiempoTotalTfIdfMs ?? null);
+      setModoEjecutado(respuesta?.algoritmoEjecutado || modoAlgoritmo);
+
+      const mensajeFin = modoAlgoritmo === 'todos'
+        ? `¡Comparación completada! Se evaluaron ${listaPares.length} pares con los 4 algoritmos en ${Number(respuesta?.tiempoTotalMs).toFixed(2)} ms.`
+        : `¡Ejecución completada! Se evaluaron ${listaPares.length} pares con ${modoAlgoritmo.toUpperCase()} en ${Number(respuesta?.tiempoTotalMs).toFixed(2)} ms.`;
+      mostrarToast(mensajeFin, 'success', 5000);
     } catch (err) {
       console.error('Error en comparación clásica:', err);
       setErrorVisible(err.message || 'Error al ejecutar la comparación');
@@ -117,12 +135,48 @@ export default function SimilitudClasicos({ onArticulosChange }) {
         </div>
 
         <div className="similitud-algoritmo-selector-box">
-          <label className="selector-algoritmo-label">Algoritmos incluidos:</label>
-          <div className="selector-algoritmo-pills">
-            <span className="pill-algoritmo active"><span className="pill-dot" /> Levenshtein</span>
-            <span className="pill-algoritmo active"><span className="pill-dot" /> Needleman-Wunsch</span>
-            <span className="pill-algoritmo active"><span className="pill-dot" /> Jaccard</span>
-            <span className="pill-algoritmo active"><span className="pill-dot" /> Coseno TF-IDF</span>
+          <label className="selector-algoritmo-label">Modo de ejecución:</label>
+          <div className="selector-algoritmo-pills" style={{ flexWrap: 'wrap' }}>
+            <button
+              type="button"
+              className={`pill-algoritmo ${modoAlgoritmo === 'todos' ? 'active' : ''}`}
+              onClick={() => setModoAlgoritmo('todos')}
+              title="Comparar simultáneamente los 4 algoritmos"
+            >
+              <span className="pill-dot" /> ⚡ Comparar los 4
+            </button>
+            <button
+              type="button"
+              className={`pill-algoritmo ${modoAlgoritmo === 'levenshtein' ? 'active' : ''}`}
+              onClick={() => setModoAlgoritmo('levenshtein')}
+              title="Ejecutar únicamente Levenshtein"
+            >
+              <span className="pill-dot" /> Levenshtein
+            </button>
+            <button
+              type="button"
+              className={`pill-algoritmo ${modoAlgoritmo === 'needleman' ? 'active' : ''}`}
+              onClick={() => setModoAlgoritmo('needleman')}
+              title="Ejecutar únicamente Needleman-Wunsch"
+            >
+              <span className="pill-dot" /> Needleman-Wunsch
+            </button>
+            <button
+              type="button"
+              className={`pill-algoritmo ${modoAlgoritmo === 'jaccard' ? 'active' : ''}`}
+              onClick={() => setModoAlgoritmo('jaccard')}
+              title="Ejecutar únicamente Jaccard"
+            >
+              <span className="pill-dot" /> Jaccard
+            </button>
+            <button
+              type="button"
+              className={`pill-algoritmo ${modoAlgoritmo === 'tfidf' ? 'active' : ''}`}
+              onClick={() => setModoAlgoritmo('tfidf')}
+              title="Ejecutar únicamente Coseno TF-IDF"
+            >
+              <span className="pill-dot" /> Coseno TF-IDF
+            </button>
           </div>
         </div>
       </section>
@@ -166,21 +220,86 @@ export default function SimilitudClasicos({ onArticulosChange }) {
 
         {pares.length > 0 && !comparando && (
           <div className="similitud-resultados-container">
-            {/* Resumen de tiempos */}
+            {/* Resumen de tiempos y Benchmark empírico */}
             {tiempoTotalMs !== null && (
-              <div className="ft-resumen-tiempos-banner">
-                <div className="ft-resumen-tiempo-principal">
-                  <div className="ft-tiempo-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
+              <div className="ft-resumen-tiempos-banner" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
+                <div className="ft-resumen-tiempo-principal" style={{ justifyContent: 'space-between', width: '100%' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div className="ft-tiempo-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div className="ft-tiempo-info">
+                      <span className="ft-tiempo-label">
+                        {modoEjecutado === 'todos'
+                          ? 'Benchmark Comparativo de Rendimiento (4 Algoritmos Clásicos)'
+                          : `Rendimiento de Algoritmo Individual: ${modoEjecutado.toUpperCase()}`}
+                      </span>
+                    </div>
                   </div>
-                  <div className="ft-tiempo-info">
-                    <span className="ft-tiempo-label">
-                      Tiempo total de los 4 algoritmos: <strong>{Number(tiempoTotalMs).toFixed(2)} ms</strong>
+                  <div>
+                    <span style={{ fontSize: '0.85rem', color: '#475569' }}>
+                      Tiempo total:{' '}
+                      <strong style={{ color: '#166534', fontSize: '1.05rem' }}>
+                        {Number(tiempoTotalMs).toFixed(2)} ms
+                      </strong>
                     </span>
                   </div>
+                </div>
+
+                {/* Tarjetas individuales de benchmark para sustentar complejidad empírica vs teórica */}
+                <div className="benchmark-grid-clasicos">
+                  {(modoEjecutado === 'todos' || modoEjecutado === 'levenshtein') && (
+                    <div className="benchmark-card-mini">
+                      <div className="bench-header">
+                        <span className="bench-title">Levenshtein</span>
+                        <span className="bench-complexity" title="Complejidad Asintótica">O(M × N)</span>
+                      </div>
+                      <span className="bench-time">{Number(tiempoLevenshteinMs ?? 0).toFixed(2)} ms</span>
+                    </div>
+                  )}
+
+                  {(modoEjecutado === 'todos' || modoEjecutado === 'needleman') && (
+                    <div className="benchmark-card-mini">
+                      <div className="bench-header">
+                        <span className="bench-title">Needleman-Wunsch</span>
+                        <span className="bench-complexity" title="Complejidad Asintótica">O(M × N)</span>
+                      </div>
+                      <span className="bench-time">{Number(tiempoNeedlemanMs ?? 0).toFixed(2)} ms</span>
+                    </div>
+                  )}
+
+                  {(modoEjecutado === 'todos' || modoEjecutado === 'jaccard') && (
+                    <div className="benchmark-card-mini">
+                      <div className="bench-header">
+                        <span className="bench-title">Jaccard</span>
+                        <span className="bench-complexity" title="Complejidad Asintótica">O(A + B)</span>
+                      </div>
+                      <span className="bench-time">{Number(tiempoJaccardMs ?? 0).toFixed(2)} ms</span>
+                    </div>
+                  )}
+
+                  {(modoEjecutado === 'todos' || modoEjecutado === 'tfidf') && (
+                    <div className="benchmark-card-mini">
+                      <div className="bench-header">
+                        <span className="bench-title">Coseno TF-IDF</span>
+                        <span className="bench-complexity" title="Complejidad Asintótica">O(V)</span>
+                      </div>
+                      <span className="bench-time">{Number(tiempoTfIdfMs ?? 0).toFixed(2)} ms</span>
+                    </div>
+                  )}
+
+                  {modoEjecutado === 'todos' && (
+                    <div className="benchmark-card-mini bench-total">
+                      <div className="bench-header">
+                        <span className="bench-title">Total Acumulado</span>
+                        <span className="bench-complexity" style={{ background: '#bbf7d0', color: '#14532d' }}>4 Algoritmos</span>
+                      </div>
+                      <span className="bench-time">{Number(tiempoTotalMs).toFixed(2)} ms</span>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -190,6 +309,7 @@ export default function SimilitudClasicos({ onArticulosChange }) {
               pares={pares}
               articulosSeleccionados={seleccionados}
               articulosMap={articulosMap}
+              algoritmo={modoEjecutado}
               onSeleccionarPar={(idA, idB) => setParDetalle({ idA, idB })}
             />
 
@@ -197,6 +317,7 @@ export default function SimilitudClasicos({ onArticulosChange }) {
             <TablaParesClasicos
               pares={pares}
               articulosMap={articulosMap}
+              algoritmo={modoEjecutado}
               onSeleccionarPar={(idA, idB) => setParDetalle({ idA, idB })}
             />
           </div>

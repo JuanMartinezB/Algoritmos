@@ -4982,3 +4982,97 @@
 .ft-resumen-tiempos-banner {
   margin-bottom: 24px !important;
 }
+
+
+/* ==========================================================================
+   Estilos para Ejecución Individual y Benchmark de Algoritmos Clásicos (Req 1)
+   ========================================================================== */
+button.pill-algoritmo {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--border-color, #cbd5e1);
+  background-color: #f8fafc;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+button.pill-algoritmo:hover:not(.active) {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+button.pill-algoritmo.active {
+  background-color: #15803d !important;
+  color: #ffffff !important;
+  border-color: #15803d !important;
+  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.25);
+}
+
+.benchmark-grid-clasicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.benchmark-card-mini {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.benchmark-card-mini:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.benchmark-card-mini .bench-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.benchmark-card-mini .bench-title {
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.benchmark-card-mini .bench-complexity {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-family: monospace;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.benchmark-card-mini .bench-time {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #166534;
+  margin-top: 2px;
+}
+
+.benchmark-card-mini.bench-total {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-color: #86efac;
+}
+
+.benchmark-card-mini.bench-total .bench-title {
+  color: #14532d;
+}
+
+.benchmark-card-mini.bench-total .bench-time {
+  color: #15803d;
+}

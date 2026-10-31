@@ -6,7 +6,9 @@
  * puede tardar varios minutos mientras el backend carga el modelo FastText.
  * No se definen timeouts cortos.
  */
-const BASE_FASTTEXT_URL = '/api/similitud/fasttext';
+import BASE_HOST from './config';
+
+const BASE_FASTTEXT_URL = `${BASE_HOST}/api/similitud/fasttext`;
 
 /**
  * Helper para procesar respuestas y extraer mensajes de error normalizados

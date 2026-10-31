@@ -1,10 +1,11 @@
 import React from 'react';
+import { formatearTiempoMs } from './formatoTiempo';
 
 /**
  * TablaPares.jsx
  * Componente que muestra la lista de comparaciones entre pares de artículos ordenados
  * de mayor a menor según el valor de coseno devuelto por el Backend.
- * Muestra 4 decimales en las métricas (coseno, distancia, similitud euclidiana)
+ * Muestra 4 decimales en las métricas (coseno, distancia, similitud euclidiana, tiempoMs)
  * y permite abrir el paso a paso detallado al hacer clic en cualquier fila.
  */
 export default function TablaPares({
@@ -45,6 +46,9 @@ export default function TablaPares({
               </th>
               <th className="th-num" title="Similitud Euclidiana: 1 / (1 + distancia)">
                 Sim. Euclidiana
+              </th>
+              <th className="th-num" title="Tiempo de cálculo del par">
+                Tiempo (ms)
               </th>
               <th style={{ width: '90px', textAlign: 'center' }}>Detalle</th>
             </tr>
@@ -91,6 +95,13 @@ export default function TablaPares({
                   <td className="td-metric">
                     <span className="metric-pill euclidean">
                       {Number(par.similitudEuclidiana).toFixed(4)}
+                    </span>
+                  </td>
+                  <td className="td-metric">
+                    <span className="metric-num tiempo-par">
+                      {par.tiempoMs !== undefined && par.tiempoMs !== null
+                        ? formatearTiempoMs(par.tiempoMs)
+                        : '-'}
                     </span>
                   </td>
                   <td style={{ textAlign: 'center' }}>

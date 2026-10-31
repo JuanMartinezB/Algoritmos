@@ -13,17 +13,44 @@ import React, { useState } from 'react';
  */
 export default function TablaCaracterMaloBm({
   patron = '',
-  tablaCaracterMalo = []
+  estructuraAuxiliar = null,
+  tablaCaracterMalo = null
 }) {
   const [copiado, setCopiado] = useState(false);
   const [caracterPrueba, setCaracterPrueba] = useState('');
 
-  if (!patron || !Array.isArray(tablaCaracterMalo) || tablaCaracterMalo.length === 0) {
+  // Estructura de mapeo auxiliar enviada por el backend
+  const aux = estructuraAuxiliar || tablaCaracterMalo;
+  if (!patron || !aux) {
     return null;
   }
 
   const patronMin = patron.toLowerCase();
   const m = patronMin.length;
+
+  /**
+   * Obtiene la última posición registrada en la tabla auxiliar para un carácter dado.
+   * Si es un array de 256 posiciones: aux[ascii % 256].
+   * Si es un objeto mapa del backend { 'a': 3, ... }: aux[char] ?? -1.
+   */
+  const obtenerUltimaPosicion = (c) => {
+    if (!c) return -1;
+    const cMin = c.toLowerCase();
+    if (Array.isArray(aux)) {
+      const ascii = cMin.charCodeAt(0) % 256;
+      return typeof aux[ascii] === 'number' ? aux[ascii] : -1;
+    }
+    if (typeof aux === 'object') {
+      if (Object.prototype.hasOwnProperty.call(aux, cMin)) {
+        return Number(aux[cMin]);
+      }
+      if (Object.prototype.hasOwnProperty.call(aux, c)) {
+        return Number(aux[c]);
+      }
+      return -1;
+    }
+    return -1;
+  };
 
   // Extraer caracteres únicos del patrón preservando orden de primera aparición
   const caracteresUnicos = [];
@@ -44,8 +71,7 @@ export default function TablaCaracterMaloBm({
     const filaChar = ['Carácter (c)       ', ...caracteresUnicos.map((c) => (c === ' ' ? '␣' : c).padStart(5))].join(' | ');
     const filaAscii = ['Código ASCII       ', ...caracteresUnicos.map((c) => String(c.charCodeAt(0)).padStart(5))].join(' | ');
     const filaPos = ['Última Posición    ', ...caracteresUnicos.map((c) => {
-      const ascii = c.charCodeAt(0) % 256;
-      return String(tablaCaracterMalo[ascii]).padStart(5);
+      return String(obtenerUltimaPosicion(c)).padStart(5);
     })].join(' | ');
 
     const separador = '-'.repeat(filaChar.length);
@@ -61,7 +87,7 @@ export default function TablaCaracterMaloBm({
   // Cálculo del probador interactivo
   const charConsulta = caracterPrueba ? caracterPrueba[0].toLowerCase() : null;
   const asciiConsulta = charConsulta ? charConsulta.charCodeAt(0) % 256 : null;
-  const valorConsulta = asciiConsulta !== null ? tablaCaracterMalo[asciiConsulta] : null;
+  const valorConsulta = charConsulta ? obtenerUltimaPosicion(charConsulta) : null;
 
   return (
     <div className="busqueda-tabla-prefijos-card bm-card">
@@ -145,8 +171,7 @@ export default function TablaCaracterMaloBm({
                 <span className="fila-sublabel">tabla[c]</span>
               </th>
               {caracteresUnicos.map((char, idx) => {
-                const ascii = char.charCodeAt(0) % 256;
-                const valor = tablaCaracterMalo[ascii];
+                const valor = obtenerUltimaPosicion(char);
                 return (
                   <td
                     key={`bm-val-${idx}`}

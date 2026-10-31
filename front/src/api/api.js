@@ -43,3 +43,22 @@ export async function ejecutarPreprocesamiento() {
   const data = await response.json();
   return { exito: true, data };
 }
+
+/**
+ * Consulta las características del hardware y del entorno del dispositivo:
+ * GET http://localhost:8080/api/articulos/dispositivo
+ */
+export async function obtenerCaracteristicasDispositivo() {
+  const response = await fetch(`${API_BASE_URL}/dispositivo`, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error al consultar características del dispositivo: HTTP ${response.status}`);
+  }
+
+  return await response.json();
+}

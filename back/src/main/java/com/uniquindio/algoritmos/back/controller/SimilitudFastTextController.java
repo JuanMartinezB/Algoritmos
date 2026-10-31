@@ -31,11 +31,18 @@ public class SimilitudFastTextController {
     public record SolicitudComparacion(List<Long> ids) {
     }
 
-    public record Par(long idA, long idB, double coseno, double distancia, double similitudEuclidiana) {
+    /** Resultado de un par; tiempoMs es lo que tardo en calcularse (vectores + las tres metricas). */
+    public record Par(long idA, long idB, double coseno, double distancia, double similitudEuclidiana,
+                      double tiempoMs) {
+    }
+
+    /** tiempoTotalMs: todo el calculo de la comparacion. tiempoCargaModeloMs: lo que tardo en cargar el modelo. */
+    public record ResultadoComparacion(List<Par> pares, double tiempoTotalMs, double tiempoCargaModeloMs) {
     }
 
     private final CorpusJson corpus;
     private SimilitudFastText fastText;
+    private double tiempoCargaMs;
 
     @Value("${fasttext.vec-completo:../datos/fasttext/wiki-news-300d-1M.vec}")
     private String vecCompleto;
@@ -90,30 +97,38 @@ public class SimilitudFastTextController {
         if (fastText == null) {
             Path rutaCompleto = resolverVecCompleto();
             Path rutaFiltrado = resolverVecFiltrado();
+            long inicio = System.nanoTime();
             fastText = new SimilitudFastText(
                     new ModeloFastText(rutaCompleto, rutaFiltrado, corpus.vocabulario()));
+            tiempoCargaMs = (System.nanoTime() - inicio) / 1_000_000.0;   // ns a ms
         }
         return fastText;
     }
 
     /** Compara cada par de articulos seleccionados. Cuerpo: {"ids": [1, 2, 3]} */
     @PostMapping("/comparar")
-    public List<Par> comparar(@RequestBody SolicitudComparacion solicitud) throws IOException {
+    public ResultadoComparacion comparar(@RequestBody SolicitudComparacion solicitud) throws IOException {
         List<Long> ids = solicitud.ids();
         if (ids == null || ids.size() < 2) {
             throw new IllegalArgumentException("Selecciona al menos dos articulos");
         }
-        SimilitudFastText ft = fastText();
+        SimilitudFastText ft = fastText();   // el modelo se carga ANTES de medir el tiempo del algoritmo
         List<Par> pares = new ArrayList<>();
+        long inicioTotal = System.nanoTime();
         for (int i = 0; i < ids.size(); i++) {
             for (int j = i + 1; j < ids.size(); j++) {
                 Articulo a = corpus.porId(ids.get(i));
                 Articulo b = corpus.porId(ids.get(j));
-                pares.add(new Par(a.id(), b.id(), ft.similitud(a, b),
-                        ft.distancia(a, b), ft.similitudEuclidiana(a, b)));
+                long inicioPar = System.nanoTime();
+                double coseno = ft.similitud(a, b);
+                double distancia = ft.distancia(a, b);
+                double similitudEuclidiana = ft.similitudEuclidiana(a, b);
+                double tiempoPar = (System.nanoTime() - inicioPar) / 1_000_000.0;   // ns a ms
+                pares.add(new Par(a.id(), b.id(), coseno, distancia, similitudEuclidiana, tiempoPar));
             }
         }
-        return pares;
+        double tiempoTotal = (System.nanoTime() - inicioTotal) / 1_000_000.0;
+        return new ResultadoComparacion(pares, tiempoTotal, tiempoCargaMs);
     }
 
     /** Calculo paso a paso entre dos abstracts: vectores, producto punto, normas, etc. */

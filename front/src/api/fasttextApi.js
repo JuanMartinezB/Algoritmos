@@ -33,7 +33,7 @@ async function procesarRespuesta(response) {
  * Envía una lista de IDs de artículos (mínimo 2) para comparar todos sus pares con FastText.
  *
  * @param {Array<number>} ids Lista de IDs seleccionados (ej: [1, 2, 3])
- * @returns {Promise<Array<{idA: number, idB: number, coseno: number, distancia: number, similitudEuclidiana: number}>>}
+ * @returns {Promise<{pares: Array<{idA: number, idB: number, coseno: number, distancia: number, similitudEuclidiana: number, tiempoMs: number}>, tiempoTotalMs: number, tiempoCargaModeloMs: number}>}
  */
 export async function compararFastText(ids) {
   const response = await fetch(`${BASE_FASTTEXT_URL}/comparar`, {

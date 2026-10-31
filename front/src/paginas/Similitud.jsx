@@ -7,22 +7,20 @@ import CoberturaModelo from '../componentes/fasttext/CoberturaModelo';
 import Toast from '../componentes/Toast';
 import { obtenerArticulos } from '../api/api';
 import { compararFastText, obtenerCoberturaFastText } from '../api/fasttextApi';
+import { formatearTiempoMs } from '../componentes/fasttext/formatoTiempo';
 
 /**
  * Similitud.jsx
- * Página principal para análisis de similitud semántica.
- * Estructurada para crecer: contiene un selector de algoritmo (por ahora "IA: FastText"),
- * lo que permitirá agregar futuros algoritmos clásicos o de IA sin reescribir la pantalla.
+ * Página principal para análisis de similitud semántica con FastText.
  *
  * Maneja:
  *  - Carga inicial de artículos del corpus.
- *  - Pestañas principales: "Comparación de Pares & Matriz" y "Cobertura del Modelo".
+ *  - Pestañas: "Comparación de Pares & Matriz" y "Cobertura del Modelo".
  *  - Selección de artículos (mínimo 2).
- *  - Llamada a POST /api/similitud/fasttext/comparar con indicador de carga prolongado
- *    ("Cargando el modelo FastText (la primera vez puede tardar unos minutos)").
- *  - Visualización de la tabla de pares y matriz de similitud.
- *  - Apertura del modal de detalle paso a paso (GET /detalle).
- *  - Consulta de cobertura del modelo (GET /cobertura).
+ *  - Llamada a POST /api/similitud/fasttext/comparar recibiendo { pares, tiempoTotalMs, tiempoCargaModeloMs }.
+ *  - Resumen de tiempos de ejecución y carga del modelo sobre los resultados.
+ *  - Visualización de la tabla de pares (con columna de tiempo) y matriz de similitud.
+ *  - Apertura del modal de detalle paso a paso con tiempo de cálculo individual.
  */
 export default function Similitud({ onArticulosChange }) {
   // Algoritmo activo (extensible para otros como Word2Vec, TF-IDF, etc.)
@@ -40,6 +38,8 @@ export default function Similitud({ onArticulosChange }) {
 
   // Resultados de la comparación
   const [pares, setPares] = useState([]);
+  const [tiempoTotalMs, setTiempoTotalMs] = useState(null);
+  const [tiempoCargaModeloMs, setTiempoCargaModeloMs] = useState(null);
   const [comparando, setComparando] = useState(false);
 
   // Par seleccionado para el modal de detalle
@@ -128,9 +128,14 @@ export default function Similitud({ onArticulosChange }) {
     mostrarToast('Iniciando comparación con FastText... La primera vez puede tardar unos minutos mientras el backend carga el modelo.', 'info', 0);
 
     try {
-      const resultadoPares = await compararFastText(seleccionados);
-      setPares(resultadoPares || []);
-      mostrarToast(`¡Comparación completada con éxito! Se evaluaron ${resultadoPares.length} pares.`, 'success', 5000);
+      const respuesta = await compararFastText(seleccionados);
+      // El backend devuelve un objeto { pares, tiempoTotalMs, tiempoCargaModeloMs }
+      const listaPares = respuesta?.pares || (Array.isArray(respuesta) ? respuesta : []);
+      setPares(listaPares);
+      setTiempoTotalMs(respuesta?.tiempoTotalMs ?? null);
+      setTiempoCargaModeloMs(respuesta?.tiempoCargaModeloMs ?? null);
+
+      mostrarToast(`¡Comparación completada con éxito! Se evaluaron ${listaPares.length} pares.`, 'success', 5000);
     } catch (err) {
       console.error('Error en comparación FastText:', err);
       setErrorVisible(err.message || 'Error al ejecutar la comparación con FastText');
@@ -214,7 +219,7 @@ export default function Similitud({ onArticulosChange }) {
             onClick={() => cambiarVista('comparacion')}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 2 2h3"></path>
             </svg>
             <span>Comparación de Pares & Matriz</span>
           </button>
@@ -279,6 +284,30 @@ export default function Similitud({ onArticulosChange }) {
           {/* Resultados de la comparación */}
           {pares.length > 0 && !comparando && (
             <div className="similitud-resultados-container">
+              {/* Resumen de tiempos arriba de los resultados */}
+              {tiempoTotalMs !== null && (
+                <div className="ft-resumen-tiempos-banner">
+                  <div className="ft-resumen-tiempo-principal">
+                    <div className="ft-tiempo-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div className="ft-tiempo-info">
+                      <span className="ft-tiempo-label">
+                        Tiempo de ejecución del algoritmo: <strong>{formatearTiempoMs(tiempoTotalMs)}</strong>
+                      </span>
+                      {tiempoCargaModeloMs !== null && (
+                        <span className="ft-tiempo-secundario">
+                          Carga del modelo: <strong>{formatearTiempoMs(tiempoCargaModeloMs)}</strong> (solo ocurre la primera vez)
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Matriz de similitud con mapa de calor */}
               <MatrizSimilitud
                 pares={pares}
@@ -287,7 +316,7 @@ export default function Similitud({ onArticulosChange }) {
                 onSeleccionarPar={(idA, idB) => setParDetalle({ idA, idB })}
               />
 
-              {/* Tabla de pares ordenada de mayor a menor coseno */}
+              {/* Tabla de pares ordenada de mayor a menor coseno con columna de tiempo */}
               <TablaPares
                 pares={pares}
                 articulosMap={articulosMap}

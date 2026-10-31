@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.uniquindio.algoritmos.back.modelo.Articulo;
 import com.uniquindio.algoritmos.back.preprocesamiento.ServicioPreprocesamiento;
+import com.uniquindio.algoritmos.back.util.CaracteristicasDispositivo;
+import com.uniquindio.algoritmos.back.util.DispositivoUtil;
 
 /** Endpoints que consume el front. */
 @RestController
@@ -34,5 +36,11 @@ public class ArticuloController {
     @PostMapping("/procesar")
     public List<Articulo> reprocesar() throws IOException {
         return servicio.procesarTodos();
+    }
+
+    /** GET /api/articulos/dispositivo -> características del hardware y del entorno del backend. */
+    @GetMapping("/dispositivo")
+    public CaracteristicasDispositivo obtenerDispositivo() {
+        return DispositivoUtil.obtenerCaracteristicas();
     }
 }

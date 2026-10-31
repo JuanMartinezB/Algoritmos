@@ -6,8 +6,8 @@ import java.util.List;
 /** Rabin-Karp con rolling hash y aritmetica modular. */
 public class RabinKarp {
 
-    private static final int BASE = 256; // tamano del alfabeto
-    private static final int MOD = 101;  // primo pequeno (se ven colisiones; sube a 1_000_003 para menos)
+    public static final int BASE = 256; // tamano del alfabeto
+    public static final int MOD = 101;  // primo pequeno (se ven colisiones; sube a 1_000_003 para menos)
 
     /** Hash de una cadena: h = (h * BASE + caracter) % MOD */
     public static long hash(String s) {
@@ -18,19 +18,22 @@ public class RabinKarp {
         return h;
     }
 
+    /** Preprocesamiento: BASE^(m-1) % MOD, el peso del primer caracter de la ventana. O(m) */
+    public static long potencia(int m) {
+        long potencia = 1;
+        for (int i = 0; i < m - 1; i++) {
+            potencia = (potencia * BASE) % MOD;
+        }
+        return potencia;
+    }
+
     /** Devuelve las posiciones (indice inicial) donde aparece el patron en el texto. */
-    public static List<Integer> buscar(String texto, String patron, long hashPatron) {
+    public static List<Integer> buscar(String texto, String patron, long hashPatron, long potencia) {
         List<Integer> posiciones = new ArrayList<>();
         int n = texto.length();
         int m = patron.length();
         if (m > n) {
             return posiciones;
-        }
-
-        // BASE^(m-1) % MOD: peso del primer caracter de la ventana
-        long potencia = 1;
-        for (int i = 0; i < m - 1; i++) {
-            potencia = (potencia * BASE) % MOD;
         }
 
         long hashVentana = hash(texto.substring(0, m));

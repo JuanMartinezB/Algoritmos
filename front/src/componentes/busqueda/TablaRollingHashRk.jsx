@@ -7,7 +7,8 @@ import React, { useState } from 'react';
  */
 export default function TablaRollingHashRk({
   patron = '',
-  tablaPrefijos = []
+  estructuraAuxiliar = null,
+  tablaPrefijos = null
 }) {
   const [copiado, setCopiado] = useState(false);
 
@@ -17,12 +18,22 @@ export default function TablaRollingHashRk({
 
   const patronMin = patron.toLowerCase();
   const m = patronMin.length;
-  const BASE = 256;
-  const MOD = 101;
 
-  // El backend envía el hash resultante como primer elemento del array: tabla = [ (int) hashPatron ]
-  const hashFinalBackend = Array.isArray(tablaPrefijos) && tablaPrefijos.length > 0
-    ? tablaPrefijos[0]
+  // Valores de la estructura auxiliar enviada por el backend en /api/busqueda/rabin-karp
+  const BASE = (estructuraAuxiliar && typeof estructuraAuxiliar.base === 'number')
+    ? estructuraAuxiliar.base
+    : 256;
+
+  const MOD = (estructuraAuxiliar && typeof estructuraAuxiliar.modulo === 'number')
+    ? estructuraAuxiliar.modulo
+    : 101;
+
+  const hashFinalBackend = (estructuraAuxiliar && typeof estructuraAuxiliar.hashPatron === 'number')
+    ? estructuraAuxiliar.hashPatron
+    : (Array.isArray(tablaPrefijos) && tablaPrefijos.length > 0 ? tablaPrefijos[0] : null);
+
+  const potenciaBackend = (estructuraAuxiliar && typeof estructuraAuxiliar.potencia === 'number')
+    ? estructuraAuxiliar.potencia
     : null;
 
   // Cálculo paso a paso de la evolución del hash carácter a carácter
@@ -40,18 +51,19 @@ export default function TablaRollingHashRk({
     });
   }
 
-  // Peso del primer carácter: BASE^(m-1) % MOD
+  // Peso del primer carácter: BASE^(m-1) % MOD (calculado o recibido del backend)
   let pesoPotencia = 1;
   for (let i = 0; i < m - 1; i++) {
     pesoPotencia = (pesoPotencia * BASE) % MOD;
   }
+  const valorPotencia = potenciaBackend !== null ? potenciaBackend : pesoPotencia;
 
   const copiarComoTexto = () => {
     let texto = 'ANÁLISIS DE ROLLING HASH - RABIN-KARP\n';
     texto += `Patrón: "${patron}" (en minúsculas: "${patronMin}", longitud m = ${m})\n`;
     texto += `Parámetros: Base = ${BASE} (ASCII), Módulo primo q = ${MOD}\n`;
     texto += `Hash Final del Patrón: ${hashFinalBackend ?? hAcumulado}\n`;
-    texto += `Peso primer carácter (Base^(m-1) mod q): ${pesoPotencia}\n\n`;
+    texto += `Peso primer carácter (Base^(m-1) mod q): ${valorPotencia}\n\n`;
 
     const filaIdx = ['Índice (i)      ', ...pasos.map((p) => String(p.indice).padStart(5))].join(' | ');
     const filaChar = ['Carácter P[i]   ', ...pasos.map((p) => (p.char === ' ' ? '␣' : p.char).padStart(5))].join(' | ');
@@ -129,7 +141,7 @@ export default function TablaRollingHashRk({
 
         <div className="rk-metrica-caja">
           <span className="rk-caja-label">Peso de Extremo (B^(m-1) mod q)</span>
-          <span className="rk-caja-valor">{pesoPotencia}</span>
+          <span className="rk-caja-valor">{valorPotencia}</span>
           <span className="rk-caja-detalle">Factor de resta del carácter saliente</span>
         </div>
       </div>

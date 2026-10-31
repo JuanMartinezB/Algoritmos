@@ -22,6 +22,10 @@ import com.uniquindio.algoritmos.back.algoritmos.agrupamiento.Enlace;
 import com.uniquindio.algoritmos.back.algoritmos.agrupamiento.Fusion;
 import com.uniquindio.algoritmos.back.algoritmos.evaluacion.Silueta;
 import com.uniquindio.algoritmos.back.algoritmos.similitud.AlgoritmoSimilitud;
+import com.uniquindio.algoritmos.back.algoritmos.similitud.clasicos.Levenshtein;
+import com.uniquindio.algoritmos.back.algoritmos.similitud.clasicos.NeedlemanWunsch;
+import com.uniquindio.algoritmos.back.algoritmos.similitud.clasicos.SimilitudCosenoTfIdf;
+import com.uniquindio.algoritmos.back.algoritmos.similitud.clasicos.SimilitudJaccard;
 import com.uniquindio.algoritmos.back.algoritmos.similitud.ia.fasttext.ModeloFastText;
 import com.uniquindio.algoritmos.back.algoritmos.similitud.ia.fasttext.SimilitudFastText;
 import com.uniquindio.algoritmos.back.algoritmos.similitud.ia.glove.ModeloGlove;
@@ -71,7 +75,8 @@ public class AgrupamientoController {
 
     /**
      * GET /api/agrupamiento/resultado?algoritmo=glove&k=3
-     * algoritmo: "glove" (rapido) o "fasttext" (la primera vez carga el modelo y puede tardar).
+     * algoritmo: "glove" (rapido), "fasttext" (la primera vez carga el modelo y puede tardar) o uno clasico:
+     * "jaccard", "tfidf", "levenshtein", "needleman".
      * k: numero de grupos en que se corta el dendrograma (2 .. 19).
      */
     @GetMapping("/resultado")
@@ -169,6 +174,19 @@ public class AgrupamientoController {
                     : resolver(fasttextFiltrado);
             ModeloFastText modelo = new ModeloFastText(completo, filtrado, corpus.vocabulario());
             return new SimilitudFastText(modelo);
+        }
+        // Algoritmos clasicos: todos cumplen AlgoritmoSimilitud, por eso el agrupamiento los usa igual que a los de IA.
+        if (algoritmo.equals("jaccard")) {
+            return new SimilitudJaccard();
+        }
+        if (algoritmo.equals("tfidf")) {
+            return new SimilitudCosenoTfIdf(articulos);
+        }
+        if (algoritmo.equals("levenshtein")) {
+            return new Levenshtein();
+        }
+        if (algoritmo.equals("needleman")) {
+            return new NeedlemanWunsch();
         }
         throw new IllegalArgumentException("Algoritmo de similitud no soportado: " + algoritmo);
     }

@@ -54,6 +54,10 @@ export default function Agrupamiento() {
           <select value={algoritmo} onChange={(e) => setAlgoritmo(e.target.value)} disabled={cargando}>
             <option value="glove">GloVe + IDF (50d)</option>
             <option value="fasttext">FastText (300d)</option>
+            <option value="tfidf">Coseno TF-IDF (clásico)</option>
+            <option value="jaccard">Jaccard (clásico)</option>
+            <option value="levenshtein">Levenshtein (clásico)</option>
+            <option value="needleman">Needleman-Wunsch (clásico)</option>
           </select>
         </label>
         <label>

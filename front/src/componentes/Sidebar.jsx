@@ -83,6 +83,26 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
               <span className="nav-item-badge kmp-badge">3 Algos</span>
             </div>
 
+            {/* Pestaña: Algoritmos Clásicos (John) */}
+            <div
+              className={`sidebar-nav-item ${pestanaActiva === 'clasicos' ? 'active' : ''}`}
+              onClick={() => onCambiarPestana && onCambiarPestana('clasicos')}
+              role="button"
+              tabIndex={0}
+              title="4 algoritmos clásicos: Levenshtein, Needleman-Wunsch, Jaccard, Coseno TF-IDF"
+            >
+              <div className="nav-item-icon busqueda-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div className="nav-item-text">
+                <span className="nav-item-title">Clásicos</span>
+                <span className="nav-item-subtitle">Levenshtein, NW, Jaccard, TF-IDF</span>
+              </div>
+              <span className="nav-item-badge kmp-badge">4 Algos</span>
+            </div>
+
             {/* Pestaña: IA: FastText */}
             <div
               className={`sidebar-nav-item ${pestanaActiva === 'fasttext' ? 'active' : ''}`}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './componentes/Sidebar';
 import Informacion from './paginas/Informacion';
 import Similitud from './paginas/Similitud';
+import SimilitudClasicos from './paginas/SimilitudClasicos';
 import BusquedaPatrones from './paginas/BusquedaPatrones';
 import SimilitudGlove from './paginas/SimilitudGlove';
 import Agrupamiento from './paginas/Agrupamiento';
@@ -41,6 +42,10 @@ function App() {
 
       {pestanaActiva === 'glove' && (
         <SimilitudGlove onArticulosChange={setTotalArticulos} />
+      )}
+
+      {pestanaActiva === 'clasicos' && (
+        <SimilitudClasicos onArticulosChange={setTotalArticulos} />
       )}
 
       {pestanaActiva === 'agrupamiento' && <Agrupamiento />}

@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
+    host: true, // Escucha en 0.0.0.0 para que cualquier túnel o red local lo alcance
     port: 5173,
     allowedHosts: true, // Permite cualquier host de túnel (localtunnel, ngrok, etc.)
     proxy: {

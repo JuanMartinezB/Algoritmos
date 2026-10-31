@@ -9,7 +9,7 @@
  * - Boyer-Moore: GET /api/busqueda/boyer-moore?patron={texto}
  * - Rabin-Karp: GET /api/busqueda/rabin-karp?patron={texto}
  */
-const BASE_BUSQUEDA_URL = 'http://localhost:8080/api/busqueda';
+const BASE_BUSQUEDA_URL = '/api/busqueda';
 
 /**
  * Realiza la búsqueda de un patrón en el corpus usando el algoritmo especificado.

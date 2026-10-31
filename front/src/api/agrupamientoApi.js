@@ -2,7 +2,7 @@
  * Servicio de llamadas a la API de agrupamiento jerárquico (Requerimiento 2).
  * Base URL: http://localhost:8080/api/agrupamiento
  */
-const BASE_AGRUPAMIENTO_URL = 'http://localhost:8080/api/agrupamiento';
+const BASE_AGRUPAMIENTO_URL = '/api/agrupamiento';
 
 /**
  * GET /resultado?algoritmo=glove&k=3

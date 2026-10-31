@@ -1,7 +1,7 @@
 /**
  * Servicio API para interactuar exclusivamente con el backend de Spring Boot.
  */
-const API_BASE_URL = 'http://localhost:8080/api/articulos';
+const API_BASE_URL = '/api/articulos';
 
 /**
  * Obtiene la lista de artículos preprocesados consumiendo el endpoint GET del Backend.

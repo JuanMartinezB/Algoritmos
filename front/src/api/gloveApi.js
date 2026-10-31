@@ -2,7 +2,7 @@
  * Servicio de llamadas a la API de similitud con GloVe.
  * Base URL: http://localhost:8080/api/similitud/glove
  */
-const BASE_GLOVE_URL = 'http://localhost:8080/api/similitud/glove';
+const BASE_GLOVE_URL = '/api/similitud/glove';
 
 /**
  * Helper para procesar respuestas y extraer mensajes de error normalizados

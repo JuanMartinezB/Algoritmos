@@ -8,7 +8,7 @@
  *  3. Jaccard (Teoría de Conjuntos)
  *  4. Coseno TF-IDF (Espacio Vectorial)
  */
-const BASE_URL = 'http://localhost:8080/api/similitud/clasicos';
+const BASE_URL = '/api/similitud/clasicos';
 
 async function procesarRespuesta(response) {
   if (!response.ok) {

@@ -34,3 +34,6 @@ build/
 
 # Modelo FastText completo (~2 GB). Se descarga aparte, no se sube al repositorio.
 datos/wiki-news-300d-1M.vec
+datos/Fasttext/wiki-news-300d-1M.vec
+datos/fasttext/wiki-news-300d-1M.vec
+*.vec.gz

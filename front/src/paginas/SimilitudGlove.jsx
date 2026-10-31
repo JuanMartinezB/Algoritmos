@@ -193,29 +193,6 @@ export default function SimilitudGlove({ onArticulosChange }) {
             Cálculo de relaciones semánticas entre investigaciones mediante modelos de embeddings vectoriales.
           </p>
         </div>
-
-        {/* Selector de Algoritmo preparado para crecer */}
-        <div className="similitud-algoritmo-selector-box">
-          <label className="selector-algoritmo-label">Algoritmo de Similitud:</label>
-          <div className="selector-algoritmo-pills">
-            <button
-              type="button"
-              className={`pill-algoritmo ${algoritmoActivo === 'glove' ? 'active' : ''}`}
-              onClick={() => setAlgoritmoActivo('glove')}
-            >
-              <span className="pill-dot" />
-              <span>GloVe + IDF (50d)</span>
-            </button>
-            <button
-              type="button"
-              className="pill-algoritmo disabled"
-              disabled
-              title="Disponible próximamente en futuras entregas"
-            >
-              <span>+ Próximos algoritmos</span>
-            </button>
-          </div>
-        </div>
       </section>
 
       {/* Subnavegación de la pantalla: Comparación vs Cobertura */}

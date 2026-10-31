@@ -112,7 +112,10 @@ export default function BusquedaPatrones({ totalArticulos = 20 }) {
       </nav>
 
       {/* SECCIÓN 1: BÚSQUEDA INDIVIDUAL (Conservada en DOM para mantener su estado) */}
-      <div style={{ display: tabPrincipal === 'individual' ? 'block' : 'none' }}>
+      <div
+        className="busqueda-seccion-individual"
+        style={{ display: tabPrincipal === 'individual' ? 'flex' : 'none' }}
+      >
         {/* Formulario y Selector de Algoritmo */}
         <section className="busqueda-seccion-formulario">
           <FormularioBusqueda

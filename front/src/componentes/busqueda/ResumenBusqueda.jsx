@@ -6,7 +6,6 @@ import React from 'react';
  * Algoritmo utilizado, patrón buscado, total de ocurrencias y artículos con coincidencias sobre el total del corpus.
  */
 export default function ResumenBusqueda({
-  algoritmo = 'KMP',
   patron = '',
   totalOcurrencias = 0,
   articulosConCoincidencias = 0,
@@ -15,10 +14,6 @@ export default function ResumenBusqueda({
   return (
     <div className="busqueda-resumen-card">
       <div className="busqueda-resumen-main">
-        <div className="busqueda-resumen-badge-algo">
-          <span className="resumen-tag-label">Algoritmo</span>
-          <span className="resumen-tag-valor">{algoritmo}</span>
-        </div>
         <div className="busqueda-resumen-patron">
           <span className="resumen-patron-label">Patrón buscado:</span>
           <span className="resumen-patron-texto">«{patron}»</span>

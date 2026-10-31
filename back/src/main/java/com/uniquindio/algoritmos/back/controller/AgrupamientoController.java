@@ -59,10 +59,10 @@ public class AgrupamientoController {
     @Value("${glove.vec-filtrado:../datos/glove/vectores-glove-corpus.vec}")
     private String gloveFiltrado;
 
-    @Value("${fasttext.vec-completo:../datos/fasttext/wiki-news-300d-1M.vec}")
+    @Value("${fasttext.vec-completo:../datos/Fasttext/wiki-news-300d-1M.vec}")
     private String fasttextCompleto;
 
-    @Value("${fasttext.vec-filtrado:../datos/fasttext/vectores-corpus.vec}")
+    @Value("${fasttext.vec-filtrado:../datos/Fasttext/vectores-corpus.vec}")
     private String fasttextFiltrado;
 
     public AgrupamientoController(CorpusJson corpus) {
@@ -177,6 +177,8 @@ public class AgrupamientoController {
     private Path resolverFastText() {
         for (String candidata : new String[]{
                 fasttextCompleto,
+                "../datos/Fasttext/wiki-news-300d-1M.vec",
+                "datos/Fasttext/wiki-news-300d-1M.vec",
                 "../datos/wiki-news-300d-1M.vec",
                 "datos/wiki-news-300d-1M.vec",
                 "../datos/fasttext/wiki-news-300d-1M.vec",

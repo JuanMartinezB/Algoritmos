@@ -57,9 +57,6 @@ export default function FormularioBusqueda({
               onClick={() => algo.disponible && onCambiarAlgoritmo && onCambiarAlgoritmo(algo.id)}
             >
               <span className="tab-nombre">{algo.nombre}</span>
-              <span className={`tab-badge ${algo.disponible ? 'badge-activo' : 'badge-proximo'}`}>
-                {algo.badge}
-              </span>
             </button>
           ))}
         </div>

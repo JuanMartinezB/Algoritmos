@@ -44,10 +44,10 @@ public class SimilitudFastTextController {
     private SimilitudFastText fastText;
     private double tiempoCargaMs;
 
-    @Value("${fasttext.vec-completo:../datos/fasttext/wiki-news-300d-1M.vec}")
+    @Value("${fasttext.vec-completo:../datos/Fasttext/wiki-news-300d-1M.vec}")
     private String vecCompleto;
 
-    @Value("${fasttext.vec-filtrado:../datos/fasttext/vectores-corpus.vec}")
+    @Value("${fasttext.vec-filtrado:../datos/Fasttext/vectores-corpus.vec}")
     private String vecFiltrado;
 
     public SimilitudFastTextController(CorpusJson corpus) {
@@ -61,10 +61,12 @@ public class SimilitudFastTextController {
     private Path resolverVecCompleto() {
         for (String candidata : new String[]{
                 vecCompleto,
-                "../datos/wiki-news-300d-1M.vec",
-                "datos/wiki-news-300d-1M.vec",
+                "../datos/Fasttext/wiki-news-300d-1M.vec",
+                "datos/Fasttext/wiki-news-300d-1M.vec",
                 "../datos/fasttext/wiki-news-300d-1M.vec",
-                "datos/fasttext/wiki-news-300d-1M.vec"}) {
+                "datos/fasttext/wiki-news-300d-1M.vec",
+                "../datos/wiki-news-300d-1M.vec",
+                "datos/wiki-news-300d-1M.vec"}) {
             if (candidata != null && !candidata.isBlank()) {
                 Path p = Path.of(candidata).toAbsolutePath().normalize();
                 if (Files.exists(p)) {
@@ -84,7 +86,14 @@ public class SimilitudFastTextController {
             // Guardar el filtrado en la misma carpeta del archivo completo o en datos/fasttext
             return rutaCompleto.getParent().resolve("vectores-corpus.vec").normalize();
         }
-        for (String candidata : new String[]{vecFiltrado, "../datos/fasttext/vectores-corpus.vec", "datos/fasttext/vectores-corpus.vec"}) {
+        for (String candidata : new String[]{
+                vecFiltrado,
+                "../datos/Fasttext/vectores-corpus.vec",
+                "datos/Fasttext/vectores-corpus.vec",
+                "../datos/fasttext/vectores-corpus.vec",
+                "datos/fasttext/vectores-corpus.vec",
+                "../datos/vectores-corpus.vec",
+                "datos/vectores-corpus.vec"}) {
             if (candidata != null && !candidata.isBlank()) {
                 return Path.of(candidata).toAbsolutePath().normalize();
             }

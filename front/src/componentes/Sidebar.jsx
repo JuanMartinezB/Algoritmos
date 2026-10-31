@@ -183,7 +183,8 @@ export default function Sidebar({ totalArticulos = 20, pestanaActiva = 'informac
                 <line x1="12" y1="17" x2="12" y2="21"></line>
               </svg>
             </div>
-            <span>Características del Dispositivo</span>
+            <span className="disp-btn-label">Características del Dispositivo</span>
+            <span className="disp-badge-exclamacion" title="Información del sistema" aria-hidden="true">!</span>
           </button>
         </div>
 

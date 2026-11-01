@@ -3,6 +3,7 @@ import SelectorArticulosClasicos from '../componentes/clasicos/SelectorArticulos
 import TablaParesClasicos from '../componentes/clasicos/TablaParesClasicos';
 import MatrizClasicos from '../componentes/clasicos/MatrizClasicos';
 import DetallePasoAPasoClasicos from '../componentes/clasicos/DetallePasoAPasoClasicos';
+import ErrorBoundary from '../componentes/ErrorBoundary';
 import Toast from '../componentes/Toast';
 import { obtenerArticulos } from '../api/api';
 import { compararClasicos } from '../api/clasicosApi';
@@ -326,13 +327,15 @@ export default function SimilitudClasicos({ onArticulosChange }) {
 
       {/* Modal de detalle paso a paso */}
       {parDetalle && (
-        <DetallePasoAPasoClasicos
-          idA={parDetalle.idA}
-          idB={parDetalle.idB}
-          articuloA={articulosMap[parDetalle.idA]}
-          articuloB={articulosMap[parDetalle.idB]}
-          onCerrar={() => setParDetalle(null)}
-        />
+        <ErrorBoundary onReset={() => setParDetalle(null)}>
+          <DetallePasoAPasoClasicos
+            idA={parDetalle.idA}
+            idB={parDetalle.idB}
+            articuloA={articulosMap[parDetalle.idA]}
+            articuloB={articulosMap[parDetalle.idB]}
+            onCerrar={() => setParDetalle(null)}
+          />
+        </ErrorBoundary>
       )}
 
       {/* Toast */}

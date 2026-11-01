@@ -6,6 +6,7 @@ import SimilitudClasicos from './paginas/SimilitudClasicos';
 import BusquedaPatrones from './paginas/BusquedaPatrones';
 import SimilitudGlove from './paginas/SimilitudGlove';
 import Agrupamiento from './paginas/Agrupamiento';
+import ErrorBoundary from './componentes/ErrorBoundary';
 import './App.css';
 
 /**
@@ -28,27 +29,29 @@ function App() {
       />
 
       {/* Vistas según la pestaña activa */}
-      {pestanaActiva === 'informacion' && (
-        <Informacion onArticulosChange={setTotalArticulos} />
-      )}
+      <ErrorBoundary>
+        {pestanaActiva === 'informacion' && (
+          <Informacion onArticulosChange={setTotalArticulos} />
+        )}
 
-      {pestanaActiva === 'busqueda' && (
-        <BusquedaPatrones totalArticulos={totalArticulos || 20} />
-      )}
+        {pestanaActiva === 'busqueda' && (
+          <BusquedaPatrones totalArticulos={totalArticulos || 20} />
+        )}
 
-      {pestanaActiva === 'fasttext' && (
-        <Similitud onArticulosChange={setTotalArticulos} />
-      )}
+        {pestanaActiva === 'fasttext' && (
+          <Similitud onArticulosChange={setTotalArticulos} />
+        )}
 
-      {pestanaActiva === 'glove' && (
-        <SimilitudGlove onArticulosChange={setTotalArticulos} />
-      )}
+        {pestanaActiva === 'glove' && (
+          <SimilitudGlove onArticulosChange={setTotalArticulos} />
+        )}
 
-      {pestanaActiva === 'clasicos' && (
-        <SimilitudClasicos onArticulosChange={setTotalArticulos} />
-      )}
+        {pestanaActiva === 'clasicos' && (
+          <SimilitudClasicos onArticulosChange={setTotalArticulos} />
+        )}
 
-      {pestanaActiva === 'agrupamiento' && <Agrupamiento />}
+        {pestanaActiva === 'agrupamiento' && <Agrupamiento />}
+      </ErrorBoundary>
     </div>
   );
 }

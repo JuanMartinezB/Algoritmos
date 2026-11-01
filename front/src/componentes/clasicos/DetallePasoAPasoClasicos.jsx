@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { obtenerDetalleClasicos } from '../../api/clasicosApi';
+import ErrorBoundary from '../ErrorBoundary';
 
 /**
  * DetallePasoAPasoClasicos.jsx
@@ -83,27 +84,29 @@ export default function DetallePasoAPasoClasicos({
             <div className="alerta-error-visible">
               <div className="alerta-error-icon">⚠️</div>
               <div className="alerta-error-content">
-                <h4 className="alerta-error-title">Error</h4>
+                <h4 className="alerta-error-title">Error al consultar el servidor</h4>
                 <p className="alerta-error-msg">{error}</p>
               </div>
             </div>
           )}
 
-          {detalle && !cargando && tabActiva === 'levenshtein' && (
-            <SeccionLevenshtein data={detalle.levenshtein} />
-          )}
+          <ErrorBoundary>
+            {detalle && !cargando && tabActiva === 'levenshtein' && (
+              <SeccionLevenshtein data={detalle.levenshtein} />
+            )}
 
-          {detalle && !cargando && tabActiva === 'needlemanWunsch' && (
-            <SeccionNeedlemanWunsch data={detalle.needlemanWunsch} />
-          )}
+            {detalle && !cargando && tabActiva === 'needlemanWunsch' && (
+              <SeccionNeedlemanWunsch data={detalle.needlemanWunsch} />
+            )}
 
-          {detalle && !cargando && tabActiva === 'jaccard' && (
-            <SeccionJaccard data={detalle.jaccard} />
-          )}
+            {detalle && !cargando && tabActiva === 'jaccard' && (
+              <SeccionJaccard data={detalle.jaccard} />
+            )}
 
-          {detalle && !cargando && tabActiva === 'cosenoTfIdf' && (
-            <SeccionCosenoTfIdf data={detalle.cosenoTfIdf} />
-          )}
+            {detalle && !cargando && tabActiva === 'cosenoTfIdf' && (
+              <SeccionCosenoTfIdf data={detalle.cosenoTfIdf} />
+            )}
+          </ErrorBoundary>
         </div>
       </div>
     </div>

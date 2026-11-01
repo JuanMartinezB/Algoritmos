@@ -113,6 +113,10 @@ export default function DetallePasoAPasoClasicos({
 /* ======================== LEVENSHTEIN ======================== */
 function SeccionLevenshtein({ data }) {
   if (!data) return <p>Sin datos de Levenshtein.</p>;
+
+  const colChars = Array.from(data.caracteresColumna || []);
+  const rowChars = Array.from(data.caracteresFila || []);
+
   return (
     <div className="clasicos-seccion-detalle">
       <h3>📐 Distancia de Levenshtein (Programación Dinámica)</h3>
@@ -125,11 +129,11 @@ function SeccionLevenshtein({ data }) {
       <div className="clasicos-resultado-box">
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">Distancia total</span>
-          <span className="clasicos-resultado-valor">{data.distanciaTotal}</span>
+          <span className="clasicos-resultado-valor">{data.distanciaTotal ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item destacado">
           <span className="clasicos-resultado-label">Similitud normalizada</span>
-          <span className="clasicos-resultado-valor">{Number(data.similitudCalculada).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.similitudCalculada ?? 0).toFixed(6)}</span>
         </div>
       </div>
 
@@ -140,7 +144,7 @@ function SeccionLevenshtein({ data }) {
             <tr>
               <th></th>
               <th>∅</th>
-              {data.caracteresColumna && data.caracteresColumna.map((c, j) => (
+              {colChars.map((c, j) => (
                 <th key={j} className="dp-char-header">{c}</th>
               ))}
             </tr>
@@ -148,7 +152,7 @@ function SeccionLevenshtein({ data }) {
           <tbody>
             {data.matriz && data.matriz.map((fila, i) => (
               <tr key={i}>
-                <th className="dp-char-header">{i === 0 ? '∅' : (data.caracteresFila?.[i - 1] || '')}</th>
+                <th className="dp-char-header">{i === 0 ? '∅' : (rowChars[i - 1] || '')}</th>
                 {fila.map((val, j) => (
                   <td key={j} className={`dp-celda ${i === 0 || j === 0 ? 'dp-base' : ''}`}>
                     {val}
@@ -166,6 +170,10 @@ function SeccionLevenshtein({ data }) {
 /* ======================== NEEDLEMAN-WUNSCH ======================== */
 function SeccionNeedlemanWunsch({ data }) {
   if (!data) return <p>Sin datos de Needleman-Wunsch.</p>;
+
+  const colChars = Array.from(data.caracteresColumna || []);
+  const rowChars = Array.from(data.caracteresFila || []);
+
   return (
     <div className="clasicos-seccion-detalle">
       <h3>🧬 Needleman-Wunsch (Alineamiento Global)</h3>
@@ -178,11 +186,11 @@ function SeccionNeedlemanWunsch({ data }) {
       <div className="clasicos-resultado-box">
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">Puntaje total</span>
-          <span className="clasicos-resultado-valor">{data.puntajeTotal}</span>
+          <span className="clasicos-resultado-valor">{data.puntajeTotal ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item destacado">
           <span className="clasicos-resultado-label">Similitud normalizada</span>
-          <span className="clasicos-resultado-valor">{Number(data.similitudCalculada).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.similitudCalculada ?? 0).toFixed(6)}</span>
         </div>
       </div>
 
@@ -193,7 +201,7 @@ function SeccionNeedlemanWunsch({ data }) {
             <tr>
               <th></th>
               <th>∅</th>
-              {data.caracteresColumna && data.caracteresColumna.map((c, j) => (
+              {colChars.map((c, j) => (
                 <th key={j} className="dp-char-header">{c}</th>
               ))}
             </tr>
@@ -201,7 +209,7 @@ function SeccionNeedlemanWunsch({ data }) {
           <tbody>
             {data.matriz && data.matriz.map((fila, i) => (
               <tr key={i}>
-                <th className="dp-char-header">{i === 0 ? '∅' : (data.caracteresFila?.[i - 1] || '')}</th>
+                <th className="dp-char-header">{i === 0 ? '∅' : (rowChars[i - 1] || '')}</th>
                 {fila.map((val, j) => (
                   <td key={j} className={`dp-celda ${i === 0 || j === 0 ? 'dp-base' : ''} ${val > 0 ? 'dp-positivo' : val < 0 ? 'dp-negativo' : ''}`}>
                     {val}
@@ -231,30 +239,30 @@ function SeccionJaccard({ data }) {
       <div className="clasicos-resultado-box">
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|Conjunto A|</span>
-          <span className="clasicos-resultado-valor">{data.tamConjuntoA} palabras</span>
+          <span className="clasicos-resultado-valor">{data.tamConjuntoA ?? 0} palabras</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|Conjunto B|</span>
-          <span className="clasicos-resultado-valor">{data.tamConjuntoB} palabras</span>
+          <span className="clasicos-resultado-valor">{data.tamConjuntoB ?? 0} palabras</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|A ∩ B| (Intersección)</span>
-          <span className="clasicos-resultado-valor">{data.tamInterseccion}</span>
+          <span className="clasicos-resultado-valor">{data.tamInterseccion ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|A ∪ B| (Unión)</span>
-          <span className="clasicos-resultado-valor">{data.tamUnion}</span>
+          <span className="clasicos-resultado-valor">{data.tamUnion ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item destacado">
           <span className="clasicos-resultado-label">Coeficiente de Jaccard</span>
-          <span className="clasicos-resultado-valor">{Number(data.coeficiente).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.coeficiente ?? 0).toFixed(6)}</span>
         </div>
       </div>
 
       {/* Palabras en la intersección */}
-      <h4>Palabras en común ({data.interseccionPalabras?.length || 0})</h4>
+      <h4>Palabras en común ({Array.isArray(data.interseccionPalabras) ? data.interseccionPalabras.length : 0})</h4>
       <div className="clasicos-palabras-lista">
-        {data.interseccionPalabras && data.interseccionPalabras.length > 0 ? (
+        {Array.isArray(data.interseccionPalabras) && data.interseccionPalabras.length > 0 ? (
           data.interseccionPalabras.map((p, i) => (
             <span key={i} className="clasicos-tag interseccion">{p}</span>
           ))
@@ -265,21 +273,21 @@ function SeccionJaccard({ data }) {
 
       <div className="clasicos-conjuntos-row">
         <div className="clasicos-conjunto-col">
-          <h4>Solo en A ({data.soloEnA?.length || 0})</h4>
+          <h4>Solo en A ({Array.isArray(data.soloEnA) ? data.soloEnA.length : 0})</h4>
           <div className="clasicos-palabras-lista">
-            {data.soloEnA && data.soloEnA.slice(0, 40).map((p, i) => (
+            {Array.isArray(data.soloEnA) && data.soloEnA.slice(0, 40).map((p, i) => (
               <span key={i} className="clasicos-tag solo-a">{p}</span>
             ))}
-            {data.soloEnA && data.soloEnA.length > 40 && <span className="clasicos-tag mas">+{data.soloEnA.length - 40} más</span>}
+            {Array.isArray(data.soloEnA) && data.soloEnA.length > 40 && <span className="clasicos-tag mas">+{data.soloEnA.length - 40} más</span>}
           </div>
         </div>
         <div className="clasicos-conjunto-col">
-          <h4>Solo en B ({data.soloEnB?.length || 0})</h4>
+          <h4>Solo en B ({Array.isArray(data.soloEnB) ? data.soloEnB.length : 0})</h4>
           <div className="clasicos-palabras-lista">
-            {data.soloEnB && data.soloEnB.slice(0, 40).map((p, i) => (
+            {Array.isArray(data.soloEnB) && data.soloEnB.slice(0, 40).map((p, i) => (
               <span key={i} className="clasicos-tag solo-b">{p}</span>
             ))}
-            {data.soloEnB && data.soloEnB.length > 40 && <span className="clasicos-tag mas">+{data.soloEnB.length - 40} más</span>}
+            {Array.isArray(data.soloEnB) && data.soloEnB.length > 40 && <span className="clasicos-tag mas">+{data.soloEnB.length - 40} más</span>}
           </div>
         </div>
       </div>
@@ -307,32 +315,32 @@ function SeccionCosenoTfIdf({ data }) {
       <div className="clasicos-resultado-box">
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">Dimensiones del vector</span>
-          <span className="clasicos-resultado-valor">{data.dimensionesVector}</span>
+          <span className="clasicos-resultado-valor">{data.dimensionesVector ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">Documentos en el corpus</span>
-          <span className="clasicos-resultado-valor">{data.totalDocumentosCorpus}</span>
+          <span className="clasicos-resultado-valor">{data.totalDocumentosCorpus ?? 0}</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">Producto punto (A·B)</span>
-          <span className="clasicos-resultado-valor">{Number(data.productoPunto).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.productoPunto ?? 0).toFixed(6)}</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|A| (norma)</span>
-          <span className="clasicos-resultado-valor">{Number(data.normaA).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.normaA ?? 0).toFixed(6)}</span>
         </div>
         <div className="clasicos-resultado-item">
           <span className="clasicos-resultado-label">|B| (norma)</span>
-          <span className="clasicos-resultado-valor">{Number(data.normaB).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.normaB ?? 0).toFixed(6)}</span>
         </div>
         <div className="clasicos-resultado-item destacado">
           <span className="clasicos-resultado-label">Similitud del Coseno</span>
-          <span className="clasicos-resultado-valor">{Number(data.similitudCoseno).toFixed(6)}</span>
+          <span className="clasicos-resultado-valor">{Number(data.similitudCoseno ?? 0).toFixed(6)}</span>
         </div>
       </div>
 
       {/* Top términos comunes */}
-      {data.topTerminosComunes && data.topTerminosComunes.length > 0 && (
+      {Array.isArray(data.topTerminosComunes) && data.topTerminosComunes.length > 0 && (
         <>
           <h4>Top Términos Comunes (mayor peso compartido)</h4>
           <div className="table-responsive-wrapper">
@@ -351,11 +359,11 @@ function SeccionCosenoTfIdf({ data }) {
                 {data.topTerminosComunes.map((t, i) => (
                   <tr key={i}>
                     <td><strong>{t.termino}</strong></td>
-                    <td>{Number(t.tfA).toFixed(5)}</td>
-                    <td>{Number(t.tfB).toFixed(5)}</td>
-                    <td>{Number(t.idf).toFixed(4)}</td>
-                    <td style={{ color: '#16a34a', fontWeight: 600 }}>{Number(t.pesoA).toFixed(5)}</td>
-                    <td style={{ color: '#2563eb', fontWeight: 600 }}>{Number(t.pesoB).toFixed(5)}</td>
+                    <td>{Number(t.tfA ?? 0).toFixed(5)}</td>
+                    <td>{Number(t.tfB ?? 0).toFixed(5)}</td>
+                    <td>{Number(t.idf ?? 0).toFixed(4)}</td>
+                    <td style={{ color: '#16a34a', fontWeight: 600 }}>{Number(t.pesoA ?? 0).toFixed(5)}</td>
+                    <td style={{ color: '#2563eb', fontWeight: 600 }}>{Number(t.pesoB ?? 0).toFixed(5)}</td>
                   </tr>
                 ))}
               </tbody>

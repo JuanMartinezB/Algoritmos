@@ -28,4 +28,11 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Iniciar la aplicación en la raíz /app para que encuentre ./datos
-CMD ["java", "-Dserver.port=${PORT}", "-Dcorpus.json=datos/procesados/articulos.json", "-jar", "app.jar"]
+CMD ["java", \
+     "-Dserver.port=${PORT}", \
+     "-Dcorpus.json=datos/procesados/articulos.json", \
+     "-Dfasttext.vec-completo=datos/Fasttext/wiki-news-300d-1M.vec", \
+     "-Dfasttext.vec-filtrado=datos/Fasttext/vectores-corpus.vec", \
+     "-Dglove.vec-completo=datos/glove/glove.6B.50d.txt", \
+     "-Dglove.vec-filtrado=datos/glove/vectores-glove-corpus.vec", \
+     "-jar", "app.jar"]
